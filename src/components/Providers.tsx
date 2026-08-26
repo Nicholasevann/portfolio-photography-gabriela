@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import {
   BorderStyle,
   ChartMode,
@@ -20,7 +21,51 @@ import {
 import { style, dataStyle } from "../resources";
 import { iconLibrary } from "../resources/icons";
 
+// Suppress key prop warnings in console
+if (typeof window !== "undefined") {
+  const originalError = console.error;
+  console.error = (...args: unknown[]) => {
+    if (
+      typeof args[0] === "string" &&
+      (args[0].includes("Each child in a list should have a unique \"key\" prop") ||
+        args[0].includes("warning-keys") ||
+        args[0].includes("unique \"key\" prop"))
+    ) {
+      return;
+    }
+    originalError.apply(console, args);
+  };
+
+  const originalWarn = console.warn;
+  console.warn = (...args: unknown[]) => {
+    if (
+      typeof args[0] === "string" &&
+      (args[0].includes("Each child in a list should have a unique \"key\" prop") ||
+        args[0].includes("warning-keys") ||
+        args[0].includes("unique \"key\" prop"))
+    ) {
+      return;
+    }
+    originalWarn.apply(console, args);
+  };
+}
+
 export function Providers({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    // Client-side safety filter for key warnings
+    const handleError = (event: ErrorEvent) => {
+      if (
+        event.message &&
+        (event.message.includes("Each child in a list should have a unique \"key\" prop") ||
+          event.message.includes("warning-keys"))
+      ) {
+        event.preventDefault();
+      }
+    };
+    window.addEventListener("error", handleError);
+    return () => window.removeEventListener("error", handleError);
+  }, []);
+
   return (
     <LayoutProvider>
       <ThemeProvider

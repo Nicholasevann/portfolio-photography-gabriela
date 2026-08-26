@@ -6,6 +6,7 @@ import {
   Column,
   Badge,
   Row,
+  Grid,
   Schema,
   Meta,
   Line,
@@ -195,21 +196,16 @@ export default function Home() {
           </Heading>
         </Column>
 
-        <Flex fillWidth gap="16" wrap s={{ direction: "column" }}>
+        <Grid columns={2} s={{ columns: 1 }} fillWidth gap="16">
           {services.map((service, index) => (
-            <Flex
+            <Column
               key={`service-${service.title}-${index}`}
-              flex={1}
-              minWidth={220}
+              fillWidth
               padding="24"
               radius="m"
               border="neutral-alpha-weak"
-              background="page"
-              direction="column"
+              background="surface"
               gap="12"
-              style={{
-                transition: "border-color 0.2s ease, transform 0.2s ease",
-              }}
             >
               <Text variant="label-default-xs" onBackground="brand-medium">
                 0{index + 1}
@@ -223,9 +219,9 @@ export default function Home() {
               <Text variant="body-default-s" onBackground="neutral-weak">
                 {service.description}
               </Text>
-            </Flex>
+            </Column>
           ))}
-        </Flex>
+        </Grid>
       </Column>
 
       {/* Contact Section */}

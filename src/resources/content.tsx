@@ -124,9 +124,9 @@ const photographyExperiences = [
     timeframe: "May 2026 - Present",
     role: "Property & Hospitality Photographer (Bali)",
     achievements: [
-      <>Documented boutique hotel guest rooms and suites, capturing architectural light and minimalist spatial aesthetics.</>,
-      <>Commercial food, beverage, and ambiance photography for the on-site mini restaurant and dining menu.</>,
-      <>Produced high-resolution visual marketing assets for guest booking platforms and digital promotion.</>,
+      "Documented boutique hotel guest rooms and suites, capturing architectural light and minimalist spatial aesthetics.",
+      "Commercial food, beverage, and ambiance photography for the on-site mini restaurant and dining menu.",
+      "Produced high-resolution visual marketing assets for guest booking platforms and digital promotion.",
     ],
     images: [
       {
@@ -142,9 +142,9 @@ const photographyExperiences = [
     timeframe: "May 2026 - Present",
     role: "Architectural & Hospitality Photographer (Lombok)",
     achievements: [
-      <>Captured unique organic wooden pavilions, luxury guest villa rental units, and tranquil nature surroundings.</>,
-      <>Documented the culinary menu, dining experience, and hospitality amenities.</>,
-      <>Produced cohesive visual storytelling emphasizing tropical architecture and indoor-outdoor living flow.</>,
+      "Captured unique organic wooden pavilions, luxury guest villa rental units, and tranquil nature surroundings.",
+      "Documented the culinary menu, dining experience, and hospitality amenities.",
+      "Produced cohesive visual storytelling emphasizing tropical architecture and indoor-outdoor living flow.",
     ],
     images: [
       {
@@ -160,8 +160,8 @@ const photographyExperiences = [
     timeframe: "May 2026 (Single Commission)",
     role: "Property & Architectural Photographer (Canggu, Bali)",
     achievements: [
-      <>Commissioned for single-visit visual capture of luxury rental villa suites and private plunge pools.</>,
-      <>Delivered refined interior and exterior photography for property rental listings and hospitality showcases.</>,
+      "Commissioned for single-visit visual capture of luxury rental villa suites and private plunge pools.",
+      "Delivered refined interior and exterior photography for property rental listings and hospitality showcases.",
     ],
     images: [
       {
@@ -180,10 +180,10 @@ const engineeringExperiences = [
     timeframe: "September 2025 - Present",
     role: "Fullstack Website & Mobile Developer (Bali)",
     achievements: [
-      <>Built full-stack web applications using Next.js, Vue.js, Nest.js and Express.js with TypeScript.</>,
-      <>Developed cross-platform mobile apps using Flutter and React Native.</>,
-      <>Designed and implemented RESTful APIs and microservices with Node.js/Express and Flask.</>,
-      <>Integrated third-party services (payments, analytics, auth) and optimized CI/CD pipelines.</>,
+      "Built full-stack web applications using Next.js, Vue.js, Nest.js and Express.js with TypeScript.",
+      "Developed cross-platform mobile apps using Flutter and React Native.",
+      "Designed and implemented RESTful APIs and microservices with Node.js/Express and Flask.",
+      "Integrated third-party services (payments, analytics, auth) and optimized CI/CD pipelines.",
     ],
     images: [],
   },
@@ -192,9 +192,9 @@ const engineeringExperiences = [
     timeframe: "September 2024 - September 2025",
     role: "Senior Frontend & Mobile Developer (Bali)",
     achievements: [
-      <>Lead front-end and mobile development projects, ensuring high-quality deliverables.</>,
-      <>Develop and optimize web and mobile applications according to client specifications.</>,
-      <>Collaborate with cross-functional teams to troubleshoot and solve complex technical challenges.</>,
+      "Lead front-end and mobile development projects, ensuring high-quality deliverables.",
+      "Develop and optimize web and mobile applications according to client specifications.",
+      "Collaborate with cross-functional teams to troubleshoot and solve complex technical challenges.",
     ],
     images: [],
   },
@@ -203,8 +203,8 @@ const engineeringExperiences = [
     timeframe: "April 2023 - August 2024",
     role: "Front-End & Mobile Developer (Bandung)",
     achievements: [
-      <>Designed and implemented scalable web and mobile applications for company projects.</>,
-      <>Handled end-to-end mobile app deployment for Google Play Store and Apple App Store.</>,
+      "Designed and implemented scalable web and mobile applications for company projects.",
+      "Handled end-to-end mobile app deployment for Google Play Store and Apple App Store.",
     ],
     images: [],
   },
@@ -213,8 +213,8 @@ const engineeringExperiences = [
     timeframe: "July 2022 - March 2023",
     role: "Mobile Developer (Bandung)",
     achievements: [
-      <>Developed and maintained mobile applications, improving user experience and performance.</>,
-      <>Managed version control and application deployments to app stores.</>,
+      "Developed and maintained mobile applications, improving user experience and performance.",
+      "Managed version control and application deployments to app stores.",
     ],
     images: [],
   },
@@ -257,11 +257,11 @@ const about: About = {
     institutions: [
       {
         name: "Indonesian Computer University Bandung Indonesia",
-        description: <>Bachelor of Computer Engineering (Information Technology) · GPA 3.42 / 4.00 (2018 - 2022)</>,
+        description: "Bachelor of Computer Engineering (Information Technology) · GPA 3.42 / 4.00 (2018 - 2022)",
       },
       {
         name: "SMAK Kolese Santo Yusup Malang Indonesia",
-        description: <>High School Diploma (Science) · Accumulations: 85 (2015 - 2018)</>,
+        description: "High School Diploma (Science) · Accumulations: 85 (2015 - 2018)",
       },
     ],
   },
@@ -271,7 +271,7 @@ const about: About = {
     skills: [
       {
         title: "Photography & Visual Direction",
-        description: <>Property & Architectural Photography, Natural Light Composition, Food & Beverage Imagery, Spatial Storytelling, Lightroom Color Grading.</>,
+        description: "Property & Architectural Photography, Natural Light Composition, Food & Beverage Imagery, Spatial Storytelling, Lightroom Color Grading.",
         tags: [
           { name: "Property" },
           { name: "Hospitality" },
@@ -281,7 +281,7 @@ const about: About = {
       },
       {
         title: "Web & Mobile Development",
-        description: <>Next.js, React.js, React Native, Flutter, Vue.js, Nest.js, Express.js, TypeScript, and Shopify.</>,
+        description: "Next.js, React.js, React Native, Flutter, Vue.js, Nest.js, Express.js, TypeScript, and Shopify.",
         tags: [
           { name: "Next.js", icon: "nextjs" },
           { name: "JavaScript", icon: "javascript" },
