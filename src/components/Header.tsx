@@ -1,0 +1,158 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+import { Fade, Flex, Line, Row, SmartLink, Text, ToggleButton } from "@once-ui-system/core";
+
+import { routes, display, person, about, blog, work, gallery } from "@/resources";
+import { ThemeToggle } from "./ThemeToggle";
+import styles from "./Header.module.scss";
+
+type TimeDisplayProps = {
+  timeZone: string;
+  locale?: string;
+};
+
+const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
+  const [currentTime, setCurrentTime] = useState("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone,
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      };
+      const timeString = new Intl.DateTimeFormat(locale, options).format(now);
+      setCurrentTime(timeString);
+    };
+
+    updateTime();
+    const intervalId = setInterval(updateTime, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [timeZone, locale]);
+
+  return <>{currentTime}</>;
+};
+
+export default TimeDisplay;
+
+export const Header = () => {
+  const pathname = usePathname() ?? "";
+
+  return (
+    <>
+      <Fade s={{ hide: true }} fillWidth position="fixed" height="80" zIndex={9} />
+      <Fade
+        hide
+        s={{ hide: false }}
+        fillWidth
+        position="fixed"
+        bottom="0"
+        to="top"
+        height="80"
+        zIndex={9}
+      />
+      <Row
+        fitHeight
+        className={styles.position}
+        position="sticky"
+        as="header"
+        zIndex={9}
+        fillWidth
+        padding="8"
+        horizontal="center"
+        data-border="rounded"
+        s={{
+          position: "fixed",
+        }}
+      >
+        <Row paddingLeft="16" fillWidth vertical="center" textVariant="body-default-s">
+          <SmartLink href="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <Text variant="heading-strong-s" style={{ letterSpacing: "-0.02em" }}>
+              ne.lens
+            </Text>
+          </SmartLink>
+        </Row>
+        <Row fillWidth horizontal="center">
+          <Row
+            background="page"
+            border="neutral-alpha-weak"
+            radius="m-4"
+            shadow="l"
+            padding="4"
+            horizontal="center"
+            zIndex={1}
+          >
+            <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
+              {routes["/"] && (
+                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+              )}
+              {routes["/work"] && (
+                <ToggleButton
+                  prefixIcon="grid"
+                  href="/work"
+                  label={work.label}
+                  selected={pathname.startsWith("/work")}
+                />
+              )}
+              {routes["/about"] && (
+                <ToggleButton
+                  prefixIcon="person"
+                  href="/about"
+                  label={about.label}
+                  selected={pathname === "/about"}
+                />
+              )}
+              {routes["/blog"] && (
+                <ToggleButton
+                  prefixIcon="book"
+                  href="/blog"
+                  label={blog.label}
+                  selected={pathname.startsWith("/blog")}
+                />
+              )}
+              {routes["/gallery"] && (
+                <ToggleButton
+                  prefixIcon="gallery"
+                  href="/gallery"
+                  label={gallery.label}
+                  selected={pathname.startsWith("/gallery")}
+                />
+              )}
+              {display.themeSwitcher && (
+                <>
+                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
+                  <ThemeToggle />
+                </>
+              )}
+            </Row>
+          </Row>
+        </Row>
+        <Flex fillWidth horizontal="end" vertical="center">
+          <Flex
+            paddingRight="16"
+            horizontal="end"
+            vertical="center"
+            textVariant="body-default-s"
+            gap="16"
+          >
+            <Flex s={{ hide: true }} style={{ opacity: 0.8 }}>
+              {display.location && <Text variant="body-default-xs" onBackground="neutral-weak">Bali</Text>}
+              {display.time && (
+                <Text variant="body-default-xs" onBackground="neutral-weak" marginLeft="8">
+                  · <TimeDisplay timeZone={person.location} />
+                </Text>
+              )}
+            </Flex>
+          </Flex>
+        </Flex>
+      </Row>
+    </>
+  );
+};
