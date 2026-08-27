@@ -47,13 +47,9 @@ export async function Projects({ range, exclude, category, paddingX = "l" }: Pro
     projectsList = projectsList.filter((p) => !exclude.includes(p.slug));
   }
 
-  const sortedProjects = [...projectsList].sort((a, b) => {
-    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-  });
-
   const displayedProjects = range
-    ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)
-    : sortedProjects;
+    ? projectsList.slice(range[0] - 1, range[1] ?? projectsList.length)
+    : projectsList;
 
   return (
     <Column fillWidth gap="xl" marginBottom="40" paddingX={paddingX === "none" ? undefined : paddingX}>

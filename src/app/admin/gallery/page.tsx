@@ -106,7 +106,7 @@ export default function AdminGalleryPage() {
     }
   };
 
-  const toggleOrientation = (id: string) => {
+  const toggleOrientation = async (id: string) => {
     const updated = gallery.map((item) => {
       if (item.id === id) {
         return {
@@ -117,6 +117,7 @@ export default function AdminGalleryPage() {
       return item;
     });
     setGallery(updated);
+    await saveGalleryChanges(updated);
   };
 
   const updateItemAlt = (id: string, alt: string) => {
@@ -135,7 +136,7 @@ export default function AdminGalleryPage() {
     await saveGalleryChanges(updated);
   };
 
-  const moveItem = (index: number, direction: "up" | "down") => {
+  const moveItem = async (index: number, direction: "up" | "down") => {
     const target = direction === "up" ? index - 1 : index + 1;
     if (target < 0 || target >= gallery.length) return;
 
@@ -144,6 +145,7 @@ export default function AdminGalleryPage() {
     updated[index] = updated[target];
     updated[target] = temp;
     setGallery(updated);
+    await saveGalleryChanges(updated);
   };
 
   return (

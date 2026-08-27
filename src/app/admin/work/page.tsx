@@ -102,6 +102,28 @@ export default function AdminWorkPage() {
     }
   };
 
+  const handleMove = async (index: number, direction: "up" | "down") => {
+    const target = direction === "up" ? index - 1 : index + 1;
+    if (target < 0 || target >= projects.length) return;
+
+    const updated = [...projects];
+    const temp = updated[index];
+    updated[index] = updated[target];
+    updated[target] = temp;
+    setProjects(updated);
+
+    try {
+      await fetch("/api/admin/projects", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updated),
+      });
+      setMessage({ text: "Project order updated!", type: "success" });
+    } catch (err) {
+      setMessage({ text: "Failed to update project order", type: "error" });
+    }
+  };
+
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!editingProject) return;
@@ -437,6 +459,24 @@ export default function AdminWorkPage() {
                   </Row>
 
                   <Row gap="8" vertical="center">
+                    <Row gap="4">
+                      <Button
+                        size="s"
+                        variant="tertiary"
+                        onClick={() => handleMove(idx, "up")}
+                        disabled={idx === 0}
+                      >
+                        ↑
+                      </Button>
+                      <Button
+                        size="s"
+                        variant="tertiary"
+                        onClick={() => handleMove(idx, "down")}
+                        disabled={idx === projects.length - 1}
+                      >
+                        ↓
+                      </Button>
+                    </Row>
                     <Button
                       size="s"
                       variant="tertiary"
