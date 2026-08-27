@@ -395,6 +395,7 @@ export async function savePortfolioData(data: PortfolioData): Promise<PortfolioD
         access: "public",
         contentType: "application/json",
         addRandomSuffix: false,
+        allowOverwrite: true,
       });
     } catch (err) {
       console.error("Failed to write data to Vercel Blob:", err);
