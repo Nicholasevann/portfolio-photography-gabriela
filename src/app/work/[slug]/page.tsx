@@ -122,10 +122,6 @@ export default async function Project({
 
   const content = dynamicMatch ? (dynamicMatch.content || "") : (post?.content || "");
 
-  // Display all project gallery images properly without skipping the first photo
-  const primaryGallery = allImages.length > 2 ? allImages.slice(0, 2) : allImages;
-  const secondaryGallery = allImages.length > 2 ? allImages.slice(2) : [];
-
   // Compute Next Project
   const allSlugs =
     allDynamicProjects.length > 0
@@ -141,7 +137,7 @@ export default async function Project({
     staticProjects.find((p) => p.slug === nextSlug);
 
   return (
-    <Column as="section" maxWidth="m" fillWidth horizontal="center" gap="xl" paddingX="l">
+    <Column as="section" maxWidth="m" fillWidth horizontal="center" gap="m" paddingX="l">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -167,7 +163,7 @@ export default async function Project({
 
       {/* 1. Project Hero & 2. Project Information */}
       <RevealFx translateY="8" fillWidth horizontal="center">
-        <Column maxWidth="s" gap="16" horizontal="center" align="center" paddingBottom="16">
+        <Column maxWidth="s" gap="12" horizontal="center" align="center" paddingBottom="8">
           <Row gap="8" vertical="center">
             <Badge
               background="brand-alpha-weak"
@@ -234,10 +230,10 @@ export default async function Project({
         </Row>
       </RevealFx>
 
-      {/* 4. Photography Gallery (Primary Series) */}
-      {primaryGallery.length > 0 && (
-        <Column fillWidth marginTop="12">
-          <ProjectGallery images={primaryGallery} title={title} />
+      {/* 4. Complete Photography Gallery (Unified Masonry Grid) */}
+      {allImages.length > 0 && (
+        <Column fillWidth marginTop="8">
+          <ProjectGallery images={allImages} title={title} />
         </Column>
       )}
 
@@ -245,10 +241,10 @@ export default async function Project({
       {content ? (
         <ScrollReveal translateY="12" fillWidth horizontal="center">
           <Column
-            style={{ margin: "auto" }}
+            style={{ margin: "0 auto" }}
             as="article"
             maxWidth="xs"
-            paddingY="32"
+            paddingY="16"
             fillWidth
           >
             <CustomMDX source={content} />
@@ -256,17 +252,10 @@ export default async function Project({
         </ScrollReveal>
       ) : null}
 
-      {/* 6. Additional Gallery / Detail Shots */}
-      {secondaryGallery.length > 0 && (
-        <Column fillWidth marginTop="12">
-          <ProjectGallery images={secondaryGallery} title={title} />
-        </Column>
-      )}
-
-      {/* 7. Next Project Navigation */}
+      {/* 6. Next Project Navigation */}
       {nextProject && nextSlug !== slugPath && (
         <ScrollReveal translateY="12" fillWidth horizontal="center">
-          <Column fillWidth gap="24" horizontal="center" marginTop="48" marginBottom="32">
+          <Column fillWidth gap="20" horizontal="center" marginTop="32" marginBottom="24">
             <Line maxWidth={48} />
             <Row fillWidth horizontal="between" vertical="center">
               <Column gap="4">

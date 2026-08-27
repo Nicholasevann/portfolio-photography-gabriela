@@ -25,8 +25,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
   });
 
   return (
-    <Column fillWidth gap="l">
-      <MasonryGrid columns={2} s={{ columns: 1 }} gap="16">
+    <MasonryGrid columns={2} s={{ columns: 1 }} gap="16">
         {normalizedImages.map((image, index) => {
           const src = image.src;
           const orientation = image.orientation || "horizontal";
@@ -75,7 +74,6 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
           );
         })}
       </MasonryGrid>
-    </Column>
   );
 };
 
