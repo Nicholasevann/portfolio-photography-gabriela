@@ -8,7 +8,7 @@ const person: Person = {
   role: "Photographer & Software Developer",
   avatar: "/images/avatar.png",
   email: "contact@nelens.photography",
-  location: "Asia/Jakarta", // IANA time zone identifier
+  location: "Asia/Makassar", // Bali, Indonesia (WITA / UTC+8)
   languages: ["English", "Indonesian"],
   locale: "en",
 };

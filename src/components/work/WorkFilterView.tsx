@@ -12,15 +12,36 @@ import {
   ToggleButton,
 } from "@once-ui-system/core";
 import { ProjectCard } from "@/components/ProjectCard";
-import { projects } from "@/resources/projects";
+import { ProjectItem } from "@/types/portfolio";
+import { projects as fallbackProjects } from "@/resources/projects";
 
-type CategoryType = "all" | "property" | "travel";
+type CategoryType = "all" | "property" | "hospitality" | "travel";
 
-export function WorkFilterView() {
+interface WorkFilterViewProps {
+  initialProjects?: ProjectItem[];
+}
+
+export function WorkFilterView({ initialProjects }: WorkFilterViewProps) {
   const [activeCategory, setActiveCategory] = useState<CategoryType>("all");
 
-  const propertyProjects = projects.filter(
-    (p) => activeCategory === "all" || p.category.toLowerCase() === activeCategory,
+  const projectList: ProjectItem[] =
+    initialProjects && initialProjects.length > 0
+      ? initialProjects
+      : fallbackProjects.map((p) => ({
+          slug: p.slug,
+          title: p.title,
+          category: p.category,
+          location: p.location,
+          year: p.year,
+          publishedAt: p.publishedAt,
+          summary: p.description,
+          description: p.description,
+          coverImage: p.coverImage,
+          images: p.images,
+        }));
+
+  const filteredProjects = projectList.filter(
+    (p) => activeCategory === "all" || p.category?.toLowerCase() === activeCategory.toLowerCase()
   );
 
   return (
@@ -52,8 +73,8 @@ export function WorkFilterView() {
         />
       </Row>
 
-      {/* Content Rendering based on Category */}
-      {activeCategory === "travel" ? (
+      {/* Content Rendering based on Filter */}
+      {filteredProjects.length === 0 ? (
         <RevealFx translateY="12" fillWidth horizontal="center">
           <Column
             fillWidth
@@ -76,7 +97,7 @@ export function WorkFilterView() {
               textVariant="label-default-s"
               arrow={false}
             >
-              Travel Photography
+              {activeCategory.toUpperCase()} Photography
             </Badge>
             <Heading as="h2" variant="display-strong-s">
               Coming Soon
@@ -88,7 +109,7 @@ export function WorkFilterView() {
                 wrap="balance"
                 align="center"
               >
-                A collection of travel photography and destination narratives is coming soon.
+                A curated collection of {activeCategory} photography projects is coming soon.
               </Text>
             </Column>
             <Row paddingTop="8">
@@ -100,12 +121,12 @@ export function WorkFilterView() {
         </RevealFx>
       ) : (
         <Column fillWidth gap="xl">
-          {propertyProjects.map((post, index) => (
+          {filteredProjects.map((post, index) => (
             <RevealFx key={post.slug} translateY="8" delay={index * 0.1}>
               <ProjectCard
                 priority={index < 2}
                 href={`/work/${post.slug}`}
-                images={post.images}
+                images={post.images?.length ? post.images : [post.coverImage]}
                 coverImage={post.coverImage}
                 title={post.title}
                 category={post.category}

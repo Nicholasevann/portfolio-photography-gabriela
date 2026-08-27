@@ -1,0 +1,301 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-27T14:50:48.354Z",
+  "person": {
+    "firstName": "Nicholas",
+    "lastName": "Evan L",
+    "name": "Nicholas Evan L",
+    "role": "Photographer & Software Developer",
+    "avatar": "/images/avatar.png",
+    "email": "contact@nelens.photography",
+    "location": "Asia/Makassar",
+    "languages": [
+      "English",
+      "Indonesian"
+    ],
+    "locale": "en"
+  },
+  "home": {
+    "title": "ne.lens — Photography",
+    "description": "Photography portfolio focused on property, hospitality, and travel.",
+    "headline": "ne.lens",
+    "subline": "Photography focused on spaces, places, and experiences.",
+    "image": "/images/hero/hero-cover.jpg"
+  },
+  "about": {
+    "title": "About – Nicholas Evan L (ne.lens)",
+    "description": "Meet Nicholas Evan Lindartono — Architectural Photographer & Software Developer.",
+    "headline": "Introduction",
+    "introText": "Hi! I'm Nicholas Evan Lindartono — an Architectural Photographer and Software Developer. I capture architectural spaces, luxury villas, and boutique hospitality properties with a focus on clean geometry, natural illumination, and calm atmospheres.",
+    "photographyExperiences": [
+      {
+        "company": "On The Sola Boutique Hotel",
+        "timeframe": "May 2026 - Present",
+        "role": "Property & Hospitality Photographer (Bali)",
+        "achievements": [
+          "Documented boutique hotel guest rooms and suites, capturing architectural light and minimalist spatial aesthetics.",
+          "Commercial food, beverage, and ambiance photography for the on-site mini restaurant and dining menu.",
+          "Produced high-resolution visual marketing assets for guest booking platforms and digital promotion."
+        ],
+        "images": [
+          {
+            "src": "/images/projects/on-the-sola/cover.jpg",
+            "alt": "On The Sola",
+            "width": 16,
+            "height": 9
+          }
+        ]
+      },
+      {
+        "company": "The Huthut Villa",
+        "timeframe": "May 2026 - Present",
+        "role": "Architectural & Hospitality Photographer (Lombok)",
+        "achievements": [
+          "Captured unique organic wooden pavilions, luxury guest villa rental units, and tranquil nature surroundings.",
+          "Documented the culinary menu, dining experience, and hospitality amenities.",
+          "Produced cohesive visual storytelling emphasizing tropical architecture and indoor-outdoor living flow."
+        ],
+        "images": [
+          {
+            "src": "/images/projects/the-huthut/cover.jpg",
+            "alt": "The Huthut",
+            "width": 16,
+            "height": 9
+          }
+        ]
+      },
+      {
+        "company": "Bali Paradise Suites",
+        "timeframe": "May 2026 (Single Commission)",
+        "role": "Property & Architectural Photographer (Canggu, Bali)",
+        "achievements": [
+          "Commissioned for single-visit visual capture of luxury rental villa suites and private plunge pools.",
+          "Delivered refined interior and exterior photography for property rental listings and hospitality showcases."
+        ],
+        "images": [
+          {
+            "src": "/images/projects/bali-paradise-suites/cover.jpg",
+            "alt": "Bali Paradise Suites",
+            "width": 16,
+            "height": 9
+          }
+        ]
+      }
+    ],
+    "engineeringExperiences": [
+      {
+        "company": "PT B One Consulting",
+        "timeframe": "September 2025 - Present",
+        "role": "Fullstack Website & Mobile Developer (Bali)",
+        "achievements": [
+          "Built full-stack web applications using Next.js, Vue.js, Nest.js and Express.js with TypeScript.",
+          "Developed cross-platform mobile apps using Flutter and React Native.",
+          "Designed and implemented RESTful APIs and microservices with Node.js/Express and Flask.",
+          "Integrated third-party services (payments, analytics, auth) and optimized CI/CD pipelines."
+        ],
+        "images": []
+      },
+      {
+        "company": "PT B One Consulting",
+        "timeframe": "September 2024 - September 2025",
+        "role": "Senior Frontend & Mobile Developer (Bali)",
+        "achievements": [
+          "Lead front-end and mobile development projects, ensuring high-quality deliverables.",
+          "Develop and optimize web and mobile applications according to client specifications.",
+          "Collaborate with cross-functional teams to troubleshoot and solve complex technical challenges."
+        ],
+        "images": []
+      },
+      {
+        "company": "PT Supernova Palapa Indonesia",
+        "timeframe": "April 2023 - August 2024",
+        "role": "Front-End & Mobile Developer (Bandung)",
+        "achievements": [
+          "Designed and implemented scalable web and mobile applications for company projects.",
+          "Handled end-to-end mobile app deployment for Google Play Store and Apple App Store."
+        ],
+        "images": []
+      },
+      {
+        "company": "PT Layanan Cerdas Indonesia",
+        "timeframe": "July 2022 - March 2023",
+        "role": "Mobile Developer (Bandung)",
+        "achievements": [
+          "Developed and maintained mobile applications, improving user experience and performance.",
+          "Managed version control and application deployments to app stores."
+        ],
+        "images": []
+      }
+    ],
+    "education": [
+      {
+        "name": "Indonesian Computer University Bandung Indonesia",
+        "description": "Bachelor of Computer Engineering (Information Technology) · GPA 3.42 / 4.00 (2018 - 2022)"
+      },
+      {
+        "name": "SMAK Kolese Santo Yusup Malang Indonesia",
+        "description": "High School Diploma (Science) · Accumulations: 85 (2015 - 2018)"
+      }
+    ],
+    "skills": [
+      {
+        "title": "Photography & Visual Direction",
+        "description": "Property & Architectural Photography, Natural Light Composition, Food & Beverage Imagery, Spatial Storytelling, Lightroom Color Grading.",
+        "tags": [
+          {
+            "name": "Property"
+          },
+          {
+            "name": "Hospitality"
+          },
+          {
+            "name": "Travel"
+          },
+          {
+            "name": "Architecture"
+          }
+        ]
+      },
+      {
+        "title": "Web & Mobile Development",
+        "description": "Next.js, React.js, React Native, Flutter, Vue.js, Nest.js, Express.js, TypeScript, and Shopify.",
+        "tags": [
+          {
+            "name": "Next.js",
+            "icon": "nextjs"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "javascript"
+          },
+          {
+            "name": "Figma",
+            "icon": "figma"
+          },
+          {
+            "name": "Supabase",
+            "icon": "supabase"
+          }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "slug": "sola",
+      "title": "Sola",
+      "category": "Property",
+      "location": "Bali, Indonesia",
+      "year": "2026",
+      "summary": "",
+      "description": "",
+      "coverImage": "/uploads/1787842212583-dsc08915-hdr.jpg",
+      "images": [
+        "/uploads/1787842212583-dsc08915-hdr.jpg",
+        "/uploads/1787842229106-dsc09047.jpg",
+        "/uploads/1787842245225-dsc09610-hdr.jpg"
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "content": "## Overview\n\nDetailed narrative about this photography assignment.\n\n## Concept & Lighting\n\nHighlighting spatial geometry, ambient daylight, and material finishes."
+    },
+    {
+      "slug": "the-huthut",
+      "title": "The Huthut",
+      "category": "Property",
+      "location": "Lombok, Indonesia",
+      "year": "2024",
+      "summary": "Editorial architectural and lifestyle photography capturing organic wooden craftsmanship, open pavilions, and tranquil nature surroundings.",
+      "description": "A celebration of sustainable bamboo architecture and open-air living nestled among lush coastal hills.",
+      "coverImage": "/images/projects/the-huthut/cover.jpg",
+      "images": [
+        "/images/projects/the-huthut/cover.jpg",
+        "/images/projects/the-huthut/01.jpg",
+        "/images/projects/the-huthut/02.jpg",
+        "/images/projects/the-huthut/03.jpg",
+        "/images/projects/the-huthut/04.jpg"
+      ],
+      "featured": true,
+      "publishedAt": "2024-05-22",
+      "content": "## Overview\n\nThe Huthut is a sustainable eco-retreat conceived as an organic cluster of bamboo and reclaimed timber pavilions nestled into the coastal hillsides of Lombok.\n\n## Craftsmanship & Architecture\n\nThe visual documentation focused on the tactile qualities of handmade joinery, curved structural bamboo columns, and high vaulted ceilings that allow natural sea breezes to circulate through the living quarters.\n\n- **Organic Structures**: Handcrafted sustainable materials with rhythmic geometric curves.\n- **Biophilic Living**: Seamless openness blurring boundary lines between the jungle and interior spaces.\n- **Warm Illumination**: Low-impact ambient lighting highlighting the warm amber hues of aged teak and rattan.\n\n## Visual Narrative\n\nFraming the tactile dialogue between traditional artisan building techniques and contemporary eco-luxury living, the photography provides an intimate exploration of form, texture, and light."
+    },
+    {
+      "slug": "bali-paradise-suites",
+      "title": "Bali Paradise Suites",
+      "category": "Property",
+      "location": "Canggu, Bali",
+      "year": "2024",
+      "summary": "Hospitality and property visual capture highlighting boutique luxury suites, sunlit private pools, and elegant interior design.",
+      "description": "Documenting high-end hospitality interiors, intimate plunge pools, and seamless indoor-outdoor transitions.",
+      "coverImage": "/images/projects/bali-paradise-suites/cover.jpg",
+      "images": [
+        "/images/projects/bali-paradise-suites/cover.jpg",
+        "/images/projects/bali-paradise-suites/01.jpg",
+        "/images/projects/bali-paradise-suites/02.jpg",
+        "/images/projects/bali-paradise-suites/03.jpg",
+        "/images/projects/bali-paradise-suites/04.jpg"
+      ],
+      "featured": true,
+      "publishedAt": "2024-04-18",
+      "content": "## Overview\n\nBali Paradise Suites represents the intersection of boutique luxury hospitality and relaxed tropical living. Situated in Canggu, each suite is oriented around private sunlit courtyards and reflection pools.\n\n## Light & Hospitality Experience\n\nThe photography captures the serene morning ambiance as soft daylight washes over custom terrazzo floors and brass architectural fixtures.\n\n- **Private Courtyards**: Turquoise plunge pools reflecting minimalist plaster facades.\n- **Material Palette**: Custom terrazzo, microcement, brass accents, and woven textiles.\n- **Guest Experience**: Editorial vignettes evoking effortless relaxation and quiet refinement.\n\n## Visual Narrative\n\nThrough balanced compositions and natural framing, the visual series highlights the spatial intimacy and luxury hospitality standards that define the property."
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-1",
+      "src": "/images/gallery/horizontal-1.jpg",
+      "alt": "On The Sola Villa Courtyard",
+      "orientation": "horizontal",
+      "category": "Property"
+    },
+    {
+      "id": "gal-2",
+      "src": "/images/gallery/vertical-4.jpg",
+      "alt": "Architectural Lines & Light",
+      "orientation": "vertical",
+      "category": "Architecture"
+    },
+    {
+      "id": "gal-3",
+      "src": "/images/gallery/horizontal-3.jpg",
+      "alt": "Modern Tropical Villa Living",
+      "orientation": "horizontal",
+      "category": "Property"
+    },
+    {
+      "id": "gal-4",
+      "src": "/images/gallery/vertical-1.jpg",
+      "alt": "Minimalist Corridor Perspective",
+      "orientation": "vertical",
+      "category": "Architecture"
+    },
+    {
+      "id": "gal-5",
+      "src": "/images/gallery/vertical-2.jpg",
+      "alt": "Natural Materials & Teak Wood",
+      "orientation": "vertical",
+      "category": "Details"
+    },
+    {
+      "id": "gal-6",
+      "src": "/images/gallery/horizontal-2.jpg",
+      "alt": "Bali Paradise Suites Poolside",
+      "orientation": "horizontal",
+      "category": "Hospitality"
+    },
+    {
+      "id": "gal-7",
+      "src": "/images/gallery/horizontal-4.jpg",
+      "alt": "The Huthut Organic Pavilion",
+      "orientation": "horizontal",
+      "category": "Architecture"
+    },
+    {
+      "id": "gal-8",
+      "src": "/images/gallery/vertical-3.jpg",
+      "alt": "Serene Morning Daylight",
+      "orientation": "vertical",
+      "category": "Atmosphere"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
+import { getProjects } from "@/lib/data-store";
 import { getPosts } from "@/utils/utils";
 import { Column } from "@once-ui-system/core";
 import { ProjectCard } from "@/components";
-import { projects as fallbackProjects } from "@/resources/projects";
 
 interface ProjectsProps {
   range?: [number, number?];
@@ -10,44 +10,45 @@ interface ProjectsProps {
   paddingX?: "l" | "m" | "s" | "none";
 }
 
-export function Projects({ range, exclude, category, paddingX = "l" }: ProjectsProps) {
-  let allProjects = getPosts(["src", "app", "work", "projects"]);
+export async function Projects({ range, exclude, category, paddingX = "l" }: ProjectsProps) {
+  // 1. Fetch dynamic projects from data store
+  let projectsList = await getProjects();
 
-  // Fallback to static project dataset if MDX lookup is empty
-  if (!allProjects || allProjects.length === 0) {
-    allProjects = fallbackProjects.map((p) => ({
-      slug: p.slug,
-      content: "",
-      metadata: {
-        title: p.title,
-        category: p.category,
-        location: p.location,
-        year: p.year,
-        publishedAt: p.publishedAt,
-        summary: p.description,
-        description: p.description,
-        coverImage: p.coverImage,
-        image: p.coverImage,
-        images: p.images,
-        featured: p.featured,
-      },
-    }));
+  // 2. If data store is empty, fallback to MDX files
+  if (!projectsList || projectsList.length === 0) {
+    const mdxPosts = getPosts(["src", "app", "work", "projects"]);
+    if (mdxPosts && mdxPosts.length > 0) {
+      projectsList = mdxPosts.map((post) => ({
+        slug: post.slug,
+        title: post.metadata.title,
+        category: post.metadata.category || "Property",
+        location: post.metadata.location || "",
+        year: post.metadata.year || "",
+        publishedAt: post.metadata.publishedAt || new Date().toISOString(),
+        summary: post.metadata.summary || post.metadata.description || "",
+        description: post.metadata.description || post.metadata.summary || "",
+        coverImage: post.metadata.coverImage || post.metadata.image || "/images/hero/hero-cover.jpg",
+        images: post.metadata.images || [],
+        featured: post.metadata.featured ?? true,
+        content: post.content,
+      }));
+    }
   }
 
   // Filter by category if specified
   if (category && category.toLowerCase() !== "all") {
-    allProjects = allProjects.filter(
-      (post) => post.metadata.category?.toLowerCase() === category.toLowerCase(),
+    projectsList = projectsList.filter(
+      (p) => p.category?.toLowerCase() === category.toLowerCase()
     );
   }
 
   // Exclude by slug
   if (exclude && exclude.length > 0) {
-    allProjects = allProjects.filter((post) => !exclude.includes(post.slug));
+    projectsList = projectsList.filter((p) => !exclude.includes(p.slug));
   }
 
-  const sortedProjects = allProjects.sort((a, b) => {
-    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
+  const sortedProjects = [...projectsList].sort((a, b) => {
+    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
   });
 
   const displayedProjects = range
@@ -61,16 +62,14 @@ export function Projects({ range, exclude, category, paddingX = "l" }: ProjectsP
           priority={index < 2}
           key={post.slug}
           href={`/work/${post.slug}`}
-          images={post.metadata.images}
-          coverImage={post.metadata.coverImage || post.metadata.image}
-          title={post.metadata.title}
-          category={post.metadata.category || "Property"}
-          location={post.metadata.location}
-          year={post.metadata.year}
-          description={post.metadata.summary || post.metadata.description}
+          images={post.images?.length ? post.images : [post.coverImage]}
+          coverImage={post.coverImage}
+          title={post.title}
+          category={post.category || "Property"}
+          location={post.location}
+          year={post.year}
+          description={post.summary || post.description}
           content={post.content}
-          avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
-          link={post.metadata.link || ""}
         />
       ))}
     </Column>

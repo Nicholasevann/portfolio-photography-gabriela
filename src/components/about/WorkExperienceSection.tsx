@@ -2,18 +2,28 @@
 
 import { useState } from "react";
 import {
-  Badge,
   Column,
-  Heading,
   Media,
   RevealFx,
   Row,
   Text,
   ToggleButton,
 } from "@once-ui-system/core";
-import { photographyExperiences, engineeringExperiences } from "@/resources/content";
+import {
+  photographyExperiences as defaultPhotoExp,
+  engineeringExperiences as defaultEngExp,
+} from "@/resources/content";
+import { ExperienceItem } from "@/types/portfolio";
 
-export function WorkExperienceSection() {
+interface WorkExperienceSectionProps {
+  photographyExperiences?: ExperienceItem[];
+  engineeringExperiences?: ExperienceItem[];
+}
+
+export function WorkExperienceSection({
+  photographyExperiences = defaultPhotoExp,
+  engineeringExperiences = defaultEngExp,
+}: WorkExperienceSectionProps) {
   const [activeTab, setActiveTab] = useState<"photographer" | "software">("photographer");
 
   const currentExperiences =

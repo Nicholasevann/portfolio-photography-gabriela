@@ -9,33 +9,48 @@ import {
   Grid,
   Schema,
   Meta,
-  Line,
   Media,
-  Flex,
   SmartLink,
 } from "@once-ui-system/core";
 import {
-  home,
-  person,
+  home as staticHome,
+  person as staticPerson,
   baseURL,
   services,
-  introduction,
-  contact,
+  introduction as staticIntro,
+  contact as staticContact,
   social,
 } from "@/resources";
 import { Projects } from "@/components/work/Projects";
+import { getPortfolioData } from "@/lib/data-store";
 
 export async function generateMetadata() {
+  const portfolioData = await getPortfolioData();
+  const title = portfolioData?.home?.title || staticHome.title;
+  const description = portfolioData?.home?.description || staticHome.description;
+
   return Meta.generate({
-    title: home.title,
-    description: home.description,
+    title: title,
+    description: description,
     baseURL: baseURL,
-    path: home.path,
-    image: home.image,
+    path: staticHome.path,
+    image: staticHome.image,
   });
 }
 
-export default function Home() {
+export default async function Home() {
+  const portfolioData = await getPortfolioData();
+  const person = portfolioData?.person || staticPerson;
+  const home = {
+    ...staticHome,
+    headline: portfolioData?.home?.headline || staticHome.headline,
+    subline: portfolioData?.home?.subline || staticHome.subline,
+  };
+  const contact = {
+    ...staticContact,
+    email: person.email || staticContact.email,
+  };
+
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
       <Schema
@@ -162,7 +177,7 @@ export default function Home() {
           }}
         >
           <Text variant="label-default-s" onBackground="brand-medium">
-            {introduction.tag}
+            {staticIntro.tag}
           </Text>
           <Column maxWidth="s" horizontal="center" align="center" gap="12">
             <Heading
@@ -171,7 +186,7 @@ export default function Home() {
               variant="heading-strong-xl"
               wrap="balance"
             >
-              {introduction.headline}
+              {staticIntro.headline}
             </Heading>
             <Text
               align="center"
@@ -179,7 +194,7 @@ export default function Home() {
               onBackground="neutral-weak"
               wrap="balance"
             >
-              {introduction.description}
+              {staticIntro.description}
             </Text>
           </Column>
         </Column>
@@ -187,39 +202,42 @@ export default function Home() {
 
       {/* Services Section */}
       <Column fillWidth gap="l" paddingX="l" marginTop="16">
-        <Column gap="4">
-          <Text variant="label-default-s" onBackground="brand-medium">
-            Services
-          </Text>
-          <Heading as="h2" variant="heading-strong-xl">
-            Disciplines & Specializations
-          </Heading>
-        </Column>
+        <RevealFx translateY="8">
+          <Column gap="4">
+            <Text variant="label-default-s" onBackground="brand-medium">
+              Services
+            </Text>
+            <Heading as="h2" variant="heading-strong-xl">
+              Disciplines & Specializations
+            </Heading>
+          </Column>
+        </RevealFx>
 
         <Grid columns={2} s={{ columns: 1 }} fillWidth gap="16">
           {services.map((service, index) => (
-            <Column
-              key={`service-${service.title}-${index}`}
-              fillWidth
-              padding="24"
-              radius="m"
-              border="neutral-alpha-weak"
-              background="surface"
-              gap="12"
-            >
-              <Text variant="label-default-xs" onBackground="brand-medium">
-                0{index + 1}
-              </Text>
-              <Heading as="h3" variant="heading-strong-m">
-                {service.title}
-              </Heading>
-              <Text variant="body-default-xs" onBackground="brand-weak">
-                {service.tagline}
-              </Text>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                {service.description}
-              </Text>
-            </Column>
+            <RevealFx key={`service-${service.title}-${index}`} translateY="12" delay={index * 0.08} fillWidth>
+              <Column
+                fillWidth
+                padding="24"
+                radius="m"
+                border="neutral-alpha-weak"
+                background="surface"
+                gap="12"
+              >
+                <Text variant="label-default-xs" onBackground="brand-medium">
+                  0{index + 1}
+                </Text>
+                <Heading as="h3" variant="heading-strong-m">
+                  {service.title}
+                </Heading>
+                <Text variant="body-default-xs" onBackground="brand-weak">
+                  {service.tagline}
+                </Text>
+                <Text variant="body-default-s" onBackground="neutral-weak">
+                  {service.description}
+                </Text>
+              </Column>
+            </RevealFx>
           ))}
         </Grid>
       </Column>
@@ -239,13 +257,13 @@ export default function Home() {
           gap="m"
         >
           <Text variant="label-default-s" onBackground="brand-medium">
-            {contact.tag}
+            {staticContact.tag}
           </Text>
           <Heading as="h2" align="center" variant="display-strong-m">
-            {contact.headline}
+            {staticContact.headline}
           </Heading>
           <Text variant="heading-default-s" onBackground="brand-weak" align="center">
-            {contact.subline}
+            {staticContact.subline}
           </Text>
           <Column maxWidth="xs" horizontal="center" align="center">
             <Text
@@ -254,7 +272,7 @@ export default function Home() {
               align="center"
               wrap="balance"
             >
-              {contact.description}
+              {staticContact.description}
             </Text>
           </Column>
           <Row gap="12" paddingTop="12" wrap horizontal="center">

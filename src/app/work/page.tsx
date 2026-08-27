@@ -1,6 +1,7 @@
 import { Column, Heading, Meta, Schema, Text, RevealFx } from "@once-ui-system/core";
 import { baseURL, person, work } from "@/resources";
 import { WorkFilterView } from "@/components/work/WorkFilterView";
+import { getProjects } from "@/lib/data-store";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -12,7 +13,9 @@ export async function generateMetadata() {
   });
 }
 
-export default function Work() {
+export default async function Work() {
+  const projects = await getProjects();
+
   return (
     <Column maxWidth="m" fillWidth paddingTop="24" paddingX="l" horizontal="center">
       <Schema
@@ -44,7 +47,7 @@ export default function Work() {
         </Column>
       </RevealFx>
 
-      <WorkFilterView />
+      <WorkFilterView initialProjects={projects} />
     </Column>
   );
 }

@@ -3,7 +3,6 @@ import { getPosts } from "@/utils/utils";
 import {
   Badge,
   Column,
-  Flex,
   Heading,
   Line,
   Media,
@@ -18,10 +17,15 @@ import { baseURL, person, work } from "@/resources";
 import { projects as staticProjects } from "@/resources/projects";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { ProjectGallery } from "@/components/work/ProjectGallery";
-import { ProjectCard } from "@/components/ProjectCard";
 import { Metadata } from "next";
+import { getProjectBySlug, getProjects } from "@/lib/data-store";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  const dynamicProjects = await getProjects();
+  if (dynamicProjects && dynamicProjects.length > 0) {
+    return dynamicProjects.map((p) => ({ slug: p.slug }));
+  }
+
   const posts = getPosts(["src", "app", "work", "projects"]);
   if (posts && posts.length > 0) {
     return posts.map((post) => ({
@@ -43,18 +47,22 @@ export async function generateMetadata({
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
+  // Check dynamic store first
+  const dynamicMatch = await getProjectBySlug(slugPath);
   const posts = getPosts(["src", "app", "work", "projects"]);
-  let post = posts.find((p) => p.slug === slugPath);
-
+  const post = posts.find((p) => p.slug === slugPath);
   const staticMatch = staticProjects.find((p) => p.slug === slugPath);
 
-  const title = post?.metadata.title || staticMatch?.title || "Project";
+  const title = dynamicMatch?.title || post?.metadata.title || staticMatch?.title || "Project";
   const description =
+    dynamicMatch?.summary ||
+    dynamicMatch?.description ||
     post?.metadata.summary ||
     post?.metadata.description ||
     staticMatch?.description ||
     "Photography project by ne.lens";
   const image =
+    dynamicMatch?.coverImage ||
     post?.metadata.coverImage ||
     post?.metadata.image ||
     staticMatch?.coverImage ||
@@ -79,47 +87,61 @@ export default async function Project({
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  const allPosts = getPosts(["src", "app", "work", "projects"]);
-  const postIndex = allPosts.findIndex((p) => p.slug === slugPath);
+  // 1. Fetch dynamic project & list from data store
+  const allDynamicProjects = await getProjects();
+  const dynamicMatch = allDynamicProjects.find((p) => p.slug === slugPath);
 
-  let post = allPosts[postIndex];
+  // 2. MDX & static fallbacks
+  const allPosts = getPosts(["src", "app", "work", "projects"]);
+  const post = allPosts.find((p) => p.slug === slugPath);
   const staticMatch = staticProjects.find((p) => p.slug === slugPath);
 
-  if (!post && !staticMatch) {
+  if (!dynamicMatch && !post && !staticMatch) {
     notFound();
   }
 
-  const title = post?.metadata.title || staticMatch?.title || "";
-  const category = post?.metadata.category || staticMatch?.category || "Property";
-  const location = post?.metadata.location || staticMatch?.location || "";
-  const year = post?.metadata.year || staticMatch?.year || "2024";
+  const title = dynamicMatch?.title || post?.metadata.title || staticMatch?.title || "";
+  const category = dynamicMatch?.category || post?.metadata.category || staticMatch?.category || "Property";
+  const location = dynamicMatch?.location || post?.metadata.location || staticMatch?.location || "";
+  const year = dynamicMatch?.year || post?.metadata.year || staticMatch?.year || "2024";
   const description =
+    dynamicMatch?.summary ||
+    dynamicMatch?.description ||
     post?.metadata.summary ||
     post?.metadata.description ||
     staticMatch?.summary ||
     staticMatch?.description ||
     "";
   const coverImage =
+    dynamicMatch?.coverImage ||
     post?.metadata.coverImage ||
     post?.metadata.images?.[0] ||
     staticMatch?.coverImage ||
     "/images/hero/hero-cover.jpg";
-  const allImages = post?.metadata.images?.length
-    ? post.metadata.images
-    : staticMatch?.images || [coverImage];
+  const allImages =
+    dynamicMatch?.images?.length
+      ? dynamicMatch.images
+      : post?.metadata.images?.length
+      ? post.metadata.images
+      : staticMatch?.images || [coverImage];
 
-  // Gallery images (excluding the main cover if desired, or all images)
+  const content = dynamicMatch?.content || post?.content || "";
+
+  // Gallery images
   const primaryGallery = allImages.slice(1, 3);
   const secondaryGallery = allImages.slice(3);
 
   // Compute Next Project
   const allSlugs =
-    allPosts.length > 0
+    allDynamicProjects.length > 0
+      ? allDynamicProjects.map((p) => p.slug)
+      : allPosts.length > 0
       ? allPosts.map((p) => p.slug)
       : staticProjects.map((p) => p.slug);
   const currentIndex = allSlugs.indexOf(slugPath);
   const nextSlug = allSlugs[(currentIndex + 1) % allSlugs.length];
   const nextProject =
+    allDynamicProjects.find((p) => p.slug === nextSlug) ||
     allPosts.find((p) => p.slug === nextSlug) ||
     staticProjects.find((p) => p.slug === nextSlug);
 
@@ -225,7 +247,7 @@ export default async function Project({
       )}
 
       {/* 5. Project Narrative & Description */}
-      {post?.content ? (
+      {content ? (
         <RevealFx translateY="12" fillWidth horizontal="center">
           <Column
             style={{ margin: "auto" }}
@@ -234,7 +256,7 @@ export default async function Project({
             paddingY="32"
             fillWidth
           >
-            <CustomMDX source={post.content} />
+            <CustomMDX source={content} />
           </Column>
         </RevealFx>
       ) : null}
@@ -256,7 +278,11 @@ export default async function Project({
                 Next Project
               </Text>
               <Heading as="h2" variant="heading-strong-l">
-                {"metadata" in nextProject ? nextProject.metadata.title : nextProject.title}
+                {"title" in nextProject
+                  ? nextProject.title
+                  : "metadata" in nextProject
+                  ? nextProject.metadata.title
+                  : ""}
               </Heading>
             </Column>
             <SmartLink href={`/work/${nextSlug}`} suffixIcon="arrowRight">
@@ -281,11 +307,19 @@ export default async function Project({
               <Media
                 aspectRatio="21 / 9"
                 sizes="(max-width: 960px) 100vw, 960px"
-                alt={"metadata" in nextProject ? nextProject.metadata.title : nextProject.title}
+                alt={
+                  "title" in nextProject
+                    ? nextProject.title
+                    : "metadata" in nextProject
+                    ? nextProject.metadata.title
+                    : ""
+                }
                 src={
-                  ("metadata" in nextProject
+                  ("coverImage" in nextProject
+                    ? nextProject.coverImage
+                    : "metadata" in nextProject
                     ? nextProject.metadata.coverImage || nextProject.metadata.image
-                    : nextProject.coverImage) || "/images/hero/hero-cover.jpg"
+                    : "") || "/images/hero/hero-cover.jpg"
                 }
                 style={{
                   width: "100%",

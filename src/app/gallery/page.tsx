@@ -1,6 +1,7 @@
 import { Column, Heading, Meta, Schema, Text, RevealFx } from "@once-ui-system/core";
 import GalleryView from "@/components/gallery/GalleryView";
 import { baseURL, gallery, person } from "@/resources";
+import { getGallery } from "@/lib/data-store";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -12,7 +13,9 @@ export async function generateMetadata() {
   });
 }
 
-export default function Gallery() {
+export default async function Gallery() {
+  const dynamicGallery = await getGallery();
+
   return (
     <Column maxWidth="l" fillWidth paddingTop="24" paddingX="l" horizontal="center" gap="l">
       <Schema
@@ -43,7 +46,7 @@ export default function Gallery() {
           </Text>
         </Column>
       </RevealFx>
-      <GalleryView />
+      <GalleryView initialImages={dynamicGallery} />
     </Column>
   );
 }
