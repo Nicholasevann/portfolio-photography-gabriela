@@ -11,7 +11,10 @@ export async function GET() {
     const projects = await getProjects();
     return NextResponse.json({ success: true, data: projects });
   } catch (error) {
-    return NextResponse.json({ success: false, message: "Failed to fetch projects" }, { status: 500 });
+    return NextResponse.json(
+      { success: false, message: error instanceof Error ? error.message : "Failed to fetch projects" },
+      { status: 500 }
+    );
   }
 }
 
@@ -30,7 +33,11 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true, data: saved, message: "Project saved successfully" });
   } catch (error) {
-    return NextResponse.json({ success: false, message: "Failed to save project" }, { status: 500 });
+    console.error("POST /api/admin/projects error:", error);
+    return NextResponse.json(
+      { success: false, message: error instanceof Error ? error.message : "Failed to save project" },
+      { status: 500 }
+    );
   }
 }
 
@@ -58,7 +65,11 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ success: true, data: saved, message: "Project updated successfully" });
     }
   } catch (error) {
-    return NextResponse.json({ success: false, message: "Failed to update projects" }, { status: 500 });
+    console.error("PUT /api/admin/projects error:", error);
+    return NextResponse.json(
+      { success: false, message: error instanceof Error ? error.message : "Failed to update projects" },
+      { status: 500 }
+    );
   }
 }
 
@@ -81,6 +92,10 @@ export async function DELETE(request: NextRequest) {
 
     return NextResponse.json({ success: true, message: "Project deleted successfully" });
   } catch (error) {
-    return NextResponse.json({ success: false, message: "Failed to delete project" }, { status: 500 });
+    console.error("DELETE /api/admin/projects error:", error);
+    return NextResponse.json(
+      { success: false, message: error instanceof Error ? error.message : "Failed to delete project" },
+      { status: 500 }
+    );
   }
 }

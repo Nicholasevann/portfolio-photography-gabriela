@@ -298,6 +298,38 @@ const CACHE_TTL_MS = 5000; // 5 seconds cache
  * Retrieve the current portfolio data.
  * Checks Vercel Blob if configured -> Local JSON -> Initial Default.
  */
+export function normalizePortfolioData(raw: Partial<PortfolioData> | null | undefined): PortfolioData {
+  if (!raw) return initialDefaultData;
+  return {
+    version: raw.version || initialDefaultData.version,
+    updatedAt: raw.updatedAt || new Date().toISOString(),
+    person: { ...initialDefaultData.person, ...(raw.person || {}) },
+    home: { ...initialDefaultData.home, ...(raw.home || {}) },
+    about: {
+      ...initialDefaultData.about,
+      ...(raw.about || {}),
+      photographyExperiences:
+        raw.about?.photographyExperiences || initialDefaultData.about.photographyExperiences || [],
+      engineeringExperiences:
+        raw.about?.engineeringExperiences || initialDefaultData.about.engineeringExperiences || [],
+      education: raw.about?.education || initialDefaultData.about.education || [],
+      skills: raw.about?.skills || initialDefaultData.about.skills || [],
+    },
+    projects: Array.isArray(raw.projects) && raw.projects.length > 0
+      ? raw.projects
+      : (initialDefaultData.projects || []),
+    gallery: Array.isArray(raw.gallery) && raw.gallery.length > 0
+      ? raw.gallery
+      : (initialDefaultData.gallery || []),
+  };
+}
+
+/**
+ * Get portfolio data with priority:
+ * 1. Vercel Blob store (if configured via BLOB_READ_WRITE_TOKEN)
+ * 2. Local JSON file (fallback for local development)
+ * 3. Initial default data
+ */
 export async function getPortfolioData(): Promise<PortfolioData> {
   const now = Date.now();
 
@@ -313,8 +345,8 @@ export async function getPortfolioData(): Promise<PortfolioData> {
           headers: { "Cache-Control": "no-cache, no-store, must-revalidate" },
         });
         if (response.ok) {
-          const blobData = (await response.json()) as PortfolioData;
-          return blobData;
+          const blobData = (await response.json()) as Partial<PortfolioData>;
+          return normalizePortfolioData(blobData);
         }
       }
     } catch (err) {
@@ -326,8 +358,8 @@ export async function getPortfolioData(): Promise<PortfolioData> {
   try {
     if (fs.existsSync(LOCAL_DATA_FILE)) {
       const raw = fs.readFileSync(LOCAL_DATA_FILE, "utf-8");
-      const localData = JSON.parse(raw) as PortfolioData;
-      return localData;
+      const localData = JSON.parse(raw) as Partial<PortfolioData>;
+      return normalizePortfolioData(localData);
     }
   } catch (err) {
     console.warn("Failed to read local data file:", err);
@@ -350,10 +382,10 @@ export async function getPortfolioData(): Promise<PortfolioData> {
  * Save updated portfolio data to Vercel Blob and/or local filesystem.
  */
 export async function savePortfolioData(data: PortfolioData): Promise<PortfolioData> {
-  const updatedData: PortfolioData = {
+  const updatedData: PortfolioData = normalizePortfolioData({
     ...data,
     updatedAt: new Date().toISOString(),
-  };
+  });
 
   // 1. Save to Vercel Blob if configured
   if (isVercelBlobConfigured()) {
@@ -389,7 +421,7 @@ export async function savePortfolioData(data: PortfolioData): Promise<PortfolioD
 
 export async function getProjects(): Promise<ProjectItem[]> {
   const data = await getPortfolioData();
-  return data.projects || [];
+  return Array.isArray(data.projects) ? data.projects : [];
 }
 
 export async function getProjectBySlug(slug: string): Promise<ProjectItem | null> {
@@ -399,6 +431,9 @@ export async function getProjectBySlug(slug: string): Promise<ProjectItem | null
 
 export async function saveProject(project: ProjectItem): Promise<ProjectItem> {
   const data = await getPortfolioData();
+  if (!Array.isArray(data.projects)) {
+    data.projects = [];
+  }
   const existingIndex = data.projects.findIndex((p) => p.slug === project.slug);
 
   if (existingIndex >= 0) {
@@ -413,6 +448,9 @@ export async function saveProject(project: ProjectItem): Promise<ProjectItem> {
 
 export async function deleteProject(slug: string): Promise<boolean> {
   const data = await getPortfolioData();
+  if (!Array.isArray(data.projects)) {
+    data.projects = [];
+  }
   const initialLength = data.projects.length;
   data.projects = data.projects.filter((p) => p.slug !== slug);
 
@@ -425,14 +463,14 @@ export async function deleteProject(slug: string): Promise<boolean> {
 
 export async function getGallery(): Promise<GalleryItem[]> {
   const data = await getPortfolioData();
-  return data.gallery || [];
+  return Array.isArray(data.gallery) ? data.gallery : [];
 }
 
 export async function saveGallery(gallery: GalleryItem[]): Promise<GalleryItem[]> {
   const data = await getPortfolioData();
-  data.gallery = gallery;
+  data.gallery = Array.isArray(gallery) ? gallery : [];
   await savePortfolioData(data);
-  return gallery;
+  return data.gallery;
 }
 
 export async function getAbout(): Promise<AboutData> {

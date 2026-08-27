@@ -38,7 +38,11 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true, data: saved, message: "Gallery updated successfully" });
   } catch (error) {
-    return NextResponse.json({ success: false, message: "Failed to update gallery" }, { status: 500 });
+    console.error("POST /api/admin/gallery error:", error);
+    return NextResponse.json(
+      { success: false, message: error instanceof Error ? error.message : "Failed to update gallery" },
+      { status: 500 }
+    );
   }
 }
 
@@ -59,6 +63,10 @@ export async function DELETE(request: NextRequest) {
 
     return NextResponse.json({ success: true, data: updated, message: "Photo removed from gallery" });
   } catch (error) {
-    return NextResponse.json({ success: false, message: "Failed to delete photo" }, { status: 500 });
+    console.error("DELETE /api/admin/gallery error:", error);
+    return NextResponse.json(
+      { success: false, message: error instanceof Error ? error.message : "Failed to delete photo" },
+      { status: 500 }
+    );
   }
 }
