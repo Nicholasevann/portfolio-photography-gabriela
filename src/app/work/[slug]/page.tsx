@@ -230,27 +230,27 @@ export default async function Project({
         </Row>
       </RevealFx>
 
-      {/* 4. Complete Photography Gallery (Unified Masonry Grid) */}
-      {allImages.length > 0 && (
-        <Column fillWidth marginTop="8">
-          <ProjectGallery images={allImages} title={title} />
-        </Column>
-      )}
-
-      {/* 5. Project Narrative & Description */}
+      {/* 4. Project Narrative & Description */}
       {content ? (
         <ScrollReveal translateY="12" fillWidth horizontal="center">
           <Column
             style={{ margin: "0 auto" }}
             as="article"
             maxWidth="xs"
-            paddingY="16"
+            paddingY="12"
             fillWidth
           >
             <CustomMDX source={content} />
           </Column>
         </ScrollReveal>
       ) : null}
+
+      {/* 5. Complete Photography Gallery (Unified Masonry Grid) */}
+      {allImages.length > 0 && (
+        <Column fillWidth marginTop="8">
+          <ProjectGallery images={allImages} title={title} />
+        </Column>
+      )}
 
       {/* 6. Next Project Navigation */}
       {nextProject && nextSlug !== slugPath && (
