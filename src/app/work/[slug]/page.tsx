@@ -17,6 +17,7 @@ import { baseURL, person, work } from "@/resources";
 import { projects as staticProjects } from "@/resources/projects";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { ProjectGallery } from "@/components/work/ProjectGallery";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { Metadata } from "next";
 import { getProjectBySlug, getProjects } from "@/lib/data-store";
 
@@ -251,7 +252,7 @@ export default async function Project({
 
       {/* 5. Project Narrative & Description */}
       {content ? (
-        <RevealFx translateY="12" fillWidth horizontal="center">
+        <ScrollReveal translateY="12" fillWidth horizontal="center">
           <Column
             style={{ margin: "auto" }}
             as="article"
@@ -261,7 +262,7 @@ export default async function Project({
           >
             <CustomMDX source={content} />
           </Column>
-        </RevealFx>
+        </ScrollReveal>
       ) : null}
 
       {/* 6. Additional Gallery / Detail Shots */}
@@ -273,8 +274,9 @@ export default async function Project({
 
       {/* 7. Next Project Navigation */}
       {nextProject && nextSlug !== slugPath && (
-        <Column fillWidth gap="24" horizontal="center" marginTop="48" marginBottom="32">
-          <Line maxWidth={48} />
+        <ScrollReveal translateY="12" fillWidth horizontal="center">
+          <Column fillWidth gap="24" horizontal="center" marginTop="48" marginBottom="32">
+            <Line maxWidth={48} />
           <Row fillWidth horizontal="between" vertical="center">
             <Column gap="4">
               <Text variant="label-default-s" onBackground="brand-medium">
@@ -333,6 +335,7 @@ export default async function Project({
             </SmartLink>
           </Row>
         </Column>
+      </ScrollReveal>
       )}
 
       <ScrollToHash />

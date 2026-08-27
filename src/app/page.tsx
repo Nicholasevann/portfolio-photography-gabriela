@@ -23,6 +23,7 @@ import {
 } from "@/resources";
 import { Projects } from "@/components/work/Projects";
 import { getPortfolioData } from "@/lib/data-store";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -149,24 +150,26 @@ export default async function Home() {
 
       {/* Featured Work Section */}
       <Column id="featured-work" fillWidth gap="l" marginTop="32">
-        <Row fillWidth horizontal="between" vertical="end" paddingX="l">
-          <Column gap="4">
-            <Text variant="label-default-s" onBackground="brand-medium">
-              Portfolio
-            </Text>
-            <Heading as="h2" variant="heading-strong-xl">
-              Featured Work
-            </Heading>
-          </Column>
-          <SmartLink href="/work" suffixIcon="arrowRight">
-            <Text variant="body-default-s">View all projects</Text>
-          </SmartLink>
-        </Row>
+        <ScrollReveal translateY="8">
+          <Row fillWidth horizontal="between" vertical="end" paddingX="l">
+            <Column gap="4">
+              <Text variant="label-default-s" onBackground="brand-medium">
+                Portfolio
+              </Text>
+              <Heading as="h2" variant="heading-strong-xl">
+                Featured Work
+              </Heading>
+            </Column>
+            <SmartLink href="/work" suffixIcon="arrowRight">
+              <Text variant="body-default-s">View all projects</Text>
+            </SmartLink>
+          </Row>
+        </ScrollReveal>
         <Projects />
       </Column>
 
       {/* Introduction Section */}
-      <RevealFx translateY="12" fillWidth>
+      <ScrollReveal translateY="12" fillWidth>
         <Column
           fillWidth
           paddingX="l"
@@ -201,11 +204,11 @@ export default async function Home() {
             </Text>
           </Column>
         </Column>
-      </RevealFx>
+      </ScrollReveal>
 
       {/* Services Section */}
       <Column fillWidth gap="l" paddingX="l" marginTop="16">
-        <RevealFx translateY="8">
+        <ScrollReveal translateY="8">
           <Column gap="4">
             <Text variant="label-default-s" onBackground="brand-medium">
               Services
@@ -214,11 +217,11 @@ export default async function Home() {
               Disciplines & Specializations
             </Heading>
           </Column>
-        </RevealFx>
+        </ScrollReveal>
 
         <Grid columns={2} s={{ columns: 1 }} fillWidth gap="16">
           {services.map((service, index) => (
-            <RevealFx key={`service-${service.title}-${index}`} translateY="12" delay={index * 0.08} fillWidth>
+            <ScrollReveal key={`service-${service.title}-${index}`} translateY="12" delay={index * 0.08} fillWidth>
               <Column
                 fillWidth
                 padding="24"
@@ -240,13 +243,13 @@ export default async function Home() {
                   {service.description}
                 </Text>
               </Column>
-            </RevealFx>
+            </ScrollReveal>
           ))}
         </Grid>
       </Column>
 
       {/* Contact Section */}
-      <RevealFx translateY="12" fillWidth>
+      <ScrollReveal translateY="12" fillWidth>
         <Column
           fillWidth
           marginTop="32"
@@ -303,7 +306,7 @@ export default async function Home() {
               ))}
           </Row>
         </Column>
-      </RevealFx>
+      </ScrollReveal>
     </Column>
   );
 }

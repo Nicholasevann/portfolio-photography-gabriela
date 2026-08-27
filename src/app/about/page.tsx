@@ -18,6 +18,7 @@ import WorkExperienceSection from "@/components/about/WorkExperienceSection";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
 import { getAbout, getPerson } from "@/lib/data-store";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -263,7 +264,7 @@ export default async function About() {
             )}
 
             {about.studies.display && (
-              <>
+              <ScrollReveal translateY="12" fillWidth>
                 <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
                   {about.studies.title}
                 </Heading>
@@ -279,11 +280,11 @@ export default async function About() {
                     </Column>
                   ))}
                 </Column>
-              </>
+              </ScrollReveal>
             )}
 
             {about.technical.display && (
-              <>
+              <ScrollReveal translateY="12" fillWidth>
                 <Heading
                   as="h2"
                   id={about.technical.title}
@@ -313,7 +314,7 @@ export default async function About() {
                     </Column>
                   ))}
                 </Column>
-              </>
+              </ScrollReveal>
             )}
           </Column>
         </Row>

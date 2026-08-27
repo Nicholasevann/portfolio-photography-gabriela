@@ -1,8 +1,9 @@
 "use client";
 
-import { Media, MasonryGrid, RevealFx } from "@once-ui-system/core";
+import { Media, MasonryGrid } from "@once-ui-system/core";
 import { gallery as fallbackGallery } from "@/resources";
 import { GalleryItem } from "@/types/portfolio";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 
 interface GalleryViewProps {
   initialImages?: GalleryItem[];
@@ -22,17 +23,22 @@ export default function GalleryView({ initialImages }: GalleryViewProps) {
   return (
     <MasonryGrid columns={2} s={{ columns: 1 }}>
       {images.map((image, index) => (
-        <RevealFx key={image.id || `${image.src}-${index}`} translateY="12" delay={index * 0.06} fillWidth>
+        <ScrollReveal
+          key={image.id || `${image.src}-${index}`}
+          translateY="12"
+          delay={0.06 * (index % 4)}
+          fillWidth
+        >
           <Media
             enlarge
-            priority={index < 10}
+            priority={index < 4}
             sizes="(max-width: 560px) 100vw, 50vw"
             radius="m"
             aspectRatio={image.orientation === "horizontal" ? "16 / 9" : "3 / 4"}
             src={image.src}
             alt={image.alt}
           />
-        </RevealFx>
+        </ScrollReveal>
       ))}
     </MasonryGrid>
   );

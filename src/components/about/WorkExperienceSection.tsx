@@ -15,6 +15,8 @@ import {
 } from "@/resources/content";
 import { ExperienceItem } from "@/types/portfolio";
 
+import { ScrollReveal } from "@/components/common/ScrollReveal";
+
 interface WorkExperienceSectionProps {
   photographyExperiences?: ExperienceItem[];
   engineeringExperiences?: ExperienceItem[];
@@ -30,11 +32,11 @@ export function WorkExperienceSection({
     activeTab === "photographer" ? photographyExperiences : engineeringExperiences;
 
   return (
-    <Column fillWidth gap="l" marginBottom="40">
-      {/* Experience Discipline Selector */}
+    <Column fillWidth gap="m" marginBottom="40">
+      {/* Experience Category Switcher */}
       <Row
         fitWidth
-        gap="8"
+        gap="4"
         padding="4"
         background="surface"
         border="neutral-alpha-weak"
@@ -56,7 +58,7 @@ export function WorkExperienceSection({
       {/* Experience Items */}
       <Column fillWidth gap="l">
         {currentExperiences.map((experience, index) => (
-          <RevealFx key={`${activeTab}-${experience.company}-${index}`} translateY="8" delay={index * 0.08}>
+          <ScrollReveal key={`${activeTab}-${experience.company}-${index}`} translateY="12" delay={index * 0.08} fillWidth>
             <Column fillWidth gap="8">
               <Row fillWidth horizontal="between" vertical="end" wrap gap="8">
                 <Text id={experience.company} variant="heading-strong-l">
@@ -78,36 +80,27 @@ export function WorkExperienceSection({
               </Column>
               {experience.images && experience.images.length > 0 && (
                 <Row fillWidth paddingTop="m" gap="12" wrap>
-                  {experience.images.map((image, imgIndex) => (
+                  {experience.images.map((image, imgIdx) => (
                     <Row
-                      key={`${activeTab}-${experience.company}-img-${image.src}-${imgIndex}`}
-                      border="neutral-alpha-weak"
+                      key={`exp-img-${experience.company}-${image.src}-${imgIdx}`}
+                      border="neutral-medium"
                       radius="m"
-                      overflow="hidden"
-                      style={{
-                        position: "relative",
-                        width: 240,
-                        height: 135,
-                      }}
+                      minWidth={image.width}
+                      height={image.height}
                     >
                       <Media
                         enlarge
                         radius="m"
-                        aspectRatio="16 / 9"
+                        sizes={image.width ? image.width.toString() : "100%"}
                         alt={image.alt}
                         src={image.src}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
                       />
                     </Row>
                   ))}
                 </Row>
               )}
             </Column>
-          </RevealFx>
+          </ScrollReveal>
         ))}
       </Column>
     </Column>

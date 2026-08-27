@@ -1,3 +1,12 @@
+export type ImageOrientation = "horizontal" | "vertical" | "square" | "auto";
+
+export interface ProjectImageItem {
+  src: string;
+  alt?: string;
+  orientation?: ImageOrientation;
+  caption?: string;
+}
+
 export interface ProjectItem {
   slug: string;
   title: string;
@@ -7,7 +16,8 @@ export interface ProjectItem {
   summary: string;
   description: string;
   coverImage: string;
-  images: string[];
+  coverOrientation?: ImageOrientation;
+  images: (string | ProjectImageItem)[];
   featured?: boolean;
   publishedAt: string;
   content?: string; // Markdown / Narrative content

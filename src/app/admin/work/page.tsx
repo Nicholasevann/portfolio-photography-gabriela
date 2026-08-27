@@ -339,13 +339,14 @@ export default function AdminWorkPage() {
               <MultiImageUploader
                 label="Project Detail Gallery Images"
                 images={editingProject.images || []}
-                onChange={(imgs) =>
+                onChange={(imgs) => {
+                  const firstSrc = imgs.length > 0 ? (typeof imgs[0] === "string" ? imgs[0] : imgs[0]?.src) : editingProject.coverImage;
                   setEditingProject({
                     ...editingProject,
                     images: imgs,
-                    coverImage: imgs[0] || editingProject.coverImage,
-                  })
-                }
+                    coverImage: editingProject.coverImage || firstSrc,
+                  });
+                }}
               />
 
               {/* Narrative Content (Markdown) */}

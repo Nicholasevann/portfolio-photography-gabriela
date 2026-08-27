@@ -10,3 +10,4 @@ export { ThemeToggle } from "@/components/ThemeToggle";
 export { CustomMDX } from "@/components/mdx";
 export { Projects } from "@/components/work/Projects";
 export { ProjectGallery } from "@/components/work/ProjectGallery";
+export { ScrollReveal } from "@/components/common/ScrollReveal";

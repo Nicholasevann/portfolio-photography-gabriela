@@ -15,6 +15,8 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectItem } from "@/types/portfolio";
 import { projects as fallbackProjects } from "@/resources/projects";
 
+import { ScrollReveal } from "@/components/common/ScrollReveal";
+
 type CategoryType = "all" | "property" | "hospitality" | "travel";
 
 interface WorkFilterViewProps {
@@ -59,12 +61,17 @@ export function WorkFilterView({ initialProjects }: WorkFilterViewProps) {
         <ToggleButton
           selected={activeCategory === "all"}
           onClick={() => setActiveCategory("all")}
-          label="All"
+          label="All Projects"
         />
         <ToggleButton
           selected={activeCategory === "property"}
           onClick={() => setActiveCategory("property")}
           label="Property"
+        />
+        <ToggleButton
+          selected={activeCategory === "hospitality"}
+          onClick={() => setActiveCategory("hospitality")}
+          label="Hospitality"
         />
         <ToggleButton
           selected={activeCategory === "travel"}
@@ -78,40 +85,21 @@ export function WorkFilterView({ initialProjects }: WorkFilterViewProps) {
         <RevealFx translateY="12" fillWidth horizontal="center">
           <Column
             fillWidth
-            maxWidth="s"
-            padding="40"
-            margin="24"
+            padding="48"
             radius="l"
+            background="surface"
             border="neutral-alpha-weak"
-            background="page"
             horizontal="center"
             align="center"
-            gap="m"
-            style={{
-              textAlign: "center",
-            }}
+            gap="16"
           >
-            <Badge
-              background="brand-alpha-weak"
-              onBackground="neutral-strong"
-              textVariant="label-default-s"
-              arrow={false}
-            >
-              {activeCategory.toUpperCase()} Photography
+            <Badge background="brand-alpha-weak" onBackground="brand-strong">
+              {activeCategory}
             </Badge>
-            <Heading as="h2" variant="display-strong-s">
-              Coming Soon
-            </Heading>
-            <Column maxWidth="xs" horizontal="center" align="center">
-              <Text
-                variant="body-default-m"
-                onBackground="neutral-weak"
-                wrap="balance"
-                align="center"
-              >
-                A curated collection of {activeCategory} photography projects is coming soon.
-              </Text>
-            </Column>
+            <Heading variant="heading-strong-m">No projects in this category yet</Heading>
+            <Text variant="body-default-s" onBackground="neutral-weak" align="center">
+              New property shoots and travel captures will be added here soon.
+            </Text>
             <Row paddingTop="8">
               <SmartLink href="/" suffixIcon="arrowRight">
                 <Text variant="label-default-s">Return to Home</Text>
@@ -122,11 +110,11 @@ export function WorkFilterView({ initialProjects }: WorkFilterViewProps) {
       ) : (
         <Column fillWidth gap="xl">
           {filteredProjects.map((post, index) => (
-            <RevealFx key={post.slug} translateY="8" delay={index * 0.1}>
+            <ScrollReveal key={post.slug} translateY="12" delay={0.06 * (index % 3)} fillWidth>
               <ProjectCard
                 priority={index < 2}
                 href={`/work/${post.slug}`}
-                images={post.images?.length ? post.images : [post.coverImage]}
+                images={post.images?.length ? post.images.map((img) => (typeof img === "string" ? img : img.src)) : [post.coverImage]}
                 coverImage={post.coverImage}
                 title={post.title}
                 category={post.category}
@@ -134,7 +122,7 @@ export function WorkFilterView({ initialProjects }: WorkFilterViewProps) {
                 year={post.year}
                 description={post.summary || post.description}
               />
-            </RevealFx>
+            </ScrollReveal>
           ))}
         </Column>
       )}

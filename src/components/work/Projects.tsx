@@ -2,6 +2,7 @@ import { getProjects } from "@/lib/data-store";
 import { getPosts } from "@/utils/utils";
 import { Column } from "@once-ui-system/core";
 import { ProjectCard } from "@/components";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 
 interface ProjectsProps {
   range?: [number, number?];
@@ -23,10 +24,10 @@ export async function Projects({ range, exclude, category, paddingX = "l" }: Pro
         title: post.metadata.title,
         category: post.metadata.category || "Property",
         location: post.metadata.location || "",
-        year: post.metadata.year || "",
-        publishedAt: post.metadata.publishedAt || new Date().toISOString(),
-        summary: post.metadata.summary || post.metadata.description || "",
-        description: post.metadata.description || post.metadata.summary || "",
+        year: post.metadata.year || "2024",
+        publishedAt: post.metadata.publishedAt,
+        summary: post.metadata.summary,
+        description: post.metadata.description || post.metadata.summary,
         coverImage: post.metadata.coverImage || post.metadata.image || "/images/hero/hero-cover.jpg",
         images: post.metadata.images || [],
         featured: post.metadata.featured ?? true,
@@ -54,19 +55,20 @@ export async function Projects({ range, exclude, category, paddingX = "l" }: Pro
   return (
     <Column fillWidth gap="xl" marginBottom="40" paddingX={paddingX === "none" ? undefined : paddingX}>
       {displayedProjects.map((post, index) => (
-        <ProjectCard
-          priority={index < 2}
-          key={post.slug}
-          href={`/work/${post.slug}`}
-          images={post.images?.length ? post.images : [post.coverImage]}
-          coverImage={post.coverImage}
-          title={post.title}
-          category={post.category || "Property"}
-          location={post.location}
-          year={post.year}
-          description={post.summary || post.description}
-          content={post.content}
-        />
+        <ScrollReveal key={post.slug} translateY="12" delay={0.06 * (index % 3)} fillWidth>
+          <ProjectCard
+            priority={index < 2}
+            href={`/work/${post.slug}`}
+            images={post.images?.length ? post.images.map((img) => (typeof img === "string" ? img : img.src)) : [post.coverImage]}
+            coverImage={post.coverImage}
+            title={post.title}
+            category={post.category || "Property"}
+            location={post.location}
+            year={post.year}
+            description={post.summary || post.description}
+            content={post.content}
+          />
+        </ScrollReveal>
       ))}
     </Column>
   );
