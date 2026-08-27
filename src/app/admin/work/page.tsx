@@ -33,7 +33,10 @@ export default function AdminWorkPage() {
   const fetchProjects = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/admin/projects");
+      const res = await fetch(`/api/admin/projects?_t=${Date.now()}`, {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" },
+      });
       const json = await res.json();
       if (json.success) {
         setProjects(json.data);

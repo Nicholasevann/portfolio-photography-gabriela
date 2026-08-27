@@ -300,9 +300,6 @@ const CACHE_TTL_MS = 5000; // 5 seconds cache
  */
 export async function getPortfolioData(): Promise<PortfolioData> {
   const now = Date.now();
-  if (inMemoryCache && now - inMemoryCache.fetchedAt < CACHE_TTL_MS) {
-    return inMemoryCache.data;
-  }
 
   // 1. Try Vercel Blob if configured
   if (isVercelBlobConfigured()) {
@@ -310,14 +307,13 @@ export async function getPortfolioData(): Promise<PortfolioData> {
       const { blobs } = await list({ prefix: BLOB_DATA_KEY });
       const blobItem = blobs.find((b) => b.pathname === BLOB_DATA_KEY);
       if (blobItem) {
-        const urlWithBuster = `${blobItem.url}?t=${Date.now()}`;
+        const urlWithBuster = `${blobItem.url}?t=${now}`;
         const response = await fetch(urlWithBuster, {
           cache: "no-store",
-          headers: { "Cache-Control": "no-cache" },
+          headers: { "Cache-Control": "no-cache, no-store, must-revalidate" },
         });
         if (response.ok) {
           const blobData = (await response.json()) as PortfolioData;
-          inMemoryCache = { data: blobData, fetchedAt: now };
           return blobData;
         }
       }
@@ -331,7 +327,6 @@ export async function getPortfolioData(): Promise<PortfolioData> {
     if (fs.existsSync(LOCAL_DATA_FILE)) {
       const raw = fs.readFileSync(LOCAL_DATA_FILE, "utf-8");
       const localData = JSON.parse(raw) as PortfolioData;
-      inMemoryCache = { data: localData, fetchedAt: now };
       return localData;
     }
   } catch (err) {
@@ -348,7 +343,6 @@ export async function getPortfolioData(): Promise<PortfolioData> {
     // In serverless read-only environments without local disk write access
   }
 
-  inMemoryCache = { data: initialDefaultData, fetchedAt: now };
   return initialDefaultData;
 }
 
@@ -361,9 +355,6 @@ export async function savePortfolioData(data: PortfolioData): Promise<PortfolioD
     updatedAt: new Date().toISOString(),
   };
 
-  // Update in-memory cache
-  inMemoryCache = { data: updatedData, fetchedAt: Date.now() };
-
   // 1. Save to Vercel Blob if configured
   if (isVercelBlobConfigured()) {
     try {
@@ -375,6 +366,9 @@ export async function savePortfolioData(data: PortfolioData): Promise<PortfolioD
       });
     } catch (err) {
       console.error("Failed to write data to Vercel Blob:", err);
+      if (process.env.VERCEL) {
+        throw new Error(`Failed to save data to Vercel Blob: ${err instanceof Error ? err.message : String(err)}`);
+      }
     }
   }
 
@@ -386,7 +380,6 @@ export async function savePortfolioData(data: PortfolioData): Promise<PortfolioD
     fs.writeFileSync(LOCAL_DATA_FILE, JSON.stringify(updatedData, null, 2), "utf-8");
   } catch (err) {
     // Read-only filesystem warning in cloud serverless
-    console.warn("Could not write to local file (expected in Vercel serverless):", err);
   }
 
   return updatedData;

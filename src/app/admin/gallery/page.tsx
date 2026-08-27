@@ -25,7 +25,10 @@ export default function AdminGalleryPage() {
   const fetchGallery = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/admin/gallery");
+      const res = await fetch(`/api/admin/gallery?_t=${Date.now()}`, {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" },
+      });
       const json = await res.json();
       if (json.success) {
         setGallery(json.data);

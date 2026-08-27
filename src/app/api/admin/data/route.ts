@@ -3,6 +3,9 @@ import { getPortfolioData, savePortfolioData } from "@/lib/data-store";
 import { isVercelBlobConfigured } from "@/lib/blob-storage";
 import { revalidatePath } from "next/cache";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET() {
   try {
     const data = await getPortfolioData();

@@ -26,7 +26,10 @@ export default function AdminAboutPage() {
   const fetchAboutData = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/admin/about");
+      const res = await fetch(`/api/admin/about?_t=${Date.now()}`, {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" },
+      });
       const json = await res.json();
       if (json.success) {
         setAbout(json.data.about);

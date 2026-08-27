@@ -3,6 +3,9 @@ import { getGallery, saveGallery } from "@/lib/data-store";
 import { GalleryItem } from "@/types/portfolio";
 import { revalidatePath } from "next/cache";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET() {
   try {
     const gallery = await getGallery();

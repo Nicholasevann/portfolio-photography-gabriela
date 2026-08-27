@@ -32,7 +32,10 @@ export default function AdminSettingsPage() {
   const fetchMedia = async () => {
     setLoadingMedia(true);
     try {
-      const res = await fetch("/api/admin/media");
+      const res = await fetch(`/api/admin/media?_t=${Date.now()}`, {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" },
+      });
       const json = await res.json();
       if (json.success) {
         setMedia(json.data);
