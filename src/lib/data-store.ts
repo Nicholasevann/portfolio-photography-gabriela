@@ -308,17 +308,23 @@ export function normalizePortfolioData(raw: Partial<PortfolioData> | null | unde
     about: {
       ...initialDefaultData.about,
       ...(raw.about || {}),
-      photographyExperiences:
-        raw.about?.photographyExperiences || initialDefaultData.about.photographyExperiences || [],
-      engineeringExperiences:
-        raw.about?.engineeringExperiences || initialDefaultData.about.engineeringExperiences || [],
-      education: raw.about?.education || initialDefaultData.about.education || [],
-      skills: raw.about?.skills || initialDefaultData.about.skills || [],
+      photographyExperiences: Array.isArray(raw.about?.photographyExperiences)
+        ? raw.about.photographyExperiences
+        : initialDefaultData.about.photographyExperiences || [],
+      engineeringExperiences: Array.isArray(raw.about?.engineeringExperiences)
+        ? raw.about.engineeringExperiences
+        : initialDefaultData.about.engineeringExperiences || [],
+      education: Array.isArray(raw.about?.education)
+        ? raw.about.education
+        : initialDefaultData.about.education || [],
+      skills: Array.isArray(raw.about?.skills)
+        ? raw.about.skills
+        : initialDefaultData.about.skills || [],
     },
-    projects: Array.isArray(raw.projects) && raw.projects.length > 0
+    projects: Array.isArray(raw.projects)
       ? raw.projects
       : (initialDefaultData.projects || []),
-    gallery: Array.isArray(raw.gallery) && raw.gallery.length > 0
+    gallery: Array.isArray(raw.gallery)
       ? raw.gallery
       : (initialDefaultData.gallery || []),
   };

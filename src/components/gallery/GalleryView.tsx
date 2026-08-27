@@ -11,7 +11,7 @@ interface GalleryViewProps {
 
 export default function GalleryView({ initialImages }: GalleryViewProps) {
   const images =
-    initialImages && initialImages.length > 0
+    initialImages !== undefined
       ? initialImages
       : fallbackGallery.images.map((img, i) => ({
           id: `static-${i}`,

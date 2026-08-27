@@ -27,7 +27,7 @@ export function WorkFilterView({ initialProjects }: WorkFilterViewProps) {
   const [activeCategory, setActiveCategory] = useState<CategoryType>("all");
 
   const projectList: ProjectItem[] =
-    initialProjects && initialProjects.length > 0
+    initialProjects !== undefined
       ? initialProjects
       : fallbackProjects.map((p) => ({
           slug: p.slug,

@@ -104,44 +104,35 @@ export default async function Project({
     notFound();
   }
 
-  const title = dynamicMatch?.title || post?.metadata.title || staticMatch?.title || "";
-  const category = dynamicMatch?.category || post?.metadata.category || staticMatch?.category || "Property";
-  const location = dynamicMatch?.location || post?.metadata.location || staticMatch?.location || "";
-  const year = dynamicMatch?.year || post?.metadata.year || staticMatch?.year || "2024";
-  const description =
-    dynamicMatch?.summary ||
-    dynamicMatch?.description ||
-    post?.metadata.summary ||
-    post?.metadata.description ||
-    staticMatch?.summary ||
-    staticMatch?.description ||
-    "";
-  const coverImage =
-    dynamicMatch?.coverImage ||
-    post?.metadata.coverImage ||
-    post?.metadata.images?.[0] ||
-    staticMatch?.coverImage ||
-    "/images/hero/hero-cover.jpg";
-  const allImages =
-    dynamicMatch?.images?.length
-      ? dynamicMatch.images
-      : post?.metadata.images?.length
-      ? post.metadata.images
-      : staticMatch?.images || [coverImage];
+  const title = dynamicMatch ? dynamicMatch.title : (post?.metadata.title || staticMatch?.title || "");
+  const category = dynamicMatch ? (dynamicMatch.category || "Property") : (post?.metadata.category || staticMatch?.category || "Property");
+  const location = dynamicMatch ? (dynamicMatch.location || "") : (post?.metadata.location || staticMatch?.location || "");
+  const year = dynamicMatch ? (dynamicMatch.year || "2024") : (post?.metadata.year || staticMatch?.year || "2024");
+  const description = dynamicMatch
+    ? (dynamicMatch.summary || dynamicMatch.description || "")
+    : (post?.metadata.summary || post?.metadata.description || staticMatch?.summary || staticMatch?.description || "");
+  const coverImage = dynamicMatch
+    ? (dynamicMatch.coverImage || "/images/hero/hero-cover.jpg")
+    : (post?.metadata.coverImage || post?.metadata.images?.[0] || staticMatch?.coverImage || "/images/hero/hero-cover.jpg");
 
-  const content = dynamicMatch?.content || post?.content || "";
+  // When dynamicMatch exists, strictly respect its images array (even if empty or edited by user)
+  const allImages = dynamicMatch
+    ? (dynamicMatch.images || [])
+    : (post?.metadata.images?.length ? post.metadata.images : staticMatch?.images || []);
 
-  // Gallery images
-  const primaryGallery = allImages.slice(1, 3);
-  const secondaryGallery = allImages.slice(3);
+  const content = dynamicMatch ? (dynamicMatch.content || "") : (post?.content || "");
+
+  // Display all project gallery images properly without skipping the first photo
+  const primaryGallery = allImages.length > 2 ? allImages.slice(0, 2) : allImages;
+  const secondaryGallery = allImages.length > 2 ? allImages.slice(2) : [];
 
   // Compute Next Project
   const allSlugs =
     allDynamicProjects.length > 0
       ? allDynamicProjects.map((p) => p.slug)
       : allPosts.length > 0
-      ? allPosts.map((p) => p.slug)
-      : staticProjects.map((p) => p.slug);
+        ? allPosts.map((p) => p.slug)
+        : staticProjects.map((p) => p.slug);
   const currentIndex = allSlugs.indexOf(slugPath);
   const nextSlug = allSlugs[(currentIndex + 1) % allSlugs.length];
   const nextProject =
@@ -245,7 +236,7 @@ export default async function Project({
 
       {/* 4. Photography Gallery (Primary Series) */}
       {primaryGallery.length > 0 && (
-        <Column fillWidth marginTop="24">
+        <Column fillWidth marginTop="12">
           <ProjectGallery images={primaryGallery} title={title} />
         </Column>
       )}
@@ -267,7 +258,7 @@ export default async function Project({
 
       {/* 6. Additional Gallery / Detail Shots */}
       {secondaryGallery.length > 0 && (
-        <Column fillWidth marginTop="16">
+        <Column fillWidth marginTop="12">
           <ProjectGallery images={secondaryGallery} title={title} />
         </Column>
       )}
@@ -277,65 +268,65 @@ export default async function Project({
         <ScrollReveal translateY="12" fillWidth horizontal="center">
           <Column fillWidth gap="24" horizontal="center" marginTop="48" marginBottom="32">
             <Line maxWidth={48} />
-          <Row fillWidth horizontal="between" vertical="center">
-            <Column gap="4">
-              <Text variant="label-default-s" onBackground="brand-medium">
-                Next Project
-              </Text>
-              <Heading as="h2" variant="heading-strong-l">
-                {"title" in nextProject
-                  ? nextProject.title
-                  : "metadata" in nextProject
-                  ? nextProject.metadata.title
-                  : ""}
-              </Heading>
-            </Column>
-            <SmartLink href={`/work/${nextSlug}`} suffixIcon="arrowRight">
-              <Text variant="label-default-s">View Project</Text>
-            </SmartLink>
-          </Row>
-
-          <Row
-            fillWidth
-            radius="m"
-            overflow="hidden"
-            border="neutral-alpha-weak"
-            style={{
-              position: "relative",
-              aspectRatio: "21 / 9",
-            }}
-          >
-            <SmartLink
-              href={`/work/${nextSlug}`}
-              style={{ width: "100%", height: "100%", display: "block" }}
-            >
-              <Media
-                aspectRatio="21 / 9"
-                sizes="(max-width: 960px) 100vw, 960px"
-                alt={
-                  "title" in nextProject
+            <Row fillWidth horizontal="between" vertical="center">
+              <Column gap="4">
+                <Text variant="label-default-s" onBackground="brand-medium">
+                  Next Project
+                </Text>
+                <Heading as="h2" variant="heading-strong-l">
+                  {"title" in nextProject
                     ? nextProject.title
                     : "metadata" in nextProject
-                    ? nextProject.metadata.title
-                    : ""
-                }
-                src={
-                  ("coverImage" in nextProject
-                    ? nextProject.coverImage
-                    : "metadata" in nextProject
-                    ? nextProject.metadata.coverImage || nextProject.metadata.image
-                    : "") || "/images/hero/hero-cover.jpg"
-                }
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </SmartLink>
-          </Row>
-        </Column>
-      </ScrollReveal>
+                      ? nextProject.metadata.title
+                      : ""}
+                </Heading>
+              </Column>
+              <SmartLink href={`/work/${nextSlug}`} suffixIcon="arrowRight">
+                <Text variant="label-default-s">View Project</Text>
+              </SmartLink>
+            </Row>
+
+            <Row
+              fillWidth
+              radius="m"
+              overflow="hidden"
+              border="neutral-alpha-weak"
+              style={{
+                position: "relative",
+                aspectRatio: "21 / 9",
+              }}
+            >
+              <SmartLink
+                href={`/work/${nextSlug}`}
+                style={{ width: "100%", height: "100%", display: "block" }}
+              >
+                <Media
+                  aspectRatio="21 / 9"
+                  sizes="(max-width: 960px) 100vw, 960px"
+                  alt={
+                    "title" in nextProject
+                      ? nextProject.title
+                      : "metadata" in nextProject
+                        ? nextProject.metadata.title
+                        : ""
+                  }
+                  src={
+                    ("coverImage" in nextProject
+                      ? nextProject.coverImage
+                      : "metadata" in nextProject
+                        ? nextProject.metadata.coverImage || nextProject.metadata.image
+                        : "") || "/images/hero/hero-cover.jpg"
+                  }
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </SmartLink>
+            </Row>
+          </Column>
+        </ScrollReveal>
       )}
 
       <ScrollToHash />
