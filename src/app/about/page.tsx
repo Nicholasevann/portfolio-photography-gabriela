@@ -19,6 +19,9 @@ import styles from "@/components/about/about.module.scss";
 import React from "react";
 import { getAbout, getPerson } from "@/lib/data-store";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 function formatLocationLabel(loc: string): string {
   if (!loc) return "Bali, Indonesia";
   const lower = loc.toLowerCase();

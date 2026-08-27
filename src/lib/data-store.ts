@@ -310,7 +310,11 @@ export async function getPortfolioData(): Promise<PortfolioData> {
       const { blobs } = await list({ prefix: BLOB_DATA_KEY });
       const blobItem = blobs.find((b) => b.pathname === BLOB_DATA_KEY);
       if (blobItem) {
-        const response = await fetch(blobItem.url, { cache: "no-store" });
+        const urlWithBuster = `${blobItem.url}?t=${Date.now()}`;
+        const response = await fetch(urlWithBuster, {
+          cache: "no-store",
+          headers: { "Cache-Control": "no-cache" },
+        });
         if (response.ok) {
           const blobData = (await response.json()) as PortfolioData;
           inMemoryCache = { data: blobData, fetchedAt: now };

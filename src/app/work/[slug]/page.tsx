@@ -20,6 +20,9 @@ import { ProjectGallery } from "@/components/work/ProjectGallery";
 import { Metadata } from "next";
 import { getProjectBySlug, getProjects } from "@/lib/data-store";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const dynamicProjects = await getProjects();
   if (dynamicProjects && dynamicProjects.length > 0) {

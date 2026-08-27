@@ -24,6 +24,9 @@ import {
 import { Projects } from "@/components/work/Projects";
 import { getPortfolioData } from "@/lib/data-store";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata() {
   const portfolioData = await getPortfolioData();
   const title = portfolioData?.home?.title || staticHome.title;

@@ -3,6 +3,9 @@ import GalleryView from "@/components/gallery/GalleryView";
 import { baseURL, gallery, person } from "@/resources";
 import { getGallery } from "@/lib/data-store";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata() {
   return Meta.generate({
     title: gallery.title,
