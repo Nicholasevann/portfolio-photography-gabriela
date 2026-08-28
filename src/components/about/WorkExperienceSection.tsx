@@ -16,6 +16,7 @@ import {
 import { ExperienceItem } from "@/types/portfolio";
 
 import { ScrollReveal } from "@/components/common/ScrollReveal";
+import { useLightbox } from "@/components/common/ImageLightbox";
 
 interface WorkExperienceSectionProps {
   photographyExperiences?: ExperienceItem[];
@@ -27,9 +28,22 @@ export function WorkExperienceSection({
   engineeringExperiences = defaultEngExp,
 }: WorkExperienceSectionProps) {
   const [activeTab, setActiveTab] = useState<"photographer" | "software">("photographer");
+  const { openLightbox } = useLightbox();
 
   const currentExperiences =
     activeTab === "photographer" ? photographyExperiences : engineeringExperiences;
+
+  const handleImageClick = (images: { src: string; alt: string }[], clickedIndex: number, company: string) => {
+    openLightbox({
+      images: images.map((img) => ({
+        src: img.src,
+        alt: img.alt || `${company} visual capture`,
+        title: company,
+      })),
+      initialIndex: clickedIndex,
+      title: company,
+    });
+  };
 
   return (
     <Column fillWidth gap="m" marginBottom="40">
@@ -87,9 +101,16 @@ export function WorkExperienceSection({
                       radius="m"
                       minWidth={image.width}
                       height={image.height}
+                      style={{ cursor: "zoom-in" }}
+                      onClick={() =>
+                        handleImageClick(
+                          experience.images || [],
+                          imgIdx,
+                          experience.company,
+                        )
+                      }
                     >
                       <Media
-                        enlarge
                         radius="m"
                         sizes={image.width ? image.width.toString() : "100%"}
                         alt={image.alt}

@@ -15,7 +15,7 @@ import {
 } from "@once-ui-system/core";
 import { baseURL, person, work } from "@/resources";
 import { projects as staticProjects } from "@/resources/projects";
-import { ScrollToHash, CustomMDX } from "@/components";
+import { ScrollToHash, CustomMDX, ProjectCover } from "@/components";
 import { ProjectGallery } from "@/components/work/ProjectGallery";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { Metadata } from "next";
@@ -204,30 +204,12 @@ export default async function Project({
 
       {/* 3. Featured Cover Image */}
       <RevealFx translateY="16" delay={0.2} fillWidth>
-        <Row
-          fillWidth
-          radius="l"
-          overflow="hidden"
-          border="neutral-alpha-weak"
-          style={{
-            position: "relative",
-            aspectRatio: "16 / 9",
-          }}
-        >
-          <Media
-            enlarge
-            priority
-            aspectRatio="16 / 9"
-            sizes="(max-width: 960px) 100vw, 960px"
-            alt={title}
-            src={coverImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-        </Row>
+        <ProjectCover
+          src={coverImage}
+          alt={title}
+          title={title}
+          allImages={allImages}
+        />
       </RevealFx>
 
       {/* 4. Project Narrative & Description */}

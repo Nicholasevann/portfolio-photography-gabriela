@@ -21,6 +21,8 @@ import {
 import { style, dataStyle } from "../resources";
 import { iconLibrary } from "../resources/icons";
 
+import { LightboxProvider } from "@/components/common/ImageLightbox";
+
 // Suppress key prop warnings in console
 if (typeof window !== "undefined") {
   const originalError = console.error;
@@ -62,8 +64,45 @@ export function Providers({ children }: { children: React.ReactNode }) {
         event.preventDefault();
       }
     };
+
+    // Global image protection: prevent right click saving & dragging of photos
+    const handleContextMenu = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === "IMG" ||
+          target.tagName === "PICTURE" ||
+          target.tagName === "VIDEO" ||
+          target.closest("figure") ||
+          target.closest("[data-protected-image]") ||
+          target.style.backgroundImage)
+      ) {
+        e.preventDefault();
+      }
+    };
+
+    const handleDragStart = (e: DragEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === "IMG" ||
+          target.tagName === "PICTURE" ||
+          target.tagName === "VIDEO" ||
+          target.closest("figure"))
+      ) {
+        e.preventDefault();
+      }
+    };
+
     window.addEventListener("error", handleError);
-    return () => window.removeEventListener("error", handleError);
+    document.addEventListener("contextmenu", handleContextMenu);
+    document.addEventListener("dragstart", handleDragStart);
+
+    return () => {
+      window.removeEventListener("error", handleError);
+      document.removeEventListener("contextmenu", handleContextMenu);
+      document.removeEventListener("dragstart", handleDragStart);
+    };
   }, []);
 
   return (
@@ -93,7 +132,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
           }}
         >
           <ToastProvider>
-            <IconProvider icons={iconLibrary}>{children}</IconProvider>
+            <IconProvider icons={iconLibrary}>
+              <LightboxProvider>{children}</LightboxProvider>
+            </IconProvider>
           </ToastProvider>
         </DataThemeProvider>
       </ThemeProvider>

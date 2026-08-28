@@ -12,6 +12,11 @@ import {
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
+  HiXMark,
+  HiChevronLeft,
+  HiChevronRight,
+  HiMagnifyingGlassPlus,
+  HiMagnifyingGlassMinus,
 } from "react-icons/hi2";
 
 import {
@@ -64,6 +69,11 @@ export const iconLibrary: Record<string, IconType> = {
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+  close: HiXMark,
+  chevronLeft: HiChevronLeft,
+  chevronRight: HiChevronRight,
+  zoomIn: HiMagnifyingGlassPlus,
+  zoomOut: HiMagnifyingGlassMinus,
 };
 
 export type IconLibrary = typeof iconLibrary;
