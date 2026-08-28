@@ -1,12 +1,9 @@
 import fs from "fs";
 import path from "path";
-import { put, list } from "@vercel/blob";
 import { PortfolioData, ProjectItem, GalleryItem, AboutData, PersonData, HomeData } from "@/types/portfolio";
-import { isVercelBlobConfigured } from "./blob-storage";
 
 const DATA_DIR = path.join(process.cwd(), "src", "data");
 const LOCAL_DATA_FILE = path.join(DATA_DIR, "portfolio-data.json");
-const BLOB_DATA_KEY = "portfolio/data.json";
 
 export const initialDefaultData: PortfolioData = {
   version: 1,
@@ -88,51 +85,6 @@ export const initialDefaultData: PortfolioData = {
             height: 9,
           },
         ],
-      },
-    ],
-    engineeringExperiences: [
-      {
-        company: "PT B One Consulting",
-        timeframe: "September 2025 - Present",
-        role: "Fullstack Website & Mobile Developer (Bali)",
-        achievements: [
-          "Built full-stack web applications using Next.js, Vue.js, Nest.js and Express.js with TypeScript.",
-          "Developed cross-platform mobile apps using Flutter and React Native.",
-          "Designed and implemented RESTful APIs and microservices with Node.js/Express and Flask.",
-          "Integrated third-party services (payments, analytics, auth) and optimized CI/CD pipelines.",
-        ],
-        images: [],
-      },
-      {
-        company: "PT B One Consulting",
-        timeframe: "September 2024 - September 2025",
-        role: "Senior Frontend & Mobile Developer (Bali)",
-        achievements: [
-          "Lead front-end and mobile development projects, ensuring high-quality deliverables.",
-          "Develop and optimize web and mobile applications according to client specifications.",
-          "Collaborate with cross-functional teams to troubleshoot and solve complex technical challenges.",
-        ],
-        images: [],
-      },
-      {
-        company: "PT Supernova Palapa Indonesia",
-        timeframe: "April 2023 - August 2024",
-        role: "Front-End & Mobile Developer (Bandung)",
-        achievements: [
-          "Designed and implemented scalable web and mobile applications for company projects.",
-          "Handled end-to-end mobile app deployment for Google Play Store and Apple App Store.",
-        ],
-        images: [],
-      },
-      {
-        company: "PT Layanan Cerdas Indonesia",
-        timeframe: "July 2022 - March 2023",
-        role: "Mobile Developer (Bandung)",
-        achievements: [
-          "Developed and maintained mobile applications, improving user experience and performance.",
-          "Managed version control and application deployments to app stores.",
-        ],
-        images: [],
       },
     ],
     education: [
@@ -319,13 +271,8 @@ export const initialDefaultData: PortfolioData = {
   ],
 };
 
-// In-memory cache for fast SSR
-let inMemoryCache: { data: PortfolioData; fetchedAt: number } | null = null;
-const CACHE_TTL_MS = 5000; // 5 seconds cache
-
 /**
- * Retrieve the current portfolio data.
- * Checks Vercel Blob if configured -> Local JSON -> Initial Default.
+ * Retrieve the current portfolio data from the normalized local JSON store.
  */
 export function normalizePortfolioData(raw: Partial<PortfolioData> | null | undefined): PortfolioData {
   if (!raw) return initialDefaultData;
@@ -340,9 +287,6 @@ export function normalizePortfolioData(raw: Partial<PortfolioData> | null | unde
       photographyExperiences: Array.isArray(raw.about?.photographyExperiences)
         ? raw.about.photographyExperiences
         : initialDefaultData.about.photographyExperiences || [],
-      engineeringExperiences: Array.isArray(raw.about?.engineeringExperiences)
-        ? raw.about.engineeringExperiences
-        : initialDefaultData.about.engineeringExperiences || [],
       education: Array.isArray(raw.about?.education)
         ? raw.about.education
         : initialDefaultData.about.education || [],
@@ -360,36 +304,10 @@ export function normalizePortfolioData(raw: Partial<PortfolioData> | null | unde
 }
 
 /**
- * Get portfolio data with priority:
- * 1. Vercel Blob store (if configured via BLOB_READ_WRITE_TOKEN)
- * 2. Local JSON file (fallback for local development)
- * 3. Initial default data
+ * Get portfolio data directly from local JSON file (Git-backed storage).
  */
 export async function getPortfolioData(): Promise<PortfolioData> {
-  const now = Date.now();
-
-  // 1. Try Vercel Blob if configured
-  if (isVercelBlobConfigured()) {
-    try {
-      const { blobs } = await list({ prefix: BLOB_DATA_KEY });
-      const blobItem = blobs.find((b) => b.pathname === BLOB_DATA_KEY);
-      if (blobItem) {
-        const urlWithBuster = `${blobItem.url}?t=${now}`;
-        const response = await fetch(urlWithBuster, {
-          cache: "no-store",
-          headers: { "Cache-Control": "no-cache, no-store, must-revalidate" },
-        });
-        if (response.ok) {
-          const blobData = (await response.json()) as Partial<PortfolioData>;
-          return normalizePortfolioData(blobData);
-        }
-      }
-    } catch (err) {
-      console.warn("Failed to load from Vercel Blob store, falling back to local:", err);
-    }
-  }
-
-  // 2. Try Local JSON file
+  // 1. Try Local JSON file
   try {
     if (fs.existsSync(LOCAL_DATA_FILE)) {
       const raw = fs.readFileSync(LOCAL_DATA_FILE, "utf-8");
@@ -400,7 +318,7 @@ export async function getPortfolioData(): Promise<PortfolioData> {
     console.warn("Failed to read local data file:", err);
   }
 
-  // 3. Fallback: Save initial default data locally and return
+  // 2. Fallback: Save initial default data locally and return
   try {
     if (!fs.existsSync(DATA_DIR)) {
       fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -414,7 +332,8 @@ export async function getPortfolioData(): Promise<PortfolioData> {
 }
 
 /**
- * Save updated portfolio data to Vercel Blob and/or local filesystem.
+ * Save updated portfolio data directly to the local JSON file.
+ * Changes are saved locally and deployed to production upon git push.
  */
 export async function savePortfolioData(data: PortfolioData): Promise<PortfolioData> {
   const updatedData: PortfolioData = normalizePortfolioData({
@@ -422,32 +341,14 @@ export async function savePortfolioData(data: PortfolioData): Promise<PortfolioD
     updatedAt: new Date().toISOString(),
   });
 
-  // 1. Save to Vercel Blob if configured
-  if (isVercelBlobConfigured()) {
-    try {
-      const jsonBuffer = Buffer.from(JSON.stringify(updatedData, null, 2), "utf-8");
-      await put(BLOB_DATA_KEY, jsonBuffer, {
-        access: "public",
-        contentType: "application/json",
-        addRandomSuffix: false,
-        allowOverwrite: true,
-      });
-    } catch (err) {
-      console.error("Failed to write data to Vercel Blob:", err);
-      if (process.env.VERCEL) {
-        throw new Error(`Failed to save data to Vercel Blob: ${err instanceof Error ? err.message : String(err)}`);
-      }
-    }
-  }
-
-  // 2. Save to local filesystem
+  // Save to local filesystem
   try {
     if (!fs.existsSync(DATA_DIR)) {
       fs.mkdirSync(DATA_DIR, { recursive: true });
     }
     fs.writeFileSync(LOCAL_DATA_FILE, JSON.stringify(updatedData, null, 2), "utf-8");
   } catch (err) {
-    // Read-only filesystem warning in cloud serverless
+    console.error("Failed to write data to local filesystem:", err);
   }
 
   return updatedData;

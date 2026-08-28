@@ -82,51 +82,6 @@
         ]
       }
     ],
-    "engineeringExperiences": [
-      {
-        "company": "PT B One Consulting",
-        "timeframe": "September 2025 - Present",
-        "role": "Fullstack Website & Mobile Developer (Bali)",
-        "achievements": [
-          "Built full-stack web applications using Next.js, Vue.js, Nest.js and Express.js with TypeScript.",
-          "Developed cross-platform mobile apps using Flutter and React Native.",
-          "Designed and implemented RESTful APIs and microservices with Node.js/Express and Flask.",
-          "Integrated third-party services (payments, analytics, auth) and optimized CI/CD pipelines."
-        ],
-        "images": []
-      },
-      {
-        "company": "PT B One Consulting",
-        "timeframe": "September 2024 - September 2025",
-        "role": "Senior Frontend & Mobile Developer (Bali)",
-        "achievements": [
-          "Lead front-end and mobile development projects, ensuring high-quality deliverables.",
-          "Develop and optimize web and mobile applications according to client specifications.",
-          "Collaborate with cross-functional teams to troubleshoot and solve complex technical challenges."
-        ],
-        "images": []
-      },
-      {
-        "company": "PT Supernova Palapa Indonesia",
-        "timeframe": "April 2023 - August 2024",
-        "role": "Front-End & Mobile Developer (Bandung)",
-        "achievements": [
-          "Designed and implemented scalable web and mobile applications for company projects.",
-          "Handled end-to-end mobile app deployment for Google Play Store and Apple App Store."
-        ],
-        "images": []
-      },
-      {
-        "company": "PT Layanan Cerdas Indonesia",
-        "timeframe": "July 2022 - March 2023",
-        "role": "Mobile Developer (Bandung)",
-        "achievements": [
-          "Developed and maintained mobile applications, improving user experience and performance.",
-          "Managed version control and application deployments to app stores."
-        ],
-        "images": []
-      }
-    ],
     "education": [
       {
         "name": "Indonesian Computer University Bandung Indonesia",

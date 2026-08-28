@@ -85,7 +85,7 @@ export interface AboutData {
   headline?: string;
   introText: string;
   photographyExperiences: ExperienceItem[];
-  engineeringExperiences: ExperienceItem[];
+  engineeringExperiences?: ExperienceItem[];
   education: EducationItem[];
   skills: SkillCategory[];
 }

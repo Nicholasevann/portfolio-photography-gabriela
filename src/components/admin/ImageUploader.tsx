@@ -16,7 +16,7 @@ export function ImageUploader({
   onChange,
   label = "Upload Image",
   aspectRatio = "16 / 9",
-  helpText = "PNG, JPG, WebP up to 10MB (stored on Vercel)",
+  helpText = "PNG, JPG, WebP up to 10MB (stored in /public/uploads)",
 }: ImageUploaderProps) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);

@@ -179,23 +179,15 @@ export default function AdminSettingsPage() {
         <Row horizontal="between" vertical="center">
           <Row gap="12" vertical="center">
             <Icon name="globe" onBackground="brand-strong" size="m" />
-            <Heading variant="heading-strong-m">Vercel Storage Configuration</Heading>
+            <Heading variant="heading-strong-m">Storage & Git Sync Architecture</Heading>
           </Row>
-          {isVercelBlob ? (
-            <Badge background="brand-alpha-weak" onBackground="brand-strong">
-              Active & Connected
-            </Badge>
-          ) : (
-            <Badge background="accent-alpha-weak" onBackground="accent-strong">
-              Local Dev Mode
-            </Badge>
-          )}
+          <Badge background="brand-alpha-weak" onBackground="brand-strong">
+            Local / Git-Backed
+          </Badge>
         </Row>
 
         <Text variant="body-default-s" onBackground="neutral-weak">
-          {isVercelBlob
-            ? "Your portfolio is connected directly to Vercel Blob Storage. Images and data are stored globally on Vercel CDN."
-            : "Currently running in local development mode. Uploaded images are stored in /public/uploads and data is stored in src/data/portfolio-data.json."}
+          Your portfolio uses clean local file storage (Git-backed CMS). Uploaded images are stored in <code>/public/uploads</code> and portfolio content is stored in <code>src/data/portfolio-data.json</code>.
         </Text>
 
         <Column
@@ -206,13 +198,13 @@ export default function AdminSettingsPage() {
           border="neutral-alpha-weak"
           gap="8"
         >
-          <Text variant="label-default-s">How to configure Vercel Blob for production:</Text>
+          <Text variant="label-default-s">How to publish your changes:</Text>
           <Text variant="body-default-xs" onBackground="neutral-weak">
-            1. In your Vercel Dashboard, go to your project → <strong>Storage</strong> tab.
+            1. Make any edits, add projects, or upload photos through this Admin Panel.
             <br />
-            2. Click <strong>Create Database</strong> → choose <strong>Blob</strong>.
+            2. In your terminal, run: <code>git add . && git commit -m "Update portfolio content" && git push</code>
             <br />
-            3. Vercel will automatically configure the <code style={{ color: "var(--brand-strong)" }}>BLOB_READ_WRITE_TOKEN</code> environment variable for your deployment.
+            3. Vercel will automatically build and deploy your updated portfolio immediately without any external storage quotas or fees.
           </Text>
         </Column>
       </Column>

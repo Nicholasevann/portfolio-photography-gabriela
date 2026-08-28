@@ -52,7 +52,7 @@ export default function AdminDashboardPage() {
 
   const projectCount = data?.projects?.length || 0;
   const galleryCount = data?.gallery?.length || 0;
-  const expCount = (data?.about?.photographyExperiences?.length || 0) + (data?.about?.engineeringExperiences?.length || 0);
+  const expCount = data?.about?.photographyExperiences?.length || 0;
 
   return (
     <Column maxWidth="l" fillWidth gap="xl" horizontal="center" style={{ margin: "0 auto" }}>
@@ -70,18 +70,12 @@ export default function AdminDashboardPage() {
         <Column gap="4">
           <Row gap="8" vertical="center">
             <Heading variant="display-strong-s">CMS Dashboard</Heading>
-            {isVercelBlob ? (
-              <Badge background="brand-alpha-weak" onBackground="brand-strong">
-                ● Vercel Blob Connected
-              </Badge>
-            ) : (
-              <Badge background="accent-alpha-weak" onBackground="accent-strong">
-                ● Local Dev Storage Mode
-              </Badge>
-            )}
+            <Badge background="brand-alpha-weak" onBackground="brand-strong">
+              ● Local Storage (Git-Backed)
+            </Badge>
           </Row>
           <Text variant="body-default-m" onBackground="neutral-weak">
-            Manage your photography projects, gallery showcase, and about information.
+            Manage your photography projects, gallery showcase, and about info locally. Push to git to publish updates.
           </Text>
         </Column>
 
@@ -241,7 +235,7 @@ export default function AdminDashboardPage() {
         </Row>
       </Column>
 
-      {/* Storage & Vercel Format Info Banner */}
+      {/* Storage & Git Workflow Info Banner */}
       <Column
         fillWidth
         padding="20"
@@ -252,10 +246,10 @@ export default function AdminDashboardPage() {
       >
         <Row gap="8" vertical="center">
           <Icon name="info" onBackground="brand-medium" />
-          <Text variant="heading-strong-s">Vercel Storage Architecture</Text>
+          <Text variant="heading-strong-s">Local Storage & Git Workflow</Text>
         </Row>
         <Text variant="body-default-s" onBackground="neutral-weak">
-          Your photography images and portfolio data are managed in Vercel format with high-performance edge caching. All changes made in this dashboard automatically trigger instant live site cache revalidation.
+          All changes and uploaded images are saved directly to your local project repository (<code>src/data/portfolio-data.json</code> and <code>public/uploads/</code>). Whenever you commit and push to git, your production website updates automatically without external storage dependencies or usage fees.
         </Text>
       </Column>
     </Column>

@@ -224,14 +224,14 @@ export default function AdminGalleryPage() {
         {uploading ? (
           <Row gap="12" vertical="center">
             <Spinner size="m" />
-            <Text variant="body-default-m">Uploading photos to Vercel Blob...</Text>
+            <Text variant="body-default-m">Saving photos to local uploads...</Text>
           </Row>
         ) : (
           <>
             <Icon name="gallery" onBackground="brand-medium" size="l" />
             <Heading variant="heading-strong-s">Drag & Drop or Click to Upload Multiple Photos</Heading>
             <Text variant="body-default-xs" onBackground="neutral-weak">
-              Uploaded images are stored directly in your Vercel storage and displayed in the /gallery grid.
+              Uploaded images are stored directly in your local project folder (<code>/public/uploads</code>) and published upon git push.
             </Text>
           </>
         )}
