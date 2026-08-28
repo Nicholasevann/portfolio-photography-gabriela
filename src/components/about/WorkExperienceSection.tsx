@@ -1,17 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import {
   Column,
   Media,
-  RevealFx,
   Row,
   Text,
-  ToggleButton,
 } from "@once-ui-system/core";
 import {
   photographyExperiences as defaultPhotoExp,
-  engineeringExperiences as defaultEngExp,
 } from "@/resources/content";
 import { ExperienceItem } from "@/types/portfolio";
 
@@ -20,18 +16,12 @@ import { useLightbox } from "@/components/common/ImageLightbox";
 
 interface WorkExperienceSectionProps {
   photographyExperiences?: ExperienceItem[];
-  engineeringExperiences?: ExperienceItem[];
 }
 
 export function WorkExperienceSection({
   photographyExperiences = defaultPhotoExp,
-  engineeringExperiences = defaultEngExp,
 }: WorkExperienceSectionProps) {
-  const [activeTab, setActiveTab] = useState<"photographer" | "software">("photographer");
   const { openLightbox } = useLightbox();
-
-  const currentExperiences =
-    activeTab === "photographer" ? photographyExperiences : engineeringExperiences;
 
   const handleImageClick = (images: { src: string; alt: string }[], clickedIndex: number, company: string) => {
     openLightbox({
@@ -47,32 +37,10 @@ export function WorkExperienceSection({
 
   return (
     <Column fillWidth gap="m" marginBottom="40">
-      {/* Experience Category Switcher */}
-      <Row
-        fitWidth
-        gap="4"
-        padding="4"
-        background="surface"
-        border="neutral-alpha-weak"
-        radius="full"
-        marginBottom="s"
-      >
-        <ToggleButton
-          selected={activeTab === "photographer"}
-          onClick={() => setActiveTab("photographer")}
-          label="Photographer"
-        />
-        <ToggleButton
-          selected={activeTab === "software"}
-          onClick={() => setActiveTab("software")}
-          label="Software Engineer"
-        />
-      </Row>
-
       {/* Experience Items */}
       <Column fillWidth gap="l">
-        {currentExperiences.map((experience, index) => (
-          <ScrollReveal key={`${activeTab}-${experience.company}-${index}`} translateY="12" delay={index * 0.08} fillWidth>
+        {photographyExperiences.map((experience, index) => (
+          <ScrollReveal key={`photo-${experience.company}-${index}`} translateY="12" delay={index * 0.08} fillWidth>
             <Column fillWidth gap="8">
               <Row fillWidth horizontal="between" vertical="end" wrap gap="8">
                 <Text id={experience.company} variant="heading-strong-l">
@@ -87,7 +55,7 @@ export function WorkExperienceSection({
               </Text>
               <Column as="ul" gap="12" style={{ paddingLeft: "1.25rem" }}>
                 {experience.achievements.map((achievement, i) => (
-                  <Text as="li" variant="body-default-m" key={`${activeTab}-${experience.company}-achievement-${i}`}>
+                  <Text as="li" variant="body-default-m" key={`photo-${experience.company}-achievement-${i}`}>
                     {achievement}
                   </Text>
                 ))}

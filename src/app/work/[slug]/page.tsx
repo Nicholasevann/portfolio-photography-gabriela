@@ -154,8 +154,8 @@ export default async function Project({
 
       {/* Back Navigation & Breadcrumb */}
       <Row fillWidth horizontal="start" paddingTop="12">
-        <SmartLink href="/work" prefixIcon="arrowRight" style={{ transform: "rotate(180deg)" }}>
-          <Text variant="label-default-s" style={{ transform: "rotate(180deg)", display: "inline-block" }}>
+        <SmartLink href="/work" prefixIcon="chevronLeft">
+          <Text variant="label-default-s">
             All Projects
           </Text>
         </SmartLink>

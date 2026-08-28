@@ -227,7 +227,7 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({
           color: #f5f5f5;
           border-radius: 9999px;
           cursor: pointer;
-          transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+          transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
         }
@@ -235,10 +235,9 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({
           background: rgba(255, 255, 255, 0.2);
           border-color: rgba(255, 255, 255, 0.3);
           color: #ffffff;
-          transform: scale(1.05);
         }
         .lightbox-btn:active {
-          transform: scale(0.95);
+          background: rgba(255, 255, 255, 0.28);
         }
         .lightbox-nav-btn {
           position: absolute;
@@ -248,6 +247,10 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({
           height: 52px;
           font-size: 24px;
           z-index: 20;
+        }
+        .lightbox-nav-btn:hover,
+        .lightbox-nav-btn:active {
+          transform: translateY(-50%);
         }
         @media (max-width: 640px) {
           .lightbox-nav-btn {

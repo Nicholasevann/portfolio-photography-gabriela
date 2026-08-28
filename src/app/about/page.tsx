@@ -258,7 +258,6 @@ export default async function About() {
                 </Heading>
                 <WorkExperienceSection
                   photographyExperiences={dynamicAbout?.photographyExperiences}
-                  engineeringExperiences={dynamicAbout?.engineeringExperiences}
                 />
               </>
             )}
