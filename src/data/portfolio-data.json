@@ -130,16 +130,37 @@
     "education": [
       {
         "name": "Indonesian Computer University Bandung Indonesia",
+        "timeframe": "2018 - 2022",
+        "degree": "Bachelor of Computer Engineering (Information Technology)",
+        "achievements": [
+          "Graduated with GPA 3.42 / 4.00 in Computer Engineering (Information Technology).",
+          "Specialized in Software Engineering, Web & Mobile Systems Development, and Distributed Architectures.",
+          "Developed full-stack application capstones with emphasis on clean user interfaces and system performance."
+        ],
         "description": "Bachelor of Computer Engineering (Information Technology) · GPA 3.42 / 4.00 (2018 - 2022)"
       },
       {
         "name": "SMAK Kolese Santo Yusup Malang Indonesia",
+        "timeframe": "2015 - 2018",
+        "degree": "High School Diploma (Science & Mathematics)",
+        "achievements": [
+          "Graduated with Science major and Cumulative Accumulation Score of 85.",
+          "Active in visual arts, computer science clubs, and multimedia campus documentation."
+        ],
         "description": "High School Diploma (Science) · Accumulations: 85 (2015 - 2018)"
       }
     ],
     "skills": [
       {
         "title": "Photography & Visual Direction",
+        "role": "Architectural, Property & Hospitality Photography",
+        "disciplines": [
+          "Property & Architectural Space Documentation",
+          "Natural Light, Linear Sightlines & Geometry Composition",
+          "Food, Beverage & Hospitality Menu Editorial Imagery",
+          "Spatial Storytelling for Luxury Boutique Villas & Eco-Resorts",
+          "Professional Lightroom Color Grading & Precision Retouching"
+        ],
         "description": "Property & Architectural Photography, Natural Light Composition, Food & Beverage Imagery, Spatial Storytelling, Lightroom Color Grading.",
         "tags": [
           {
@@ -158,6 +179,14 @@
       },
       {
         "title": "Web & Mobile Development",
+        "role": "Full-Stack Engineering & Cross-Platform Development",
+        "disciplines": [
+          "Modern Frontend Applications with Next.js, React.js, and TypeScript",
+          "Cross-Platform Mobile Development using Flutter and React Native",
+          "Scalable Backend Services & RESTful APIs with Nest.js, Express.js, and Node.js",
+          "Design Systems & High-Fidelity UI/UX Prototyping with Figma",
+          "Headless E-Commerce Solutions & Supabase / Firebase Cloud Integrations"
+        ],
         "description": "Next.js, React.js, React Native, Flutter, Vue.js, Nest.js, Express.js, TypeScript, and Shopify.",
         "tags": [
           {

@@ -120,32 +120,7 @@ export default async function Home() {
           </RevealFx>
         </Column>
 
-        {/* Hero Visual Reveal */}
-        <RevealFx translateY="16" delay={0.5} fillWidth paddingTop="24">
-          <Row
-            fillWidth
-            radius="l"
-            overflow="hidden"
-            border="neutral-alpha-weak"
-            style={{
-              position: "relative",
-              aspectRatio: "16 / 9",
-            }}
-          >
-            <Media
-              priority
-              aspectRatio="16 / 9"
-              sizes="(max-width: 960px) 100vw, 960px"
-              alt="ne.lens photography"
-              src="/images/hero/hero-cover.jpg"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </Row>
-        </RevealFx>
+
       </Column>
 
       {/* Featured Work Section */}

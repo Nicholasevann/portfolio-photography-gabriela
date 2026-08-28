@@ -181,8 +181,14 @@ export interface About extends BasePageConfig {
     institutions: Array<{
       /** Institution name */
       name: string;
+      /** Timeframe of study */
+      timeframe?: string;
+      /** Degree or certification */
+      degree?: React.ReactNode;
+      /** Specific achievements or details */
+      achievements?: React.ReactNode[];
       /** Description of studies */
-      description: React.ReactNode;
+      description?: React.ReactNode;
     }>;
   };
   /** Technical skills section */
@@ -195,6 +201,12 @@ export interface About extends BasePageConfig {
     skills: Array<{
       /** Skill title */
       title: string;
+      /** Role or category subtitle */
+      role?: React.ReactNode;
+      /** Category label */
+      category?: string;
+      /** Specific discipline points */
+      disciplines?: React.ReactNode[];
       /** Skill description */
       description?: React.ReactNode;
       /** Skill tags */

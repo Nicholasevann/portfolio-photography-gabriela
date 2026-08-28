@@ -264,57 +264,123 @@ export default async function About() {
             )}
 
             {about.studies.display && (
-              <ScrollReveal translateY="12" fillWidth>
+              <Column fillWidth gap="m" marginBottom="40">
                 <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
                   {about.studies.title}
                 </Heading>
-                <Column fillWidth gap="l" marginBottom="40">
+                <Column fillWidth gap="l">
                   {about.studies.institutions.map((institution, index) => (
-                    <Column key={`study-${institution.name}-${index}`} fillWidth gap="4">
-                      <Text id={institution.name} variant="heading-strong-l">
-                        {institution.name}
-                      </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {institution.description}
-                      </Text>
-                    </Column>
+                    <ScrollReveal
+                      key={`study-${institution.name}-${index}`}
+                      translateY="12"
+                      delay={index * 0.08}
+                      fillWidth
+                    >
+                      <Column fillWidth gap="8">
+                        <Row fillWidth horizontal="between" vertical="end" wrap gap="8">
+                          <Text id={institution.name} variant="heading-strong-l">
+                            {institution.name}
+                          </Text>
+                          {institution.timeframe && (
+                            <Text variant="heading-default-xs" onBackground="neutral-weak">
+                              {institution.timeframe}
+                            </Text>
+                          )}
+                        </Row>
+                        {institution.degree && (
+                          <Text variant="body-default-s" onBackground="brand-weak" marginBottom="s">
+                            {institution.degree}
+                          </Text>
+                        )}
+                        {institution.achievements && institution.achievements.length > 0 ? (
+                          <Column as="ul" gap="12" style={{ paddingLeft: "1.25rem" }}>
+                            {institution.achievements.map((achievement, i) => (
+                              <Text
+                                as="li"
+                                variant="body-default-m"
+                                key={`study-${institution.name}-achievement-${i}`}
+                              >
+                                {achievement}
+                              </Text>
+                            ))}
+                          </Column>
+                        ) : institution.description ? (
+                          <Text variant="body-default-m" onBackground="neutral-weak">
+                            {institution.description}
+                          </Text>
+                        ) : null}
+                      </Column>
+                    </ScrollReveal>
                   ))}
                 </Column>
-              </ScrollReveal>
+              </Column>
             )}
 
             {about.technical.display && (
-              <ScrollReveal translateY="12" fillWidth>
+              <Column fillWidth gap="m" marginBottom="40">
                 <Heading
                   as="h2"
                   id={about.technical.title}
                   variant="display-strong-s"
-                  marginBottom="40"
+                  marginBottom="m"
                 >
                   {about.technical.title}
                 </Heading>
                 <Column fillWidth gap="l">
                   {about.technical.skills.map((skill, index) => (
-                    <Column key={`skill-${skill.title}-${index}`} fillWidth gap="4">
-                      <Text id={skill.title} variant="heading-strong-l">
-                        {skill.title}
-                      </Text>
-                      <Text variant="body-default-m" onBackground="neutral-weak">
-                        {skill.description}
-                      </Text>
-                      {skill.tags && skill.tags.length > 0 && (
-                        <Row wrap gap="8" paddingTop="8">
-                          {skill.tags.map((tag, tagIndex) => (
-                            <Tag key={`tag-${skill.title}-${tag.name}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
-                              {tag.name}
-                            </Tag>
-                          ))}
+                    <ScrollReveal
+                      key={`skill-${skill.title}-${index}`}
+                      translateY="12"
+                      delay={index * 0.08}
+                      fillWidth
+                    >
+                      <Column fillWidth gap="8">
+                        <Row fillWidth horizontal="between" vertical="end" wrap gap="8">
+                          <Text id={skill.title} variant="heading-strong-l">
+                            {skill.title}
+                          </Text>
+                          {skill.category && (
+                            <Text variant="heading-default-xs" onBackground="neutral-weak">
+                              {skill.category}
+                            </Text>
+                          )}
                         </Row>
-                      )}
-                    </Column>
+                        {skill.role && (
+                          <Text variant="body-default-s" onBackground="brand-weak" marginBottom="s">
+                            {skill.role}
+                          </Text>
+                        )}
+                        {skill.disciplines && skill.disciplines.length > 0 ? (
+                          <Column as="ul" gap="12" style={{ paddingLeft: "1.25rem" }}>
+                            {skill.disciplines.map((discipline, i) => (
+                              <Text
+                                as="li"
+                                variant="body-default-m"
+                                key={`skill-${skill.title}-disc-${i}`}
+                              >
+                                {discipline}
+                              </Text>
+                            ))}
+                          </Column>
+                        ) : skill.description ? (
+                          <Text variant="body-default-m" onBackground="neutral-weak">
+                            {skill.description}
+                          </Text>
+                        ) : null}
+                        {skill.tags && skill.tags.length > 0 && (
+                          <Row wrap gap="8" paddingTop="8">
+                            {skill.tags.map((tag, tagIndex) => (
+                              <Tag key={`tag-${skill.title}-${tag.name}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
+                                {tag.name}
+                              </Tag>
+                            ))}
+                          </Row>
+                        )}
+                      </Column>
+                    </ScrollReveal>
                   ))}
                 </Column>
-              </ScrollReveal>
+              </Column>
             )}
           </Column>
         </Row>

@@ -49,13 +49,19 @@ export interface ExperienceItem {
 
 export interface EducationItem {
   name: string;
-  description: string;
+  timeframe?: string;
+  degree?: string;
+  achievements?: string[];
+  description?: string;
 }
 
 export interface SkillCategory {
   title: string;
-  description: string;
-  tags: {
+  role?: string;
+  category?: string;
+  disciplines?: string[];
+  description?: string;
+  tags?: {
     name: string;
     icon?: string;
   }[];
