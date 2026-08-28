@@ -70,7 +70,7 @@ export async function generateMetadata({
     post?.metadata.coverImage ||
     post?.metadata.image ||
     staticMatch?.coverImage ||
-    "/images/hero/hero-cover.jpg";
+    "/uploads/1787939992222-img_4507.jpg";
 
   return Meta.generate({
     title: `${title} — ne.lens`,
@@ -112,8 +112,8 @@ export default async function Project({
     ? (dynamicMatch.summary || dynamicMatch.description || "")
     : (post?.metadata.summary || post?.metadata.description || staticMatch?.summary || staticMatch?.description || "");
   const coverImage = dynamicMatch
-    ? (dynamicMatch.coverImage || "/images/hero/hero-cover.jpg")
-    : (post?.metadata.coverImage || post?.metadata.images?.[0] || staticMatch?.coverImage || "/images/hero/hero-cover.jpg");
+    ? (dynamicMatch.coverImage || "/uploads/1787939992222-img_4507.jpg")
+    : (post?.metadata.coverImage || post?.metadata.images?.[0] || staticMatch?.coverImage || "/uploads/1787939992222-img_4507.jpg");
 
   // When dynamicMatch exists, strictly respect its images array (even if empty or edited by user)
   const allImages = dynamicMatch
@@ -286,7 +286,7 @@ export default async function Project({
                       ? nextProject.coverImage
                       : "metadata" in nextProject
                         ? nextProject.metadata.coverImage || nextProject.metadata.image
-                        : "") || "/images/hero/hero-cover.jpg"
+                        : "") || "/uploads/1787939992222-img_4507.jpg"
                   }
                   style={{
                     width: "100%",

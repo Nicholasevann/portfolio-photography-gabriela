@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-27T14:50:48.354Z",
+  "updatedAt": "2026-08-28T18:18:05.544Z",
   "person": {
     "firstName": "Nicholas",
     "lastName": "Evan L",
@@ -20,7 +20,7 @@
     "description": "Photography portfolio focused on property, hospitality, and travel.",
     "headline": "ne.lens",
     "subline": "Photography focused on spaces, places, and experiences.",
-    "image": "/images/hero/hero-cover.jpg"
+    "image": "/uploads/1787939992222-img_4507.jpg"
   },
   "about": {
     "title": "About – Nicholas Evan L (ne.lens)",
@@ -39,7 +39,7 @@
         ],
         "images": [
           {
-            "src": "/images/projects/on-the-sola/cover.jpg",
+            "src": "/uploads/1787939992222-img_4507.jpg",
             "alt": "On The Sola",
             "width": 16,
             "height": 9
@@ -57,7 +57,7 @@
         ],
         "images": [
           {
-            "src": "/images/projects/the-huthut/cover.jpg",
+            "src": "/uploads/1787940439507-img_4451.jpg",
             "alt": "The Huthut",
             "width": 16,
             "height": 9
@@ -74,7 +74,7 @@
         ],
         "images": [
           {
-            "src": "/images/projects/bali-paradise-suites/cover.jpg",
+            "src": "/uploads/1787941062342-0.png",
             "alt": "Bali Paradise Suites",
             "width": 16,
             "height": 9
@@ -171,37 +171,97 @@
       "category": "Property",
       "location": "Bali, Indonesia",
       "year": "2026",
-      "summary": "",
-      "description": "",
-      "coverImage": "/uploads/1787842212583-dsc08915-hdr.jpg",
+      "summary": "Editorial hotel photography capturing tropical architecture, warm interiors, refined material details, and relaxed outdoor spaces. A cohesive visual story highlighting the property's design, atmosphere, and overall guest experience.\n",
+      "description": "Editorial hotel photography capturing tropical architecture, warm interiors, refined material details, and relaxed outdoor spaces. A cohesive visual story highlighting the property's design, atmosphere, and overall guest experience.\n",
+      "coverImage": "/uploads/1787939992222-img_4507.jpg",
       "images": [
-        "/uploads/1787842212583-dsc08915-hdr.jpg",
-        "/uploads/1787842229106-dsc09047.jpg",
-        "/uploads/1787842245225-dsc09610-hdr.jpg"
+        {
+          "src": "/uploads/1787940066992-img_4480.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940066995-img_4558.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940118297-img_4511.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940118299-img_4529.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940265031-img_4531.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940066998-img_4563.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940199680-img_4482.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940265033-img_4587.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940265035-img_4604.jpg",
+          "orientation": "vertical"
+        }
       ],
       "featured": true,
       "publishedAt": "2026-08-27",
-      "content": "## Overview\n\nDetailed narrative about this photography assignment.\n\n## Concept & Lighting\n\nHighlighting spatial geometry, ambient daylight, and material finishes."
+      "content": "# Hotel Property Photography\n\n## Overview\n\nA comprehensive visual documentation of the hotel, showcasing its architecture, interiors, amenities, and overall guest experience. The photography captures the property from multiple perspectives, including the pool and outdoor spaces, guest rooms, bathrooms, architectural details, common areas, and dining experiences. The series is designed to present the hotel as a complete destination, giving viewers a sense of its atmosphere, design, comfort, and character.\n\n## Concept\n\nThe concept focuses on **capturing the complete identity of the hotel through architecture, interiors, natural light, and lifestyle details**. The photographs combine wide environmental compositions with closer architectural and interior details to highlight the property's design and functionality. Warm natural materials, timber, thatched roofing, neutral tones, and tropical surroundings create a cohesive visual language throughout the series."
     },
     {
       "slug": "the-huthut",
       "title": "The Huthut",
       "category": "Property",
-      "location": "Lombok, Indonesia",
+      "location": "Bali, Indonesia",
       "year": "2024",
-      "summary": "Editorial architectural and lifestyle photography capturing organic wooden craftsmanship, open pavilions, and tranquil nature surroundings.",
-      "description": "A celebration of sustainable bamboo architecture and open-air living nestled among lush coastal hills.",
-      "coverImage": "/images/projects/the-huthut/cover.jpg",
+      "summary": "Editorial villa photography capturing tropical architecture, private pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
+      "description": "Editorial villa photography capturing tropical architecture, private pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
+      "coverImage": "/uploads/1787940439507-img_4451.jpg",
       "images": [
-        "/images/projects/the-huthut/cover.jpg",
-        "/images/projects/the-huthut/01.jpg",
-        "/images/projects/the-huthut/02.jpg",
-        "/images/projects/the-huthut/03.jpg",
-        "/images/projects/the-huthut/04.jpg"
+        {
+          "src": "/uploads/1787940584322-img_4381.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940584325-img_4399.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940584329-img_4449.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940584332-img_4456.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940906745-img_4359.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940756269-img_4389.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940584336-img_4459.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940584299-img_4339.jpg",
+          "orientation": "vertical"
+        }
       ],
       "featured": true,
       "publishedAt": "2024-05-22",
-      "content": "## Overview\n\nThe Huthut is a sustainable eco-retreat conceived as an organic cluster of bamboo and reclaimed timber pavilions nestled into the coastal hillsides of Lombok.\n\n## Craftsmanship & Architecture\n\nThe visual documentation focused on the tactile qualities of handmade joinery, curved structural bamboo columns, and high vaulted ceilings that allow natural sea breezes to circulate through the living quarters.\n\n- **Organic Structures**: Handcrafted sustainable materials with rhythmic geometric curves.\n- **Biophilic Living**: Seamless openness blurring boundary lines between the jungle and interior spaces.\n- **Warm Illumination**: Low-impact ambient lighting highlighting the warm amber hues of aged teak and rattan.\n\n## Visual Narrative\n\nFraming the tactile dialogue between traditional artisan building techniques and contemporary eco-luxury living, the photography provides an intimate exploration of form, texture, and light."
+      "content": "# Villa Property Photography\n\n## Overview\n\nA visual documentation of the villa, focusing on its tropical architecture, private pool, outdoor spaces, and connection to the surrounding landscape. The photography highlights the villa's open and relaxed character through exterior compositions, architectural details, and leisure spaces, creating a sense of privacy, comfort, and contemporary tropical living.\n\n## Concept\n\nThe concept focuses on **capturing the villa's tropical character through clean architecture, natural light, and outdoor living**. The photographs emphasize the contrast between bright white structures, warm thatched roofing, natural timber, lush greenery, and turquoise pool water. Wide compositions showcase the relationship between the villas and pool, while architectural details and lifestyle elements reinforce the intimate, tranquil atmosphere of the property.\n\n### Short Description\n\n**Editorial villa photography capturing tropical architecture, private pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.**\n"
     },
     {
       "slug": "bali-paradise-suites",
@@ -209,74 +269,109 @@
       "category": "Property",
       "location": "Canggu, Bali",
       "year": "2024",
-      "summary": "Hospitality and property visual capture highlighting boutique luxury suites, sunlit private pools, and elegant interior design.",
-      "description": "Documenting high-end hospitality interiors, intimate plunge pools, and seamless indoor-outdoor transitions.",
-      "coverImage": "/images/projects/bali-paradise-suites/cover.jpg",
+      "summary": "Editorial private villa photography capturing intimate poolside living, tropical greenery, clean interiors, and relaxed kitchen and lounge spaces.",
+      "description": "Editorial private villa photography capturing intimate poolside living, tropical greenery, clean interiors, and relaxed kitchen and lounge spaces.",
+      "coverImage": "/uploads/1787941062342-0.png",
       "images": [
-        "/images/projects/bali-paradise-suites/cover.jpg",
-        "/images/projects/bali-paradise-suites/01.jpg",
-        "/images/projects/bali-paradise-suites/02.jpg",
-        "/images/projects/bali-paradise-suites/03.jpg",
-        "/images/projects/bali-paradise-suites/04.jpg"
+        {
+          "src": "/uploads/1787941062342-0.png",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787941067712-1.png",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787941067715-2.png",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787941067718-3.png",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787941067722-4.png",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787941067725-5.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787941067726-6.png",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787941067729-7.png",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787941067731-8.png",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787941067733-9.jpg",
+          "orientation": "horizontal"
+        }
       ],
       "featured": true,
       "publishedAt": "2024-04-18",
-      "content": "## Overview\n\nBali Paradise Suites represents the intersection of boutique luxury hospitality and relaxed tropical living. Situated in Canggu, each suite is oriented around private sunlit courtyards and reflection pools.\n\n## Light & Hospitality Experience\n\nThe photography captures the serene morning ambiance as soft daylight washes over custom terrazzo floors and brass architectural fixtures.\n\n- **Private Courtyards**: Turquoise plunge pools reflecting minimalist plaster facades.\n- **Material Palette**: Custom terrazzo, microcement, brass accents, and woven textiles.\n- **Guest Experience**: Editorial vignettes evoking effortless relaxation and quiet refinement.\n\n## Visual Narrative\n\nThrough balanced compositions and natural framing, the visual series highlights the spatial intimacy and luxury hospitality standards that define the property."
+      "content": "# Private Villa Photography\n\n## Overview\n\nA visual documentation of a private villa centered around its intimate pool area, fully equipped kitchen, and relaxed lounge spaces. The photography highlights the villa as a self-contained retreat, showcasing the connection between indoor and outdoor living, tropical landscaping, private amenities, and the comfortable atmosphere of the space.\n\n## Concept\n\nThe concept focuses on **private tropical living through natural light, clean architecture, and intimate lifestyle spaces**. The photographs emphasize the contrast between white architectural surfaces, warm wooden decking, lush tropical plants, and deep blue pool water. Compositions are designed to show how the pool, kitchen, and lounge areas flow together, creating a cohesive sense of privacy, comfort, and relaxed villa living."
     }
   ],
   "gallery": [
     {
       "id": "gal-1",
-      "src": "/images/gallery/horizontal-1.jpg",
+      "src": "/uploads/1787940118299-img_4529.jpg",
       "alt": "On The Sola Villa Courtyard",
       "orientation": "horizontal",
       "category": "Property"
     },
     {
       "id": "gal-2",
-      "src": "/images/gallery/vertical-4.jpg",
+      "src": "/uploads/1787940066992-img_4480.jpg",
       "alt": "Architectural Lines & Light",
       "orientation": "vertical",
       "category": "Architecture"
     },
     {
       "id": "gal-3",
-      "src": "/images/gallery/horizontal-3.jpg",
+      "src": "/uploads/1787940584325-img_4399.jpg",
       "alt": "Modern Tropical Villa Living",
       "orientation": "horizontal",
       "category": "Property"
     },
     {
       "id": "gal-4",
-      "src": "/images/gallery/vertical-1.jpg",
+      "src": "/uploads/1787940584322-img_4381.jpg",
       "alt": "Minimalist Corridor Perspective",
       "orientation": "vertical",
       "category": "Architecture"
     },
     {
       "id": "gal-5",
-      "src": "/images/gallery/vertical-2.jpg",
+      "src": "/uploads/1787940066995-img_4558.jpg",
       "alt": "Natural Materials & Teak Wood",
       "orientation": "vertical",
       "category": "Details"
     },
     {
       "id": "gal-6",
-      "src": "/images/gallery/horizontal-2.jpg",
+      "src": "/uploads/1787941067715-2.png",
       "alt": "Bali Paradise Suites Poolside",
       "orientation": "horizontal",
       "category": "Hospitality"
     },
     {
       "id": "gal-7",
-      "src": "/images/gallery/horizontal-4.jpg",
+      "src": "/uploads/1787940265033-img_4587.jpg",
       "alt": "The Huthut Organic Pavilion",
       "orientation": "horizontal",
       "category": "Architecture"
     },
     {
       "id": "gal-8",
-      "src": "/images/gallery/vertical-3.jpg",
+      "src": "/uploads/1787940265035-img_4604.jpg",
       "alt": "Serene Morning Daylight",
       "orientation": "vertical",
       "category": "Atmosphere"

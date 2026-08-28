@@ -54,7 +54,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/hero/hero-cover.jpg",
+  image: "/uploads/1787939992222-img_4507.jpg",
   label: "Home",
   title: "ne.lens — Photography",
   description: "Photography portfolio focused on property, hospitality, and travel.",
@@ -130,7 +130,7 @@ const photographyExperiences = [
     ],
     images: [
       {
-        src: "/images/projects/on-the-sola/cover.jpg",
+        src: "/uploads/1787939992222-img_4507.jpg",
         alt: "On The Sola",
         width: 16,
         height: 9,
@@ -148,7 +148,7 @@ const photographyExperiences = [
     ],
     images: [
       {
-        src: "/images/projects/the-huthut/cover.jpg",
+        src: "/uploads/1787940439507-img_4451.jpg",
         alt: "The Huthut",
         width: 16,
         height: 9,
@@ -165,7 +165,7 @@ const photographyExperiences = [
     ],
     images: [
       {
-        src: "/images/projects/bali-paradise-suites/cover.jpg",
+        src: "/uploads/1787941062342-0.png",
         alt: "Bali Paradise Suites",
         width: 16,
         height: 9,

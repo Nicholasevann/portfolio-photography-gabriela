@@ -28,7 +28,7 @@ export async function Projects({ range, exclude, category, paddingX = "l" }: Pro
         publishedAt: post.metadata.publishedAt,
         summary: post.metadata.summary,
         description: post.metadata.description || post.metadata.summary,
-        coverImage: post.metadata.coverImage || post.metadata.image || "/images/hero/hero-cover.jpg",
+        coverImage: post.metadata.coverImage || post.metadata.image || "/uploads/1787939992222-img_4507.jpg",
         images: post.metadata.images || [],
         featured: post.metadata.featured ?? true,
         content: post.content,

@@ -39,7 +39,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   year,
   description,
 }) => {
-  const displayImage = coverImage || images[0] || "/images/hero/hero-cover.jpg";
+  const displayImage = coverImage || images[0] || "/uploads/1787939992222-img_4507.jpg";
 
   return (
     <Column

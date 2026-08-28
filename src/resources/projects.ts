@@ -14,43 +14,35 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "on-the-sola",
-    title: "On The Sola",
+    slug: "sola",
+    title: "Sola",
     category: "Property",
     location: "Bali, Indonesia",
-    year: "2024",
+    year: "2026",
     description:
-      "Property photography showcasing the architecture, minimalist interiors, and serene atmosphere of the space.",
+      "Editorial hotel photography capturing tropical architecture, warm interiors, refined material details, and relaxed outdoor spaces.",
     summary:
-      "Capturing the tropical brutalist forms, natural textures, and sunlit corridors of a contemporary private sanctuary in Bali.",
-    coverImage: "/images/projects/on-the-sola/cover.jpg",
+      "A cohesive visual story highlighting the property's design, atmosphere, and overall guest experience.",
+    coverImage: "/uploads/1787939992222-img_4507.jpg",
     images: [
-      "/images/projects/on-the-sola/cover.jpg",
-      "/images/projects/on-the-sola/01.jpg",
-      "/images/projects/on-the-sola/02.jpg",
-      "/images/projects/on-the-sola/03.jpg",
-      "/images/projects/on-the-sola/04.jpg",
+      "/uploads/1787939992222-img_4507.jpg",
     ],
     featured: true,
-    publishedAt: "2024-06-10",
+    publishedAt: "2026-08-27",
   },
   {
     slug: "the-huthut",
     title: "The Huthut",
     category: "Property",
-    location: "Lombok, Indonesia",
+    location: "Bali, Indonesia",
     year: "2024",
     description:
-      "Editorial architectural and lifestyle photography capturing organic wooden craftsmanship, open pavilions, and tranquil nature surroundings.",
+      "Editorial villa photography capturing tropical architecture, private pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
     summary:
-      "A celebration of sustainable bamboo architecture and open-air living nestled among lush coastal hills.",
-    coverImage: "/images/projects/the-huthut/cover.jpg",
+      "Editorial villa photography capturing tropical architecture, private pool living, natural textures, and serene outdoor spaces.",
+    coverImage: "/uploads/1787940439507-img_4451.jpg",
     images: [
-      "/images/projects/the-huthut/cover.jpg",
-      "/images/projects/the-huthut/01.jpg",
-      "/images/projects/the-huthut/02.jpg",
-      "/images/projects/the-huthut/03.jpg",
-      "/images/projects/the-huthut/04.jpg",
+      "/uploads/1787940439507-img_4451.jpg",
     ],
     featured: true,
     publishedAt: "2024-05-22",
@@ -62,16 +54,12 @@ export const projects: Project[] = [
     location: "Canggu, Bali",
     year: "2024",
     description:
-      "Hospitality and property visual capture highlighting boutique luxury suites, sunlit private pools, and elegant interior design.",
+      "Editorial private villa photography capturing intimate poolside living, tropical greenery, clean interiors, and relaxed kitchen and lounge spaces.",
     summary:
-      "Documenting high-end hospitality interiors, intimate plunge pools, and seamless indoor-outdoor transitions.",
-    coverImage: "/images/projects/bali-paradise-suites/cover.jpg",
+      "Editorial private villa photography capturing intimate poolside living, tropical greenery, clean interiors, and relaxed spaces.",
+    coverImage: "/uploads/1787941062342-0.png",
     images: [
-      "/images/projects/bali-paradise-suites/cover.jpg",
-      "/images/projects/bali-paradise-suites/01.jpg",
-      "/images/projects/bali-paradise-suites/02.jpg",
-      "/images/projects/bali-paradise-suites/03.jpg",
-      "/images/projects/bali-paradise-suites/04.jpg",
+      "/uploads/1787941062342-0.png",
     ],
     featured: true,
     publishedAt: "2024-04-18",
