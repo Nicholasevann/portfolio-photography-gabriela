@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-28T18:18:05.544Z",
+  "updatedAt": "2026-08-29T04:59:58.993Z",
   "person": {
     "firstName": "Nicholas",
     "lastName": "Evan L",
     "name": "Nicholas Evan L",
     "role": "Photographer & Software Developer",
     "avatar": "/images/avatar.png",
-    "email": "contact@nelens.photography",
+    "email": "nnicholasevan@gmail.com",
     "location": "Asia/Makassar",
     "languages": [
       "English",
@@ -26,7 +26,7 @@
     "title": "About – Nicholas Evan L (ne.lens)",
     "description": "Meet Nicholas Evan Lindartono — Architectural Photographer & Software Developer.",
     "headline": "Introduction",
-    "introText": "Hi! I'm Nicholas Evan Lindartono — an Architectural Photographer and Software Developer. I capture architectural spaces, luxury villas, and boutique hospitality properties with a focus on clean geometry, natural illumination, and calm atmospheres.",
+    "introText": "Hi! I'm Nicholas Evan — an Architectural Photographer and Software Developer. I capture architectural spaces, luxury villas, and boutique hospitality properties with a focus on clean geometry, natural illumination, and calm atmospheres.",
     "photographyExperiences": [
       {
         "company": "On The Sola Boutique Hotel",
@@ -66,10 +66,10 @@
       },
       {
         "company": "Bali Paradise Suites",
-        "timeframe": "May 2026 (Single Commission)",
+        "timeframe": "May 2026 - Present",
         "role": "Property & Architectural Photographer (Canggu, Bali)",
         "achievements": [
-          "Commissioned for single-visit visual capture of luxury rental villa suites and private plunge pools.",
+          "Visit visual capture of luxury rental villa suites and private plunge pools.",
           "Delivered refined interior and exterior photography for property rental listings and hospitality showcases."
         ],
         "images": [
@@ -221,9 +221,9 @@
       "title": "The Huthut",
       "category": "Property",
       "location": "Bali, Indonesia",
-      "year": "2024",
-      "summary": "Editorial villa photography capturing tropical architecture, private pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
-      "description": "Editorial villa photography capturing tropical architecture, private pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
+      "year": "2026",
+      "summary": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
+      "description": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
       "coverImage": "/uploads/1787940439507-img_4451.jpg",
       "images": [
         {
@@ -260,15 +260,15 @@
         }
       ],
       "featured": true,
-      "publishedAt": "2024-05-22",
-      "content": "# Villa Property Photography\n\n## Overview\n\nA visual documentation of the villa, focusing on its tropical architecture, private pool, outdoor spaces, and connection to the surrounding landscape. The photography highlights the villa's open and relaxed character through exterior compositions, architectural details, and leisure spaces, creating a sense of privacy, comfort, and contemporary tropical living.\n\n## Concept\n\nThe concept focuses on **capturing the villa's tropical character through clean architecture, natural light, and outdoor living**. The photographs emphasize the contrast between bright white structures, warm thatched roofing, natural timber, lush greenery, and turquoise pool water. Wide compositions showcase the relationship between the villas and pool, while architectural details and lifestyle elements reinforce the intimate, tranquil atmosphere of the property.\n\n### Short Description\n\n**Editorial villa photography capturing tropical architecture, private pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.**\n"
+      "publishedAt": "2026-08-27",
+      "content": "# Villa Property Photography\n\n## Overview\n\nA visual documentation of the villa, focusing on its tropical architecture, private pool, outdoor spaces, and connection to the surrounding landscape. The photography highlights the villa's open and relaxed character through exterior compositions, architectural details, and leisure spaces, creating a sense of privacy, comfort, and contemporary tropical living.\n\n## Concept\n\nThe concept focuses on **capturing the villa's tropical character through clean architecture, natural light, and outdoor living**. The photographs emphasize the contrast between bright white structures, warm thatched roofing, natural timber, lush greenery, and turquoise pool water. Wide compositions showcase the relationship between the villas and pool, while architectural details and lifestyle elements reinforce the intimate, tranquil atmosphere of the property.\n"
     },
     {
       "slug": "bali-paradise-suites",
       "title": "Bali Paradise Suites",
       "category": "Property",
-      "location": "Canggu, Bali",
-      "year": "2024",
+      "location": "Seminyak, Bali",
+      "year": "2026",
       "summary": "Editorial private villa photography capturing intimate poolside living, tropical greenery, clean interiors, and relaxed kitchen and lounge spaces.",
       "description": "Editorial private villa photography capturing intimate poolside living, tropical greenery, clean interiors, and relaxed kitchen and lounge spaces.",
       "coverImage": "/uploads/1787941062342-0.png",
@@ -315,7 +315,7 @@
         }
       ],
       "featured": true,
-      "publishedAt": "2024-04-18",
+      "publishedAt": "2026-08-27",
       "content": "# Private Villa Photography\n\n## Overview\n\nA visual documentation of a private villa centered around its intimate pool area, fully equipped kitchen, and relaxed lounge spaces. The photography highlights the villa as a self-contained retreat, showcasing the connection between indoor and outdoor living, tropical landscaping, private amenities, and the comfortable atmosphere of the space.\n\n## Concept\n\nThe concept focuses on **private tropical living through natural light, clean architecture, and intimate lifestyle spaces**. The photographs emphasize the contrast between white architectural surfaces, warm wooden decking, lush tropical plants, and deep blue pool water. Compositions are designed to show how the pool, kitchen, and lounge areas flow together, creating a cohesive sense of privacy, comfort, and relaxed villa living."
     }
   ],

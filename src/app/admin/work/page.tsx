@@ -266,7 +266,7 @@ export default function AdminWorkPage() {
                 <Column flex={1}>
                   <Input
                     id="project-category"
-                    label="Category (e.g. Property, Hospitality, Travel)"
+                    label="Category (e.g. Property, Travel)"
                     value={editingProject.category}
                     onChange={(e) =>
                       setEditingProject({ ...editingProject, category: e.target.value })

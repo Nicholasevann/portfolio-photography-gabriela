@@ -17,7 +17,7 @@ import { projects as fallbackProjects } from "@/resources/projects";
 
 import { ScrollReveal } from "@/components/common/ScrollReveal";
 
-type CategoryType = "all" | "property" | "hospitality" | "travel";
+type CategoryType = "all" | "property" | "travel";
 
 interface WorkFilterViewProps {
   initialProjects?: ProjectItem[];
@@ -30,17 +30,17 @@ export function WorkFilterView({ initialProjects }: WorkFilterViewProps) {
     initialProjects !== undefined
       ? initialProjects
       : fallbackProjects.map((p) => ({
-          slug: p.slug,
-          title: p.title,
-          category: p.category,
-          location: p.location,
-          year: p.year,
-          publishedAt: p.publishedAt,
-          summary: p.description,
-          description: p.description,
-          coverImage: p.coverImage,
-          images: p.images,
-        }));
+        slug: p.slug,
+        title: p.title,
+        category: p.category,
+        location: p.location,
+        year: p.year,
+        publishedAt: p.publishedAt,
+        summary: p.description,
+        description: p.description,
+        coverImage: p.coverImage,
+        images: p.images,
+      }));
 
   const filteredProjects = projectList.filter(
     (p) => activeCategory === "all" || p.category?.toLowerCase() === activeCategory.toLowerCase()
@@ -67,11 +67,6 @@ export function WorkFilterView({ initialProjects }: WorkFilterViewProps) {
           selected={activeCategory === "property"}
           onClick={() => setActiveCategory("property")}
           label="Property"
-        />
-        <ToggleButton
-          selected={activeCategory === "hospitality"}
-          onClick={() => setActiveCategory("hospitality")}
-          label="Hospitality"
         />
         <ToggleButton
           selected={activeCategory === "travel"}
