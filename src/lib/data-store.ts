@@ -14,7 +14,7 @@ export const initialDefaultData: PortfolioData = {
     name: "Nicholas Evan L",
     role: "Photographer & Software Developer",
     avatar: "/images/avatar.png",
-    email: "contact@nelens.photography",
+    email: "nnicholasevan@gmail.com",
     location: "Asia/Makassar", // Bali (WITA)
     languages: ["English", "Indonesian"],
     locale: "en",
@@ -164,6 +164,7 @@ export const initialDefaultData: PortfolioData = {
       ],
       featured: true,
       publishedAt: "2024-06-10",
+      instagram: "https://www.instagram.com/sola.uluwatu/",
       content: `## Overview\n\nOn The Sola is a bespoke architectural residence located in the lush landscapes of Bali. The visual brief was focused on documenting the seamless transition between monolithic brutalist concrete and warm tropical flora.\n\n## Concept & Spatial Flow\n\nNatural light sculpts each volume throughout the day. The photography highlights deep shadows during midday sun and the soft golden glow filtering through full-height minimalist glass openings during dusk.\n\n- **Architectural Geometry**: Linear sightlines, cantilevers, and raw board-formed concrete finishes.\n- **Interior Calm**: Curated minimalist furnishings, textured linen, and unpolished stone.\n- **Atmosphere**: Quiet reflective pool surfaces catching ambient reflections of the sky and surrounding greenery.\n\n## Visual Narrative\n\nThe series captures the stillness of early morning in the courtyard before opening up to the expansive open-plan living pavilions, highlighting the interplay of spatial volume and organic textures.`,
     },
     {
@@ -180,6 +181,7 @@ export const initialDefaultData: PortfolioData = {
       ],
       featured: true,
       publishedAt: "2024-05-22",
+      instagram: "https://www.instagram.com/thehuthutbali/",
       content: `## Overview\n\nThe Huthut is a sustainable eco-retreat conceived as an organic cluster of bamboo and reclaimed timber pavilions nestled into the coastal hillsides of Lombok.\n\n## Craftsmanship & Architecture\n\nThe visual documentation focused on the tactile qualities of handmade joinery, curved structural bamboo columns, and high vaulted ceilings that allow natural sea breezes to circulate through the living quarters.\n\n- **Organic Structures**: Handcrafted sustainable materials with rhythmic geometric curves.\n- **Biophilic Living**: Seamless openness blurring boundary lines between the jungle and interior spaces.\n- **Warm Illumination**: Low-impact ambient lighting highlighting the warm amber hues of aged teak and rattan.\n\n## Visual Narrative\n\nFraming the tactile dialogue between traditional artisan building techniques and contemporary eco-luxury living, the photography provides an intimate exploration of form, texture, and light.`,
     },
     {

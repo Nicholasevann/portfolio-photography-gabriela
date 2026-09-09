@@ -22,6 +22,7 @@ export interface ProjectItem {
   publishedAt: string;
   content?: string; // Markdown / Narrative content
   order?: number;
+  instagram?: string;
 }
 
 export interface GalleryItem {

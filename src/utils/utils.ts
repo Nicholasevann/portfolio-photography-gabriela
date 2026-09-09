@@ -25,6 +25,7 @@ export type PostMetadata = {
   team?: Team[];
   link?: string;
   featured?: boolean;
+  instagram?: string;
 };
 
 import { notFound } from "next/navigation";
@@ -61,6 +62,7 @@ function readMDXFile(filePath: string) {
     team: data.team || [],
     link: data.link || "",
     featured: data.featured ?? true,
+    instagram: data.instagram || "",
   };
 
   return { metadata, content };

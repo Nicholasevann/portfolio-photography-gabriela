@@ -165,33 +165,6 @@ export default async function About() {
               vertical="center"
               marginBottom="32"
             >
-              {about.calendar.display && (
-                <Row
-                  fitWidth
-                  border="brand-alpha-medium"
-                  background="brand-alpha-weak"
-                  radius="full"
-                  padding="4"
-                  gap="8"
-                  marginBottom="m"
-                  vertical="center"
-                  className={styles.blockAlign}
-                  style={{
-                    backdropFilter: "blur(var(--static-space-1))",
-                  }}
-                >
-                  <Icon paddingLeft="12" name="globe" onBackground="brand-weak" />
-                  <Row paddingX="8">Software Developer Portfolio</Row>
-                  <IconButton
-                    href="https://my-porto-nine-livid.vercel.app/portfolio"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-border="rounded"
-                    variant="secondary"
-                    icon="arrowUpRight"
-                  />
-                </Row>
-              )}
               <Heading className={styles.textAlign} variant="display-strong-xl">
                 {person.name}
               </Heading>

@@ -8,6 +8,7 @@ import {
   Column,
   Heading,
   Icon,
+  IconButton,
   Input,
   Line,
   Row,
@@ -72,6 +73,7 @@ export default function AdminWorkPage() {
       images: ["/uploads/1787939992222-img_4507.jpg"],
       featured: true,
       publishedAt: new Date().toISOString().slice(0, 10),
+      instagram: "",
       content: `## Overview\n\nDetailed narrative about this photography assignment.\n\n## Concept & Lighting\n\nHighlighting spatial geometry, ambient daylight, and material finishes.`,
     });
     setMessage(null);
@@ -308,6 +310,20 @@ export default function AdminWorkPage() {
                 </Column>
               </Row>
 
+              <Row fillWidth gap="m" s={{ direction: "column" }}>
+                <Column flex={1}>
+                  <Input
+                    id="project-instagram"
+                    label="Instagram URL (Optional)"
+                    value={editingProject.instagram || ""}
+                    onChange={(e) =>
+                      setEditingProject({ ...editingProject, instagram: e.target.value })
+                    }
+                    placeholder="e.g. https://www.instagram.com/sola.uluwatu/"
+                  />
+                </Column>
+              </Row>
+
               <Textarea
                 id="project-summary"
                 label="Card Summary / Subtitle"
@@ -447,6 +463,17 @@ export default function AdminWorkPage() {
                         <Badge background="brand-alpha-weak" onBackground="brand-strong">
                           {p.category}
                         </Badge>
+                        {p.instagram && (
+                          <IconButton
+                            size="s"
+                            variant="ghost"
+                            icon="instagram"
+                            href={p.instagram}
+                            target="_blank"
+                            tooltip={p.instagram}
+                            aria-label="Instagram link"
+                          />
+                        )}
                       </Row>
                       <Text
                         variant="body-default-xs"

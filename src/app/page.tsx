@@ -267,16 +267,16 @@ export default async function Home() {
               Get in touch
             </Button>
             {social
-              .filter((s) => s.name === "Instagram")
+              .filter((s) => s.name === "Instagram" || s.name === "WhatsApp")
               .map((s, index) => (
                 <Button
                   key={`contact-social-${s.name}-${index}`}
                   href={s.link}
                   variant="secondary"
                   size="m"
-                  prefixIcon="instagram"
+                  prefixIcon={s.icon}
                 >
-                  Instagram
+                  {s.name}
                 </Button>
               ))}
           </Row>

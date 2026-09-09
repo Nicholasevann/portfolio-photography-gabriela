@@ -7,7 +7,7 @@ const person: Person = {
   name: "Nicholas Evan L",
   role: "Photographer & Software Developer",
   avatar: "/images/avatar.png",
-  email: "contact@nelens.photography",
+  email: "nnicholasevan@gmail.com",
   location: "Asia/Makassar", // Bali, Indonesia (WITA / UTC+8)
   languages: ["English", "Indonesian"],
   locale: "en",
@@ -23,13 +23,13 @@ const social: Social = [
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/nicholas.lindartono/",
     essential: true,
   },
   {
-    name: "Software Portfolio",
-    icon: "globe",
-    link: "https://my-porto-nine-livid.vercel.app/portfolio",
+    name: "WhatsApp",
+    icon: "whatsapp",
+    link: "https://wa.me/6281236155717",
     essential: true,
   },
   {
@@ -37,18 +37,6 @@ const social: Social = [
     icon: "email",
     link: `mailto:${person.email}`,
     essential: true,
-  },
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com",
-    essential: false,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://linkedin.com",
-    essential: false,
   },
 ];
 
@@ -115,7 +103,7 @@ const contact = {
   subline: "Property · Hospitality · Travel",
   description:
     "Available for commissions, private villa shoots, hospitality campaigns, and destination assignments worldwide.",
-  email: "contact@nelens.photography",
+  email: "nnicholasevan@gmail.com",
 };
 
 const photographyExperiences = [
@@ -188,8 +176,8 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://my-porto-nine-livid.vercel.app/portfolio",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,

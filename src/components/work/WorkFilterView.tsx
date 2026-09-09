@@ -40,6 +40,7 @@ export function WorkFilterView({ initialProjects }: WorkFilterViewProps) {
         description: p.description,
         coverImage: p.coverImage,
         images: p.images,
+        instagram: p.instagram,
       }));
 
   const filteredProjects = projectList.filter(

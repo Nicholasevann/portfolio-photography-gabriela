@@ -34,9 +34,9 @@ export const Footer = () => {
             <Text onBackground="neutral-weak">© {currentYear} /</Text>
             <Text paddingX="4">{person.name}</Text>
           </Text>
-          <SmartLink href="/admin" style={{ textDecoration: "none", opacity: 0.35 }}>
+          {/* <SmartLink href="/admin" style={{ textDecoration: "none", opacity: 0.35 }}>
             <Text variant="body-default-xs">· Admin</Text>
-          </SmartLink>
+          </SmartLink> */}
         </Row>
         <Row gap="16">
           {social.map(

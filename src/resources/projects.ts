@@ -10,6 +10,7 @@ export interface Project {
   images: string[];
   featured?: boolean;
   publishedAt: string;
+  instagram?: string;
 }
 
 export const projects: Project[] = [
@@ -29,6 +30,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     publishedAt: "2026-08-27",
+    instagram: "https://www.instagram.com/sola.uluwatu/",
   },
   {
     slug: "the-huthut",
@@ -46,6 +48,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     publishedAt: "2024-05-22",
+    instagram: "https://www.instagram.com/thehuthutbali/",
   },
   {
     slug: "bali-paradise-suites",

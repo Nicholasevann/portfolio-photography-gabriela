@@ -192,9 +192,9 @@ const schema: SchemaConfig = {
 
 // social links — derived from the social array in content.tsx to avoid duplication
 const sameAs: SameAsConfig = {
-  threads: social.find((s) => s.name === "Threads")?.link ?? "",
-  linkedin: social.find((s) => s.name === "LinkedIn")?.link ?? "",
-  discord: social.find((s) => s.name === "Software Portfolio")?.link ?? "",
+  threads: "",
+  linkedin: "",
+  discord: "",
 };
 
 // social sharing configuration for blog posts

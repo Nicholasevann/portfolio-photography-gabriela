@@ -4,6 +4,7 @@ import {
   Badge,
   Column,
   Heading,
+  IconButton,
   Line,
   Media,
   Meta,
@@ -121,6 +122,7 @@ export default async function Project({
     : (post?.metadata.images?.length ? post.metadata.images : staticMatch?.images || []);
 
   const content = dynamicMatch ? (dynamicMatch.content || "") : (post?.content || "");
+  const instagram = dynamicMatch?.instagram || post?.metadata.instagram || staticMatch?.instagram || "";
 
   // Compute Next Project
   const allSlugs =
@@ -182,6 +184,18 @@ export default async function Project({
               <Text variant="body-default-xs" onBackground="neutral-weak">
                 · {year}
               </Text>
+            )}
+            {instagram && (
+              <IconButton
+                href={instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                icon="instagram"
+                size="m"
+                variant="tertiary"
+                tooltip="Instagram"
+                aria-label={`${title} on Instagram`}
+              />
             )}
           </Row>
 
