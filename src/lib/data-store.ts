@@ -86,6 +86,24 @@ export const initialDefaultData: PortfolioData = {
           },
         ],
       },
+      {
+        company: "White Penny Bali",
+        timeframe: "September 2026 - Present",
+        role: "Boutique Property & Lifestyle Photographer (Seminyak, Bali)",
+        achievements: [
+          "Documented bohemian-chic guest suites, custom interior woodwork, and ensuite stone vanities under ambient daylight.",
+          "Captured exterior curving lagoon pool, outdoor timber sun decks, and lush tropical landscape grounds.",
+          "Created vibrant culinary and beverage editorial imagery for the alfresco kitchen and bar.",
+        ],
+        images: [
+          {
+            src: "/uploads/1789127197934-dsc01278-hdr.jpg",
+            alt: "White Penny Bali",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
     ],
     education: [
       {
@@ -199,6 +217,23 @@ export const initialDefaultData: PortfolioData = {
       featured: true,
       publishedAt: "2024-04-18",
       content: `## Overview\n\nBali Paradise Suites represents the intersection of boutique luxury hospitality and relaxed tropical living. Situated in Canggu, each suite is oriented around private sunlit courtyards and reflection pools.\n\n## Light & Hospitality Experience\n\nThe photography captures the serene morning ambiance as soft daylight washes over custom terrazzo floors and brass architectural fixtures.\n\n- **Private Courtyards**: Turquoise plunge pools reflecting minimalist plaster facades.\n- **Material Palette**: Custom terrazzo, microcement, brass accents, and woven textiles.\n- **Guest Experience**: Editorial vignettes evoking effortless relaxation and quiet refinement.\n\n## Visual Narrative\n\nThrough balanced compositions and natural framing, the visual series highlights the spatial intimacy and luxury hospitality standards that define the property.`,
+    },
+    {
+      slug: "white-penny",
+      title: "White Penny",
+      category: "Property",
+      location: "Seminyak, Bali",
+      year: "2026",
+      summary: "Editorial boutique property photography capturing bohemian-chic suites, lagoon pool living, lush tropical gardens, and relaxed poolside dining.",
+      description: "Editorial boutique property photography capturing bohemian-chic suites, lagoon pool living, lush tropical gardens, and relaxed poolside dining.",
+      coverImage: "/uploads/1789127197934-dsc01278-hdr.jpg",
+      images: [
+        "/uploads/1789127197934-dsc01278-hdr.jpg",
+      ],
+      featured: true,
+      publishedAt: "2026-09-11",
+      instagram: "https://www.instagram.com/whitepennybali/",
+      content: `# Boutique Hospitality & Property Photography\n\n## Overview\n\nA comprehensive visual documentation of White Penny in Seminyak, Bali, showcasing its bohemian-chic accommodations, vibrant lagoon pool, lush garden grounds, and relaxed kitchen and dining spaces. The photography captures the venue as a complete boutique lifestyle destination—from tranquil private guest suites and tactile interior finishes to open-air communal living and vibrant culinary offerings.\n\n## Concept\n\nThe concept focuses on **capturing the effortless synergy of tropical bohemian design, natural daylight, and relaxed communal living**. Compositions balance expansive architectural perspectives of the curving lagoon pool and timber sun decks with tactile vignettes of woven pendant lights, artisanal macrame, brushed brass fixtures, and distressed patina woodwork.\n\n- **Interiors & Tactile Craft**: Earthy neutral tones, woven rattan lighting, handcrafted macrame wall accents, and warm timber cabinetry illuminated by soft, natural ambient daylight.\n- **Lagoon Pool & Outdoor Living**: Sunlit timber boardwalks, curving turquoise water, plush white beanbag loungers, and tropical palms that frame the relaxed island rhythm.\n- **Culinary & Dining Atmosphere**: Vibrant food and beverage storytelling at the alfresco kitchen and bar, spotlighting fresh smoothie bowls, refreshing coolers, and casual poolside dining.`,
     },
   ],
   gallery: [

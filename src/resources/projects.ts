@@ -67,6 +67,24 @@ export const projects: Project[] = [
     featured: true,
     publishedAt: "2024-04-18",
   },
+  {
+    slug: "white-penny",
+    title: "White Penny",
+    category: "Property",
+    location: "Seminyak, Bali",
+    year: "2026",
+    description:
+      "Editorial boutique property photography capturing bohemian-chic suites, lagoon pool living, lush tropical gardens, and relaxed poolside dining.",
+    summary:
+      "Editorial boutique property photography capturing bohemian-chic suites, lagoon pool living, lush tropical gardens, and relaxed poolside dining.",
+    coverImage: "/uploads/1789127197934-dsc01278-hdr.jpg",
+    images: [
+      "/uploads/1789127197934-dsc01278-hdr.jpg",
+    ],
+    featured: true,
+    publishedAt: "2026-09-11",
+    instagram: "https://www.instagram.com/whitepennybali/",
+  },
 ];
 
 export const projectCategories = [

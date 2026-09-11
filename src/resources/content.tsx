@@ -160,6 +160,24 @@ const photographyExperiences = [
       },
     ],
   },
+  {
+    company: "White Penny Bali",
+    timeframe: "September 2026 - Present",
+    role: "Boutique Property & Lifestyle Photographer (Seminyak, Bali)",
+    achievements: [
+      "Documented bohemian-chic guest suites, custom interior woodwork, and ensuite stone vanities under ambient daylight.",
+      "Captured exterior curving lagoon pool, outdoor timber sun decks, and lush tropical landscape grounds.",
+      "Created vibrant culinary and beverage editorial imagery for the alfresco kitchen and bar.",
+    ],
+    images: [
+      {
+        src: "/uploads/1789127197934-dsc01278-hdr.jpg",
+        alt: "White Penny Bali",
+        width: 16,
+        height: 9,
+      },
+    ],
+  },
 ];
 
 

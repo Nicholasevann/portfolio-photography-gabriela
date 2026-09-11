@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-29T04:59:58.993Z",
+  "updatedAt": "2026-09-11T12:14:34.109Z",
   "person": {
     "firstName": "Nicholas",
     "lastName": "Evan L",
@@ -66,7 +66,7 @@
       },
       {
         "company": "Bali Paradise Suites",
-        "timeframe": "May 2026 - Present",
+        "timeframe": "July 2026 - Present",
         "role": "Property & Architectural Photographer (Canggu, Bali)",
         "achievements": [
           "Visit visual capture of luxury rental villa suites and private plunge pools.",
@@ -76,6 +76,24 @@
           {
             "src": "/uploads/1787941062342-0.png",
             "alt": "Bali Paradise Suites",
+            "width": 16,
+            "height": 9
+          }
+        ]
+      },
+      {
+        "company": "White Penny Bali",
+        "timeframe": "September 2026",
+        "role": "Boutique Property & Lifestyle Photographer (Seminyak, Bali)",
+        "achievements": [
+          "Documented bohemian-chic guest suites, custom interior woodwork, and ensuite stone vanities under ambient daylight.",
+          "Captured exterior curving lagoon pool, outdoor timber sun decks, and lush tropical landscape grounds.",
+          "Created vibrant culinary and beverage editorial imagery for the alfresco kitchen and bar."
+        ],
+        "images": [
+          {
+            "src": "/uploads/1789127197934-dsc01278-hdr.jpg",
+            "alt": "White Penny Bali",
             "width": 16,
             "height": 9
           }
@@ -218,6 +236,66 @@
       "content": "# Hotel Property Photography\n\n## Overview\n\nA comprehensive visual documentation of the hotel, showcasing its architecture, interiors, amenities, and overall guest experience. The photography captures the property from multiple perspectives, including the pool and outdoor spaces, guest rooms, bathrooms, architectural details, common areas, and dining experiences. The series is designed to present the hotel as a complete destination, giving viewers a sense of its atmosphere, design, comfort, and character.\n\n## Concept\n\nThe concept focuses on **capturing the complete identity of the hotel through architecture, interiors, natural light, and lifestyle details**. The photographs combine wide environmental compositions with closer architectural and interior details to highlight the property's design and functionality. Warm natural materials, timber, thatched roofing, neutral tones, and tropical surroundings create a cohesive visual language throughout the series."
     },
     {
+      "slug": "white-penny",
+      "title": "White Penny",
+      "category": "Property",
+      "location": "Seminyak, Bali",
+      "year": "2026",
+      "summary": "Editorial boutique property photography capturing bohemian-chic suites, lagoon pool living, lush tropical gardens, and relaxed poolside dining.",
+      "description": "Editorial boutique property photography capturing bohemian-chic suites, lagoon pool living, lush tropical gardens, and relaxed poolside dining.",
+      "coverImage": "/uploads/1789127197934-dsc01278-hdr.jpg",
+      "images": [
+        {
+          "src": "/uploads/1789127197934-dsc01278-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1789127205720-dsc01269-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1789127215399-dsc01314-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1789127233027-dsc01395-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1789127249111-dsc01580-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1789127257903-dsc01743-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1789127264807-dsc01759-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1789127281590-dsc02061-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1789127288304-dsc02082-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1789127310879-dsc02230.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1789127328672-dsc02481-hdr.jpg",
+          "orientation": "vertical"
+        }
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-11",
+      "instagram": "https://www.instagram.com/whitepennybali/",
+      "content": "# Boutique Hospitality & Property Photography\n\n## Overview\n\nA comprehensive visual documentation of White Penny in Seminyak, Bali, showcasing its bohemian-chic accommodations, vibrant lagoon pool, lush garden grounds, and relaxed kitchen and dining spaces. The photography captures the venue as a complete boutique lifestyle destination—from tranquil private guest suites and tactile interior finishes to open-air communal living and vibrant culinary offerings.\n\n## Concept\n\nThe concept focuses on **capturing the effortless synergy of tropical bohemian design, natural daylight, and relaxed communal living**. Compositions balance expansive architectural perspectives of the curving lagoon pool and timber sun decks with tactile vignettes of woven pendant lights, artisanal macrame, brushed brass fixtures, and distressed patina woodwork.\n\n- **Interiors & Tactile Craft**: Earthy neutral tones, woven rattan lighting, handcrafted macrame wall accents, and warm timber cabinetry illuminated by soft, natural ambient daylight.\n- **Lagoon Pool & Outdoor Living**: Sunlit timber boardwalks, curving turquoise water, plush white beanbag loungers, and tropical palms that frame the relaxed island rhythm.\n- **Culinary & Dining Atmosphere**: Vibrant food and beverage storytelling at the alfresco kitchen and bar, spotlighting fresh smoothie bowls, refreshing coolers, and casual poolside dining."
+    },
+    {
       "slug": "the-huthut",
       "title": "The Huthut",
       "category": "Property",
@@ -323,11 +401,18 @@
   ],
   "gallery": [
     {
-      "id": "gal-1",
-      "src": "/uploads/1787940118299-img_4529.jpg",
-      "alt": "On The Sola Villa Courtyard",
+      "id": "gal-1789127570223-0",
+      "src": "/uploads/1789127570219-dsc01278-hdr.jpg",
+      "alt": "DSC01278 HDR",
       "orientation": "horizontal",
-      "category": "Property"
+      "category": "General"
+    },
+    {
+      "id": "gal-1789127537777-0",
+      "src": "/uploads/1789127537772-dsc02061-hdr.jpg",
+      "alt": "DSC02061 HDR",
+      "orientation": "horizontal",
+      "category": "General"
     },
     {
       "id": "gal-2",
@@ -337,18 +422,18 @@
       "category": "Architecture"
     },
     {
-      "id": "gal-3",
-      "src": "/uploads/1787940584325-img_4399.jpg",
-      "alt": "Modern Tropical Villa Living",
+      "id": "gal-1789127488418-0",
+      "src": "/uploads/1789127488414-dsc01720.jpg",
+      "alt": "DSC01720",
       "orientation": "horizontal",
-      "category": "Property"
+      "category": "General"
     },
     {
-      "id": "gal-4",
-      "src": "/uploads/1787940584322-img_4381.jpg",
-      "alt": "Minimalist Corridor Perspective",
-      "orientation": "vertical",
-      "category": "Architecture"
+      "id": "gal-1789127645105-0",
+      "src": "/uploads/1789127645099-img_4365.jpg",
+      "alt": "IMG 4365",
+      "orientation": "horizontal",
+      "category": "General"
     },
     {
       "id": "gal-5",
@@ -358,6 +443,13 @@
       "category": "Details"
     },
     {
+      "id": "gal-4",
+      "src": "/uploads/1787940584322-img_4381.jpg",
+      "alt": "Minimalist Corridor Perspective",
+      "orientation": "vertical",
+      "category": "Architecture"
+    },
+    {
       "id": "gal-6",
       "src": "/uploads/1787941067715-2.png",
       "alt": "Bali Paradise Suites Poolside",
@@ -365,18 +457,25 @@
       "category": "Hospitality"
     },
     {
-      "id": "gal-7",
-      "src": "/uploads/1787940265033-img_4587.jpg",
-      "alt": "The Huthut Organic Pavilion",
+      "id": "gal-3",
+      "src": "/uploads/1787940584325-img_4399.jpg",
+      "alt": "Modern Tropical Villa Living",
       "orientation": "horizontal",
-      "category": "Architecture"
+      "category": "Property"
     },
     {
-      "id": "gal-8",
-      "src": "/uploads/1787940265035-img_4604.jpg",
-      "alt": "Serene Morning Daylight",
+      "id": "gal-1789127696700-0",
+      "src": "/uploads/1789127696696-dsc02230.jpg",
+      "alt": "DSC02230",
+      "orientation": "horizontal",
+      "category": "General"
+    },
+    {
+      "id": "gal-1789127750962-0",
+      "src": "/uploads/1789127750958-dsc01595-hdr.jpg",
+      "alt": "DSC01595 HDR",
       "orientation": "vertical",
-      "category": "Atmosphere"
+      "category": "General"
     }
   ]
 }
