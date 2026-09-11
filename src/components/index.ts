@@ -13,3 +13,4 @@ export { ProjectGallery } from "@/components/work/ProjectGallery";
 export { ProjectCover } from "@/components/work/ProjectCover";
 export { ScrollReveal } from "@/components/common/ScrollReveal";
 export { LightboxProvider, useLightbox } from "@/components/common/ImageLightbox";
+export { WhatsAppButton } from "@/components/WhatsAppButton";

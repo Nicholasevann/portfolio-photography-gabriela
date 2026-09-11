@@ -1,0 +1,117 @@
+@use "./breakpoints.scss" as breakpoints;
+
+.whatsappWrapper {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (max-width: breakpoints.$s) {
+    bottom: 92px;
+    right: 18px;
+  }
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.2),
+    0 8px 24px -4px rgba(37, 211, 102, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  overflow: visible;
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.06);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.28),
+      0 14px 32px -4px rgba(37, 211, 102, 0.6);
+    border-color: rgba(255, 255, 255, 0.45);
+
+    .iconContainer {
+      transform: scale(1.08) rotate(3deg);
+    }
+  }
+
+  &:active {
+    transform: translateY(1px) scale(0.95);
+    box-shadow:
+      0 2px 10px rgba(0, 0, 0, 0.2),
+      0 4px 14px rgba(37, 211, 102, 0.4);
+  }
+}
+
+/* Pulsing radar ripple */
+.pulseRing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 9999px;
+  border: 2px solid #25d366;
+  opacity: 0.75;
+  animation: pulse-ring 2.6s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  color: #ffffff;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Mobile styles */
+@media (max-width: breakpoints.$s) {
+  .button {
+    width: 50px;
+    height: 50px;
+    box-shadow:
+      0 4px 14px rgba(0, 0, 0, 0.25),
+      0 6px 18px -2px rgba(37, 211, 102, 0.45);
+  }
+
+  .iconContainer {
+    font-size: 25px;
+  }
+}
