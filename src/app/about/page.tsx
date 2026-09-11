@@ -195,7 +195,10 @@ export default async function About() {
                             <Button
                               key={`btn-desktop-${item.name}`}
                               href={item.link}
+                              target={item.link.startsWith("mailto:") ? undefined : "_blank"}
+                              rel={item.link.startsWith("mailto:") ? undefined : "noopener noreferrer"}
                               prefixIcon={item.icon}
+                              suffixIcon={item.link.startsWith("http") ? "arrowUpRight" : undefined}
                               label={item.name}
                               size="s"
                               weight="default"
@@ -207,7 +210,10 @@ export default async function About() {
                               size="l"
                               key={`btn-mobile-${item.name}`}
                               href={item.link}
+                              target={item.link.startsWith("mailto:") ? undefined : "_blank"}
+                              rel={item.link.startsWith("mailto:") ? undefined : "noopener noreferrer"}
                               icon={item.icon}
+                              tooltip={item.name}
                               variant="secondary"
                             />
                           </Row>
@@ -346,6 +352,23 @@ export default async function About() {
                                 {tag.name}
                               </Tag>
                             ))}
+                          </Row>
+                        )}
+                        {(skill.title.toLowerCase().includes("development") ||
+                          skill.title.toLowerCase().includes("software")) && (
+                          <Row paddingTop="12">
+                            <Button
+                              href="https://nicholas-porto.vercel.app/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              variant="secondary"
+                              size="s"
+                              weight="default"
+                              prefixIcon="code"
+                              suffixIcon="arrowUpRight"
+                            >
+                              Explore Software Developer Portfolio
+                            </Button>
                           </Row>
                         )}
                       </Column>

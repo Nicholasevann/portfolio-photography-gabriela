@@ -38,6 +38,12 @@ const social: Social = [
     link: `mailto:${person.email}`,
     essential: true,
   },
+  {
+    name: "Software Developer",
+    icon: "code",
+    link: "https://nicholas-porto.vercel.app/",
+    essential: true,
+  },
 ];
 
 const home: Home = {

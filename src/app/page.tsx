@@ -106,17 +106,33 @@ export default async function Home() {
             </Text>
           </RevealFx>
           <RevealFx paddingTop="8" delay={0.4} horizontal="center">
-            <Button
-              id="selected-work-btn"
-              data-border="rounded"
-              href="/work"
-              variant="secondary"
-              size="m"
-              weight="default"
-              arrowIcon
-            >
-              Selected Work
-            </Button>
+            <Row gap="12" wrap horizontal="center">
+              <Button
+                id="selected-work-btn"
+                data-border="rounded"
+                href="/work"
+                variant="primary"
+                size="m"
+                weight="default"
+                arrowIcon
+              >
+                Selected Work
+              </Button>
+              <Button
+                id="software-dev-hero-btn"
+                data-border="rounded"
+                href="https://nicholas-porto.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                size="m"
+                weight="default"
+                prefixIcon="code"
+                suffixIcon="arrowUpRight"
+              >
+                Software Developer
+              </Button>
+            </Row>
           </RevealFx>
         </Column>
 
@@ -272,6 +288,8 @@ export default async function Home() {
                 <Button
                   key={`contact-social-${s.name}-${index}`}
                   href={s.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variant="secondary"
                   size="m"
                   prefixIcon={s.icon}
@@ -279,6 +297,17 @@ export default async function Home() {
                   {s.name}
                 </Button>
               ))}
+            <Button
+              href="https://nicholas-porto.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+              size="m"
+              prefixIcon="code"
+              suffixIcon="arrowUpRight"
+            >
+              Software Developer
+            </Button>
           </Row>
         </Column>
       </ScrollReveal>

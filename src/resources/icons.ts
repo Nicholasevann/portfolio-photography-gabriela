@@ -25,6 +25,7 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
+  PiCodeDuotone,
 } from "react-icons/pi";
 
 import {
@@ -74,6 +75,7 @@ export const iconLibrary: Record<string, IconType> = {
   chevronRight: HiChevronRight,
   zoomIn: HiMagnifyingGlassPlus,
   zoomOut: HiMagnifyingGlassMinus,
+  code: PiCodeDuotone,
 };
 
 export type IconLibrary = typeof iconLibrary;

@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Fade, Flex, Line, Row, SmartLink, Text, ToggleButton } from "@once-ui-system/core";
+import { Button, Fade, Flex, Line, Row, SmartLink, Text, ToggleButton } from "@once-ui-system/core";
 import { routes, display, person as staticPerson, about, blog, work, gallery } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
@@ -228,6 +228,20 @@ export const Header = () => {
                 </Text>
               )}
             </Flex>
+            <Row s={{ hide: true }}>
+              <Button
+                href="https://nicholas-porto.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                size="s"
+                weight="default"
+                prefixIcon="code"
+                suffixIcon="arrowUpRight"
+              >
+                Software Dev
+              </Button>
+            </Row>
           </Flex>
         </Flex>
       </Row>
