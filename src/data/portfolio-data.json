@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11T13:38:17.688Z",
+  "updatedAt": "2026-09-11T13:44:11.497Z",
   "person": {
     "firstName": "Nicholas",
     "lastName": "Evan L",
@@ -397,9 +397,9 @@
   ],
   "gallery": [
     {
-      "id": "gal-1789127570223-0",
-      "src": "/uploads/1789127570219-dsc01278-hdr.jpg",
-      "alt": "DSC01278 HDR",
+      "id": "gal-1789134195592-0",
+      "src": "/uploads/1789134195586-cover.jpg",
+      "alt": "cover",
       "orientation": "horizontal",
       "category": "General"
     },
@@ -425,18 +425,18 @@
       "category": "General"
     },
     {
-      "id": "gal-1789127645105-0",
-      "src": "/uploads/1789127645099-img_4365.jpg",
-      "alt": "IMG 4365",
-      "orientation": "horizontal",
-      "category": "General"
-    },
-    {
       "id": "gal-5",
       "src": "/uploads/1787940066995-img_4558.jpg",
       "alt": "Natural Materials & Teak Wood",
       "orientation": "vertical",
       "category": "Details"
+    },
+    {
+      "id": "gal-1789127645105-0",
+      "src": "/uploads/1789127645099-img_4365.jpg",
+      "alt": "IMG 4365",
+      "orientation": "horizontal",
+      "category": "General"
     },
     {
       "id": "gal-4",
@@ -470,7 +470,7 @@
       "id": "gal-1789127750962-0",
       "src": "/uploads/1789127750958-dsc01595-hdr.jpg",
       "alt": "DSC01595 HDR",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "category": "General"
     }
   ]
