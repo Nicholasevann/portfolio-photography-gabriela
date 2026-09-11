@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11T12:37:26.394Z",
+  "updatedAt": "2026-09-11T13:33:52.796Z",
   "person": {
     "firstName": "Nicholas",
     "lastName": "Evan L",
@@ -243,12 +243,9 @@
       "year": "2026",
       "summary": "Editorial boutique property photography capturing bohemian-chic suites, lagoon pool living, lush tropical gardens, and relaxed poolside dining.",
       "description": "Editorial boutique property photography capturing bohemian-chic suites, lagoon pool living, lush tropical gardens, and relaxed poolside dining.",
-      "coverImage": "/uploads/1789127197934-dsc01278-hdr.jpg",
+      "coverImage": "/uploads/1789133625061-cover.jpg",
       "images": [
-        {
-          "src": "/uploads/1789127197934-dsc01278-hdr.jpg",
-          "orientation": "horizontal"
-        },
+        "/uploads/1789133625061-cover.jpg",
         {
           "src": "/uploads/1789127205720-dsc01269-hdr.jpg",
           "orientation": "vertical"
