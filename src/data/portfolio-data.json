@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11T12:14:34.109Z",
+  "updatedAt": "2026-09-11T12:37:26.394Z",
   "person": {
     "firstName": "Nicholas",
     "lastName": "Evan L",
@@ -258,7 +258,19 @@
           "orientation": "vertical"
         },
         {
+          "src": "/uploads/1789127281590-dsc02061-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
           "src": "/uploads/1789127233027-dsc01395-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1789127288304-dsc02082-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1789127328672-dsc02481-hdr.jpg",
           "orientation": "vertical"
         },
         {
@@ -270,30 +282,18 @@
           "orientation": "vertical"
         },
         {
-          "src": "/uploads/1789127264807-dsc01759-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1789127281590-dsc02061-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1789127288304-dsc02082-hdr.jpg",
-          "orientation": "vertical"
-        },
-        {
           "src": "/uploads/1789127310879-dsc02230.jpg",
           "orientation": "horizontal"
         },
         {
-          "src": "/uploads/1789127328672-dsc02481-hdr.jpg",
-          "orientation": "vertical"
+          "src": "/uploads/1789127264807-dsc01759-hdr.jpg",
+          "orientation": "horizontal"
         }
       ],
       "featured": true,
       "publishedAt": "2026-09-11",
       "instagram": "https://www.instagram.com/whitepennybali/",
-      "content": "# Boutique Hospitality & Property Photography\n\n## Overview\n\nA comprehensive visual documentation of White Penny in Seminyak, Bali, showcasing its bohemian-chic accommodations, vibrant lagoon pool, lush garden grounds, and relaxed kitchen and dining spaces. The photography captures the venue as a complete boutique lifestyle destination—from tranquil private guest suites and tactile interior finishes to open-air communal living and vibrant culinary offerings.\n\n## Concept\n\nThe concept focuses on **capturing the effortless synergy of tropical bohemian design, natural daylight, and relaxed communal living**. Compositions balance expansive architectural perspectives of the curving lagoon pool and timber sun decks with tactile vignettes of woven pendant lights, artisanal macrame, brushed brass fixtures, and distressed patina woodwork.\n\n- **Interiors & Tactile Craft**: Earthy neutral tones, woven rattan lighting, handcrafted macrame wall accents, and warm timber cabinetry illuminated by soft, natural ambient daylight.\n- **Lagoon Pool & Outdoor Living**: Sunlit timber boardwalks, curving turquoise water, plush white beanbag loungers, and tropical palms that frame the relaxed island rhythm.\n- **Culinary & Dining Atmosphere**: Vibrant food and beverage storytelling at the alfresco kitchen and bar, spotlighting fresh smoothie bowls, refreshing coolers, and casual poolside dining."
+      "content": "# Boutique Hospitality & Property Photography\n\n## Overview\n\nA comprehensive visual documentation of White Penny in Seminyak, Bali, showcasing its bohemian-chic accommodations, vibrant lagoon pool, lush garden grounds, and relaxed kitchen and dining spaces. The photography captures the venue as a complete boutique lifestyle destination—from tranquil private guest suites and tactile interior finishes to open-air communal living and vibrant culinary offerings.\n\n## Concept\n\nThe concept focuses on **capturing the effortless synergy of tropical bohemian design, natural daylight, and relaxed communal living**. Compositions balance expansive architectural perspectives of the curving lagoon pool and timber sun decks with tactile vignettes of woven pendant lights, artisanal macrame, brushed brass fixtures, and distressed patina woodwork."
     },
     {
       "slug": "the-huthut",
