@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11T13:33:52.796Z",
+  "updatedAt": "2026-09-11T13:38:17.688Z",
   "person": {
     "firstName": "Nicholas",
     "lastName": "Evan L",
@@ -245,7 +245,10 @@
       "description": "Editorial boutique property photography capturing bohemian-chic suites, lagoon pool living, lush tropical gardens, and relaxed poolside dining.",
       "coverImage": "/uploads/1789133625061-cover.jpg",
       "images": [
-        "/uploads/1789133625061-cover.jpg",
+        {
+          "src": "/uploads/1789127281590-dsc02061-hdr.jpg",
+          "orientation": "horizontal"
+        },
         {
           "src": "/uploads/1789127205720-dsc01269-hdr.jpg",
           "orientation": "vertical"
@@ -255,27 +258,7 @@
           "orientation": "vertical"
         },
         {
-          "src": "/uploads/1789127281590-dsc02061-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
           "src": "/uploads/1789127233027-dsc01395-hdr.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1789127288304-dsc02082-hdr.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1789127328672-dsc02481-hdr.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1789127249111-dsc01580-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1789127257903-dsc01743-hdr.jpg",
           "orientation": "vertical"
         },
         {
@@ -283,8 +266,24 @@
           "orientation": "horizontal"
         },
         {
-          "src": "/uploads/1789127264807-dsc01759-hdr.jpg",
+          "src": "/uploads/1789127288304-dsc02082-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1789127328672-dsc02481-hdr.jpg",
           "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1789127249111-dsc01580-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1789133738309-dsc02112-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1789127257903-dsc01743-hdr.jpg",
+          "orientation": "vertical"
         }
       ],
       "featured": true,
