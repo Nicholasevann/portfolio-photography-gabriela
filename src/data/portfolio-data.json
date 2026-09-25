@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T14:45:29.346Z",
+  "updatedAt": "2026-09-25T14:52:06.491Z",
   "person": {
     "firstName": "Nicholas",
     "lastName": "Evan L",
@@ -184,114 +184,6 @@
   },
   "projects": [
     {
-      "slug": "ciputra-resort-svana",
-      "title": "Ciputra Resort Svana",
-      "category": "Property",
-      "location": "Tabanan, Bali",
-      "year": "2026",
-      "summary": "Architectural photography capturing a luxury two-story residence in the Resvara coastal cluster at Ciputra Beach Resort.",
-      "description": "Architectural photography capturing a luxury two-story residence in the Resvara coastal cluster at Ciputra Beach Resort.",
-      "coverImage": "/uploads/1790340716575-dsc05707-hdr.jpg",
-      "images": [
-        {
-          "src": "/uploads/1790340716575-dsc05707-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1790340749040-dsc05265-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1790340794053-dsc05286-hdr.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1790340834203-dsc05325-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1790340846481-dsc05346-hdr.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1790340936936-dsc05914-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1790341723532-dsc05496-hdr.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1790341039197-dsc05667-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1790340993216-dsc05775-hdr.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1790341053196-dsc05469-hdr.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1790341577255-dsc05694-hdr.jpg",
-          "orientation": "vertical"
-        }
-      ],
-      "featured": true,
-      "publishedAt": "2026-09-25",
-      "instagram": "",
-      "content": "## Overview\n\nAn architectural photography commission documenting Type Svana within the coastal Resvara cluster at Ciputra Beach Resort in Tabanan, Bali. The assignment captures the spacious two-story luxury residence, highlighting its expansive 125 m² layout, functional spatial zoning, and seamless connection between interior open-plan living and lush private garden grounds near the sunset beach.\n\n## Concept & Lighting\n\nHighlighting clean orthogonal sightlines, double-height ceiling volumes, and the tranquil interplay between natural illumination and tropical landscaping. Natural afternoon daylight was utilized to accent raw stone textures, refined timber cabinetry, and smooth neutral plaster finishes, establishing an airy and sophisticated coastal ambiance."
-    },
-    {
-      "slug": "the-huthut",
-      "title": "The Huthut",
-      "category": "Property",
-      "location": "Uluwatu, Bali",
-      "year": "2026",
-      "summary": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
-      "description": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
-      "coverImage": "/uploads/1787940439507-img_4451.jpg",
-      "images": [
-        {
-          "src": "/uploads/1787940584322-img_4381.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1787940584325-img_4399.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1787940584329-img_4449.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1787940584332-img_4456.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1787940906745-img_4359.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1787940756269-img_4389.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1787940584336-img_4459.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1787940584299-img_4339.jpg",
-          "orientation": "vertical"
-        }
-      ],
-      "featured": true,
-      "publishedAt": "2026-08-27",
-      "instagram": "https://www.instagram.com/thehuthutbali/",
-      "content": "## Overview\n\nA boutique hospitality and property photography assignment documenting The Hut Hut, a secluded retreat nestled in Bingin, Uluwatu. The visual series captures the intimate cluster of six handcrafted wooden bungalows, the central turquoise swimming pool, open-air communal living spaces, and tranquil garden pathways tailored for peaceful coastal stays.\n\n## Concept & Lighting\n\nHighlighting the organic geometry of sustainable bamboo joinery, high-vaulted thatched ceilings, and fluid transitions between private suites and tropical outdoor living. Soft ambient daylight filtering through the surrounding canopy illuminates warm weathered teak surfaces, while low-angle morning sun accentuates tactile craftsmanship and serene island living."
-    },
-    {
       "slug": "ciputra-beach-resort",
       "title": "Ciputra Resort Askana",
       "category": "Property",
@@ -350,6 +242,114 @@
       "publishedAt": "2026-09-25",
       "instagram": "",
       "content": "## Overview\n\nArchitectural and interior documentation of Type Askana, situated in the seaside Resvara cluster at Ciputra Beach Resort in Tabanan, Bali. The photography captures the modern two-story villa's compact 76 m² architecture, emphasizing efficient spatial design, contemporary vacation comfort, and harmonious integration into the coastal landscape.\n\n## Concept & Lighting\n\nHighlighting linear structural geometry, tall vertical window apertures, and clean spatial flow from the living lounge into private master suites. Bright daylight balanced with gentle shadow gradations brings out natural wood textures, clean architectural lines, and neutral tones, evoking an understated and relaxed seaside aesthetic."
+    },
+    {
+      "slug": "the-huthut",
+      "title": "The Huthut",
+      "category": "Property",
+      "location": "Uluwatu, Bali",
+      "year": "2026",
+      "summary": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
+      "description": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
+      "coverImage": "/uploads/1787940439507-img_4451.jpg",
+      "images": [
+        {
+          "src": "/uploads/1787940584322-img_4381.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940584325-img_4399.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940584329-img_4449.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940584332-img_4456.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940906745-img_4359.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940756269-img_4389.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940584336-img_4459.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940584299-img_4339.jpg",
+          "orientation": "vertical"
+        }
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "instagram": "https://www.instagram.com/thehuthutbali/",
+      "content": "## Overview\n\nA boutique hospitality and property photography assignment documenting The Hut Hut, a secluded retreat nestled in Bingin, Uluwatu. The visual series captures the intimate cluster of six handcrafted wooden bungalows, the central turquoise swimming pool, open-air communal living spaces, and tranquil garden pathways tailored for peaceful coastal stays.\n\n## Concept & Lighting\n\nHighlighting the organic geometry of sustainable bamboo joinery, high-vaulted thatched ceilings, and fluid transitions between private suites and tropical outdoor living. Soft ambient daylight filtering through the surrounding canopy illuminates warm weathered teak surfaces, while low-angle morning sun accentuates tactile craftsmanship and serene island living."
+    },
+    {
+      "slug": "ciputra-resort-svana",
+      "title": "Ciputra Resort Svana",
+      "category": "Property",
+      "location": "Tabanan, Bali",
+      "year": "2026",
+      "summary": "Architectural photography capturing a luxury two-story residence in the Resvara coastal cluster at Ciputra Beach Resort.",
+      "description": "Architectural photography capturing a luxury two-story residence in the Resvara coastal cluster at Ciputra Beach Resort.",
+      "coverImage": "/uploads/1790347905132-dsc05265-hdr.jpg",
+      "images": [
+        {
+          "src": "/uploads/1790347905132-dsc05265-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790340716575-dsc05707-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790340794053-dsc05286-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790340834203-dsc05325-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790340846481-dsc05346-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790340936936-dsc05914-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790341723532-dsc05496-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790341039197-dsc05667-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790340993216-dsc05775-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790341053196-dsc05469-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790341577255-dsc05694-hdr.jpg",
+          "orientation": "vertical"
+        }
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-25",
+      "instagram": "",
+      "content": "## Overview\n\nAn architectural photography commission documenting Type Svana within the coastal Resvara cluster at Ciputra Beach Resort in Tabanan, Bali. The assignment captures the spacious two-story luxury residence, highlighting its expansive 125 m² layout, functional spatial zoning, and seamless connection between interior open-plan living and lush private garden grounds near the sunset beach.\n\n## Concept & Lighting\n\nHighlighting clean orthogonal sightlines, double-height ceiling volumes, and the tranquil interplay between natural illumination and tropical landscaping. Natural afternoon daylight was utilized to accent raw stone textures, refined timber cabinetry, and smooth neutral plaster finishes, establishing an airy and sophisticated coastal ambiance."
     },
     {
       "slug": "sola",
