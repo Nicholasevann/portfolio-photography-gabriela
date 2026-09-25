@@ -22,8 +22,7 @@ import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { Metadata } from "next";
 import { getProjectBySlug, getProjects } from "@/lib/data-store";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 60;
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const dynamicProjects = await getProjects();

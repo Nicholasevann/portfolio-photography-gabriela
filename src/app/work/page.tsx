@@ -3,8 +3,7 @@ import { baseURL, person, work } from "@/resources";
 import { WorkFilterView } from "@/components/work/WorkFilterView";
 import { getProjects } from "@/lib/data-store";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 60;
 
 export async function generateMetadata() {
   return Meta.generate({
