@@ -16,7 +16,7 @@ import {
 } from "@once-ui-system/core";
 import { baseURL, person, work } from "@/resources";
 import { projects as staticProjects } from "@/resources/projects";
-import { ScrollToHash, CustomMDX, ProjectCover } from "@/components";
+import { ScrollToHash, CustomMDX } from "@/components";
 import { ProjectGallery } from "@/components/work/ProjectGallery";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { Metadata } from "next";
@@ -121,7 +121,26 @@ export default async function Project({
     ? (dynamicMatch.images || [])
     : (post?.metadata.images?.length ? post.metadata.images : staticMatch?.images || []);
 
-  const content = dynamicMatch ? (dynamicMatch.content || "") : (post?.content || "");
+  // Ensure showcase images includes all project photos
+  const showcaseImages = (() => {
+    if (allImages.length === 0) {
+      return coverImage ? [coverImage] : [];
+    }
+    const hasCover = coverImage && allImages.some((img) => {
+      const src = typeof img === "string" ? img : img.src;
+      return src === coverImage;
+    });
+    if (coverImage && !hasCover) {
+      return [coverImage, ...allImages];
+    }
+    return allImages;
+  })();
+
+  const rawContent = dynamicMatch ? (dynamicMatch.content || "") : (post?.content || "");
+  // Clean content: remove any title before overview, keeping just the overview and concept
+  const content = rawContent
+    ? rawContent.replace(/^#+\s+(?!Overview\b)[^\n]+\n+/, "").trim()
+    : "";
   const instagram = dynamicMatch?.instagram || post?.metadata.instagram || staticMatch?.instagram || "";
 
   // Compute Next Project
@@ -163,10 +182,10 @@ export default async function Project({
         </SmartLink>
       </Row>
 
-      {/* 1. Project Hero & 2. Project Information */}
+      {/* 1. Project Title & Information Header */}
       <RevealFx translateY="8" fillWidth horizontal="center">
-        <Column maxWidth="s" gap="12" horizontal="center" align="center" paddingBottom="8">
-          <Row gap="8" vertical="center">
+        <Column maxWidth="s" gap="12" horizontal="center" align="center" paddingBottom="12">
+          <Row gap="8" vertical="center" wrap>
             <Badge
               background="brand-alpha-weak"
               onBackground="neutral-strong"
@@ -175,14 +194,9 @@ export default async function Project({
             >
               {category}
             </Badge>
-            {location && (
-              <Text variant="body-default-xs" onBackground="neutral-weak">
-                {location}
-              </Text>
-            )}
             {year && (
               <Text variant="body-default-xs" onBackground="neutral-weak">
-                · {year}
+                {year}
               </Text>
             )}
             {instagram && (
@@ -203,50 +217,61 @@ export default async function Project({
             {title}
           </Heading>
 
-          {description && (
+          {location && (
             <Text
               variant="heading-default-m"
               onBackground="neutral-weak"
               align="center"
               wrap="balance"
             >
-              {description}
+              {location}
             </Text>
           )}
         </Column>
       </RevealFx>
 
-      {/* 3. Featured Cover Image */}
-      <RevealFx translateY="16" delay={0.2} fillWidth>
-        <ProjectCover
-          src={coverImage}
-          alt={title}
-          title={title}
-          allImages={allImages}
-        />
-      </RevealFx>
+      {/* 2. Photography Showcase (Unified Masonry Grid on Top) */}
+      {showcaseImages.length > 0 && (
+        <Column fillWidth>
+          <ProjectGallery images={showcaseImages} title={title} />
+        </Column>
+      )}
 
-      {/* 4. Project Narrative & Description */}
+      {/* 3. Project Overview, Concept & Narrative Description (At Bottom of Showcase) */}
       {content ? (
         <ScrollReveal translateY="12" fillWidth horizontal="center">
           <Column
             style={{ margin: "0 auto" }}
             as="article"
             maxWidth="xs"
-            paddingY="12"
+            paddingTop="32"
+            paddingBottom="16"
             fillWidth
           >
             <CustomMDX source={content} />
           </Column>
         </ScrollReveal>
+      ) : description ? (
+        <ScrollReveal translateY="12" fillWidth horizontal="center">
+          <Column
+            style={{ margin: "0 auto" }}
+            as="article"
+            maxWidth="xs"
+            paddingTop="32"
+            paddingBottom="16"
+            fillWidth
+          >
+            <Text
+              variant="body-default-m"
+              onBackground="neutral-weak"
+              wrap="balance"
+              style={{ lineHeight: "1.7" }}
+            >
+              {description}
+            </Text>
+          </Column>
+        </ScrollReveal>
       ) : null}
-
-      {/* 5. Complete Photography Gallery (Unified Masonry Grid) */}
-      {allImages.length > 0 && (
-        <Column fillWidth marginTop="8">
-          <ProjectGallery images={allImages} title={title} />
-        </Column>
-      )}
 
       {/* 6. Next Project Navigation */}
       {nextProject && nextSlug !== slugPath && (

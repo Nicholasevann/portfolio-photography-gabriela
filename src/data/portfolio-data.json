@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11T13:44:11.497Z",
+  "updatedAt": "2026-09-25T14:45:29.346Z",
   "person": {
     "firstName": "Nicholas",
     "lastName": "Evan L",
@@ -184,10 +184,178 @@
   },
   "projects": [
     {
+      "slug": "ciputra-resort-svana",
+      "title": "Ciputra Resort Svana",
+      "category": "Property",
+      "location": "Tabanan, Bali",
+      "year": "2026",
+      "summary": "Architectural photography capturing a luxury two-story residence in the Resvara coastal cluster at Ciputra Beach Resort.",
+      "description": "Architectural photography capturing a luxury two-story residence in the Resvara coastal cluster at Ciputra Beach Resort.",
+      "coverImage": "/uploads/1790340716575-dsc05707-hdr.jpg",
+      "images": [
+        {
+          "src": "/uploads/1790340716575-dsc05707-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790340749040-dsc05265-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790340794053-dsc05286-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790340834203-dsc05325-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790340846481-dsc05346-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790340936936-dsc05914-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790341723532-dsc05496-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790341039197-dsc05667-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790340993216-dsc05775-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790341053196-dsc05469-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790341577255-dsc05694-hdr.jpg",
+          "orientation": "vertical"
+        }
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-25",
+      "instagram": "",
+      "content": "## Overview\n\nAn architectural photography commission documenting Type Svana within the coastal Resvara cluster at Ciputra Beach Resort in Tabanan, Bali. The assignment captures the spacious two-story luxury residence, highlighting its expansive 125 m² layout, functional spatial zoning, and seamless connection between interior open-plan living and lush private garden grounds near the sunset beach.\n\n## Concept & Lighting\n\nHighlighting clean orthogonal sightlines, double-height ceiling volumes, and the tranquil interplay between natural illumination and tropical landscaping. Natural afternoon daylight was utilized to accent raw stone textures, refined timber cabinetry, and smooth neutral plaster finishes, establishing an airy and sophisticated coastal ambiance."
+    },
+    {
+      "slug": "the-huthut",
+      "title": "The Huthut",
+      "category": "Property",
+      "location": "Uluwatu, Bali",
+      "year": "2026",
+      "summary": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
+      "description": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
+      "coverImage": "/uploads/1787940439507-img_4451.jpg",
+      "images": [
+        {
+          "src": "/uploads/1787940584322-img_4381.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940584325-img_4399.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940584329-img_4449.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940584332-img_4456.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940906745-img_4359.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940756269-img_4389.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1787940584336-img_4459.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1787940584299-img_4339.jpg",
+          "orientation": "vertical"
+        }
+      ],
+      "featured": true,
+      "publishedAt": "2026-08-27",
+      "instagram": "https://www.instagram.com/thehuthutbali/",
+      "content": "## Overview\n\nA boutique hospitality and property photography assignment documenting The Hut Hut, a secluded retreat nestled in Bingin, Uluwatu. The visual series captures the intimate cluster of six handcrafted wooden bungalows, the central turquoise swimming pool, open-air communal living spaces, and tranquil garden pathways tailored for peaceful coastal stays.\n\n## Concept & Lighting\n\nHighlighting the organic geometry of sustainable bamboo joinery, high-vaulted thatched ceilings, and fluid transitions between private suites and tropical outdoor living. Soft ambient daylight filtering through the surrounding canopy illuminates warm weathered teak surfaces, while low-angle morning sun accentuates tactile craftsmanship and serene island living."
+    },
+    {
+      "slug": "ciputra-beach-resort",
+      "title": "Ciputra Resort Askana",
+      "category": "Property",
+      "location": "Tabanan, Bali",
+      "year": "2026",
+      "summary": "Contemporary coastal villa photography capturing clean lines, functional spaces, and seaside resort living in Tabanan.",
+      "description": "Contemporary coastal villa photography capturing clean lines, functional spaces, and seaside resort living in Tabanan.",
+      "coverImage": "/uploads/1790338486612-dsc05028-hdr.jpg",
+      "images": [
+        {
+          "src": "/uploads/1790338486612-dsc05028-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790338591967-dsc05004-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790338605686-dsc04986-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790338643963-dsc05031-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790338711485-dsc05118-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790338798683-dsc04959-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790339068677-dsc04836-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790339020542-dsc05064-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790338752530-dsc04893-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790338729933-dsc04863-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790339315860-dsc05007-hdr.jpg",
+          "orientation": "horizontal"
+        }
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-25",
+      "instagram": "",
+      "content": "## Overview\n\nArchitectural and interior documentation of Type Askana, situated in the seaside Resvara cluster at Ciputra Beach Resort in Tabanan, Bali. The photography captures the modern two-story villa's compact 76 m² architecture, emphasizing efficient spatial design, contemporary vacation comfort, and harmonious integration into the coastal landscape.\n\n## Concept & Lighting\n\nHighlighting linear structural geometry, tall vertical window apertures, and clean spatial flow from the living lounge into private master suites. Bright daylight balanced with gentle shadow gradations brings out natural wood textures, clean architectural lines, and neutral tones, evoking an understated and relaxed seaside aesthetic."
+    },
+    {
       "slug": "sola",
       "title": "Sola",
       "category": "Property",
-      "location": "Bali, Indonesia",
+      "location": "Uluwatu, Bali",
       "year": "2026",
       "summary": "Editorial hotel photography capturing tropical architecture, warm interiors, refined material details, and relaxed outdoor spaces. A cohesive visual story highlighting the property's design, atmosphere, and overall guest experience.\n",
       "description": "Editorial hotel photography capturing tropical architecture, warm interiors, refined material details, and relaxed outdoor spaces. A cohesive visual story highlighting the property's design, atmosphere, and overall guest experience.\n",
@@ -233,7 +401,7 @@
       "featured": true,
       "publishedAt": "2026-08-27",
       "instagram": "https://www.instagram.com/sola.uluwatu/",
-      "content": "# Hotel Property Photography\n\n## Overview\n\nA comprehensive visual documentation of the hotel, showcasing its architecture, interiors, amenities, and overall guest experience. The photography captures the property from multiple perspectives, including the pool and outdoor spaces, guest rooms, bathrooms, architectural details, common areas, and dining experiences. The series is designed to present the hotel as a complete destination, giving viewers a sense of its atmosphere, design, comfort, and character.\n\n## Concept\n\nThe concept focuses on **capturing the complete identity of the hotel through architecture, interiors, natural light, and lifestyle details**. The photographs combine wide environmental compositions with closer architectural and interior details to highlight the property's design and functionality. Warm natural materials, timber, thatched roofing, neutral tones, and tropical surroundings create a cohesive visual language throughout the series."
+      "content": "## Overview\n\nAn architectural and hospitality photography assignment documenting Sola, an intimate boutique retreat in Pecatu, Uluwatu. The series presents a cohesive visual narrative of the property, capturing its central swimming pool, minimalist guest suites, architectural daybeds, and relaxed open-air dining atmosphere near Bali's southern coast.\n\n## Concept & Lighting\n\nHighlighting Mediterranean-inspired arches, clean brutalist geometry, and warm tactile finishes under ambient daylight. Natural tropical sunlight was composed to cast striking geometric shadows along cantilevered corridors during the day, softening into a warm golden glow across textured linen, limestone, and timber details at dusk."
     },
     {
       "slug": "white-penny",
@@ -289,55 +457,7 @@
       "featured": true,
       "publishedAt": "2026-09-11",
       "instagram": "https://www.instagram.com/whitepennybali/",
-      "content": "# Boutique Hospitality & Property Photography\n\n## Overview\n\nA comprehensive visual documentation of White Penny in Seminyak, Bali, showcasing its bohemian-chic accommodations, vibrant lagoon pool, lush garden grounds, and relaxed kitchen and dining spaces. The photography captures the venue as a complete boutique lifestyle destination—from tranquil private guest suites and tactile interior finishes to open-air communal living and vibrant culinary offerings.\n\n## Concept\n\nThe concept focuses on **capturing the effortless synergy of tropical bohemian design, natural daylight, and relaxed communal living**. Compositions balance expansive architectural perspectives of the curving lagoon pool and timber sun decks with tactile vignettes of woven pendant lights, artisanal macrame, brushed brass fixtures, and distressed patina woodwork."
-    },
-    {
-      "slug": "the-huthut",
-      "title": "The Huthut",
-      "category": "Property",
-      "location": "Bali, Indonesia",
-      "year": "2026",
-      "summary": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
-      "description": "Editorial villa photography capturing tropical architecture, pool living, natural textures, and serene outdoor spaces in bright, relaxed daylight.",
-      "coverImage": "/uploads/1787940439507-img_4451.jpg",
-      "images": [
-        {
-          "src": "/uploads/1787940584322-img_4381.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1787940584325-img_4399.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1787940584329-img_4449.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1787940584332-img_4456.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1787940906745-img_4359.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1787940756269-img_4389.jpg",
-          "orientation": "vertical"
-        },
-        {
-          "src": "/uploads/1787940584336-img_4459.jpg",
-          "orientation": "horizontal"
-        },
-        {
-          "src": "/uploads/1787940584299-img_4339.jpg",
-          "orientation": "vertical"
-        }
-      ],
-      "featured": true,
-      "publishedAt": "2026-08-27",
-      "instagram": "https://www.instagram.com/thehuthutbali/",
-      "content": "# Villa Property Photography\n\n## Overview\n\nA visual documentation of the villa, focusing on its tropical architecture, private pool, outdoor spaces, and connection to the surrounding landscape. The photography highlights the villa's open and relaxed character through exterior compositions, architectural details, and leisure spaces, creating a sense of privacy, comfort, and contemporary tropical living.\n\n## Concept\n\nThe concept focuses on **capturing the villa's tropical character through clean architecture, natural light, and outdoor living**. The photographs emphasize the contrast between bright white structures, warm thatched roofing, natural timber, lush greenery, and turquoise pool water. Wide compositions showcase the relationship between the villas and pool, while architectural details and lifestyle elements reinforce the intimate, tranquil atmosphere of the property.\n"
+      "content": "## Overview\n\nAn editorial hospitality photography commission capturing White Penny, a boutique lifestyle destination and social hub on Jalan Pura Telaga Waja in Petitenget, Seminyak. The coverage showcases the property's vibrant island aesthetic across its curving lagoon swimming pool, bohemian-chic private guest suites, lush tropical gardens, and the lively White Penny Kitchen & Bar.\n\n## Concept & Lighting\n\nHighlighting textural contrast between rustic macrame accents, warm distressed teak woodwork, and crisp white Mediterranean-inspired facades. Luminous natural daylight was harnessed to enhance turquoise water reflections across the pool deck, while soft interior accent lighting illuminates cozy guest corners and artisanal craftsmanship."
     },
     {
       "slug": "bali-paradise-suites",
@@ -392,10 +512,150 @@
       ],
       "featured": true,
       "publishedAt": "2026-08-27",
-      "content": "# Private Villa Photography\n\n## Overview\n\nA visual documentation of a private villa centered around its intimate pool area, fully equipped kitchen, and relaxed lounge spaces. The photography highlights the villa as a self-contained retreat, showcasing the connection between indoor and outdoor living, tropical landscaping, private amenities, and the comfortable atmosphere of the space.\n\n## Concept\n\nThe concept focuses on **private tropical living through natural light, clean architecture, and intimate lifestyle spaces**. The photographs emphasize the contrast between white architectural surfaces, warm wooden decking, lush tropical plants, and deep blue pool water. Compositions are designed to show how the pool, kitchen, and lounge areas flow together, creating a cohesive sense of privacy, comfort, and relaxed villa living."
+      "content": "## Overview\n\nProperty and hospitality visual documentation for Bali Paradise Suites, located on Jalan Eka Laweya in the Nakula area of Seminyak. The photography assignment highlights each suite as a private tropical sanctuary, capturing intimate plunge pools, sun-drenched timber decking, full-height glass openings, and relaxed open-plan living spaces.\n\n## Concept & Lighting\n\nHighlighting clean linear symmetry, private courtyard geometries, and deep ambient reflections across still plunge pool waters. High-key natural morning daylight was balanced with subtle interior shadows to accentuate polished terrazzo floors, woven textiles, and lush perimeter garden landscaping without artificial glare."
+    },
+    {
+      "slug": "gracie-efata-house",
+      "title": "Gracie Efata House",
+      "category": "Property",
+      "location": "Jimbaran, Bali",
+      "year": "2026",
+      "summary": "Property photography showcasing clean studio living, private balconies, and tranquil residential comfort in Jimbaran.",
+      "description": "Property photography showcasing clean studio living, private balconies, and tranquil residential comfort in Jimbaran.",
+      "coverImage": "/uploads/1790345017154-dsc03055-hdr.jpg",
+      "images": [
+        {
+          "src": "/uploads/1790345017154-dsc03055-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790345026989-dsc03334-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790345046121-dsc03235-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790345073627-dsc03500-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790345725904-dsc03194-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790345202396-dsc03823-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790345516435-dsc03100-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790345096113-dsc03569-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790345222900-dsc03613-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790345260626-dsc03790-hdr.jpg",
+          "orientation": "vertical"
+        }
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-25",
+      "instagram": "",
+      "content": "## Overview\n\nAn architectural and accommodation photography assignment capturing Gracie Efata House on Jalan Ampel Gading in the scenic hills of Jimbaran. The visual coverage presents the property's clean studio units, private terraces, peaceful garden surroundings, and welcoming residential character designed for comfortable short and extended Bali getaways.\n\n## Concept & Lighting\n\nHighlighting practical spatial proportions, uncluttered interior geometry, and seamless visual flow from studio interiors to open-air balconies. Soft directional daylight was utilized to illuminate neutral floor tiles, clean timber joinery, and well-lit living spaces, conveying an inviting and serene home-like ambiance."
+    },
+    {
+      "slug": "xcite-gym",
+      "title": "Xcite Gym",
+      "category": "Property",
+      "location": "Denpasar, Bali",
+      "year": "2026",
+      "summary": "Commercial architectural photography capturing premium fitness spaces, modern training equipment, and athletic interiors in Denpasar.",
+      "description": "Commercial architectural photography capturing premium fitness spaces, modern training equipment, and athletic interiors in Denpasar.",
+      "coverImage": "/uploads/1790344666356-dsc04590-hdr.jpg",
+      "images": [
+        {
+          "src": "/uploads/1790344666356-dsc04590-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790343918336-dsc03859-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790344433848-dsc03899-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790343996250-dsc03920-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790344674772-dsc03844-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790344479545-dsc04074-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790344490651-dsc03965-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790344540127-dsc04150-hdr.jpg",
+          "orientation": "horizontal"
+        },
+        {
+          "src": "/uploads/1790344562449-dsc04204-hdr.jpg",
+          "orientation": "vertical"
+        },
+        {
+          "src": "/uploads/1790344577376-dsc04306-hdr.jpg",
+          "orientation": "horizontal"
+        }
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-25",
+      "instagram": "",
+      "content": "## Overview\n\nCommercial interior and architectural photography documenting Xcite Gym & Society, located within the prestigious Bali International Golf complex in East Denpasar. The assignment captures the comprehensive athletic training facility, detailing its open weightlifting zones, high-performance strength machinery, cardio sections, and refined club amenities.\n\n## Concept & Lighting\n\nHighlighting bold industrial lines, spacious workout corridors, and high-contrast ambient illumination across heavy training equipment. Directional overhead lighting was balanced against matte impact flooring, textured dark wall accents, and wide wall mirrors to create an energetic, focused, and premium athletic aesthetic."
     }
   ],
   "gallery": [
+    {
+      "id": "gal-1790347365978-0",
+      "src": "/uploads/1790347365830-dsc05013-hdr.jpg",
+      "alt": "DSC05013 HDR",
+      "orientation": "horizontal",
+      "category": "General"
+    },
+    {
+      "id": "gal-1790347489903-0",
+      "src": "/uploads/1790347489900-dsc05430-hdr.jpg",
+      "alt": "DSC05430 HDR",
+      "orientation": "horizontal",
+      "category": "General"
+    },
+    {
+      "id": "gal-1790347379638-0",
+      "src": "/uploads/1790347379633-dsc05304-hdr.jpg",
+      "alt": "DSC05304 HDR",
+      "orientation": "vertical",
+      "category": "General"
+    },
+    {
+      "id": "gal-1790347516287-0",
+      "src": "/uploads/1790347516281-dsc04836-hdr.jpg",
+      "alt": "DSC04836 HDR",
+      "orientation": "horizontal",
+      "category": "General"
+    },
     {
       "id": "gal-1789134195592-0",
       "src": "/uploads/1789134195586-cover.jpg",
@@ -458,20 +718,6 @@
       "alt": "Modern Tropical Villa Living",
       "orientation": "horizontal",
       "category": "Property"
-    },
-    {
-      "id": "gal-1789127696700-0",
-      "src": "/uploads/1789127696696-dsc02230.jpg",
-      "alt": "DSC02230",
-      "orientation": "horizontal",
-      "category": "General"
-    },
-    {
-      "id": "gal-1789127750962-0",
-      "src": "/uploads/1789127750958-dsc01595-hdr.jpg",
-      "alt": "DSC01595 HDR",
-      "orientation": "horizontal",
-      "category": "General"
     }
   ]
 }
