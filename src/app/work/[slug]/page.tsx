@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import { getPosts } from "@/utils/utils";
 import {
   Badge,
@@ -100,9 +99,7 @@ export default async function Project({
   const post = allPosts.find((p) => p.slug === slugPath);
   const staticMatch = staticProjects.find((p) => p.slug === slugPath);
 
-  if (!dynamicMatch && !post && !staticMatch) {
-    notFound();
-  }
+
 
   const title = dynamicMatch ? dynamicMatch.title : (post?.metadata.title || staticMatch?.title || "");
   const category = dynamicMatch ? (dynamicMatch.category || "Property") : (post?.metadata.category || staticMatch?.category || "Property");
