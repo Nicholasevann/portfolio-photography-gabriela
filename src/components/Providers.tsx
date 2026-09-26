@@ -65,6 +65,17 @@ export function Providers({ children }: { children: React.ReactNode }) {
       }
     };
 
+    // Ensure initial theme is light if no theme is in localStorage
+    try {
+      const savedTheme = localStorage.getItem("data-theme");
+      if (!savedTheme) {
+        localStorage.setItem("data-theme", style.theme || "light");
+        document.documentElement.setAttribute("data-theme", style.theme || "light");
+      }
+    } catch {
+      // ignore
+    }
+
     // Global image protection: prevent right click saving & dragging of photos
     const handleContextMenu = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
