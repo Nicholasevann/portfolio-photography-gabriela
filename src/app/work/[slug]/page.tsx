@@ -63,7 +63,7 @@ export async function generateMetadata({
     post?.metadata.summary ||
     post?.metadata.description ||
     staticMatch?.description ||
-    "Photography project by ne.lens";
+    "Photography project by gabriela.dominiquee";
   const image =
     dynamicMatch?.coverImage ||
     post?.metadata.coverImage ||
@@ -72,7 +72,7 @@ export async function generateMetadata({
     "/uploads/1787939992222-img_4507.jpg";
 
   return Meta.generate({
-    title: `${title} — ne.lens`,
+    title: `${title} — gabriela.dominiquee`,
     description: description,
     baseURL: baseURL,
     image: image,
@@ -159,7 +159,7 @@ export default async function Project({
         as="webPage"
         baseURL={baseURL}
         path={`${work.path}/${slugPath}`}
-        title={`${title} — ne.lens`}
+        title={`${title} — gabriela.dominiquee`}
         description={description}
         image={coverImage}
         author={{

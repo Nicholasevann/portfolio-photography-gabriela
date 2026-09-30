@@ -75,7 +75,7 @@ export default function AdminLoginPage() {
       >
         <Column horizontal="center" align="center" gap="8">
           <Badge background="brand-alpha-weak" onBackground="brand-strong">
-            ne.lens Portfolio
+            gabriela.dominiquee Portfolio
           </Badge>
           <Heading variant="heading-strong-l" align="center">
             Admin Access

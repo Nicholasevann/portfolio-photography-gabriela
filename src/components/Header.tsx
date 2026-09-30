@@ -149,7 +149,7 @@ export const Header = () => {
         <Row paddingLeft="16" fillWidth vertical="center" textVariant="body-default-s">
           <SmartLink href="/" style={{ textDecoration: "none", color: "inherit" }}>
             <Text variant="heading-strong-s" style={{ letterSpacing: "-0.02em" }}>
-              ne.lens
+              gabriela.dominiquee
             </Text>
           </SmartLink>
         </Row>
@@ -230,16 +230,16 @@ export const Header = () => {
             </Flex>
             <Row s={{ hide: true }}>
               <Button
-                href="https://nicholas-porto.vercel.app/"
+                href="https://wa.me/6281573027842"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="secondary"
                 size="s"
                 weight="default"
-                prefixIcon="code"
+                prefixIcon="whatsapp"
                 suffixIcon="arrowUpRight"
               >
-                Software Dev
+                WhatsApp
               </Button>
             </Row>
           </Flex>

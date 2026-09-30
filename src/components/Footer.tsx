@@ -34,20 +34,6 @@ export const Footer = () => {
             <Text onBackground="neutral-weak">© {currentYear} /</Text>
             <Text paddingX="4">{person.name}</Text>
           </Text>
-          <SmartLink
-            href="https://nicholas-porto.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <Row gap="4" vertical="center" style={{ opacity: 0.75 }}>
-              <Icon name="code" size="xs" onBackground="neutral-weak" />
-              <Text variant="body-default-xs" onBackground="neutral-weak">
-                Software Developer Portfolio
-              </Text>
-              <Icon name="arrowUpRight" size="xs" onBackground="neutral-weak" />
-            </Row>
-          </SmartLink>
         </Row>
         <Row gap="16">
           {social.map(

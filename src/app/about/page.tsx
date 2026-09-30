@@ -354,23 +354,6 @@ export default async function About() {
                             ))}
                           </Row>
                         )}
-                        {(skill.title.toLowerCase().includes("development") ||
-                          skill.title.toLowerCase().includes("software")) && (
-                          <Row paddingTop="12">
-                            <Button
-                              href="https://nicholas-porto.vercel.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              variant="secondary"
-                              size="s"
-                              weight="default"
-                              prefixIcon="code"
-                              suffixIcon="arrowUpRight"
-                            >
-                              Explore Software Developer Portfolio
-                            </Button>
-                          </Row>
-                        )}
                       </Column>
                     </ScrollReveal>
                   ))}

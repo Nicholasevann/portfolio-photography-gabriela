@@ -2,12 +2,12 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Nicholas",
-  lastName: "Evan L",
-  name: "Nicholas Evan L",
-  role: "Photographer & Software Developer",
-  avatar: "/images/avatar.png",
-  email: "nnicholasevan@gmail.com",
+  firstName: "Gabriela",
+  lastName: "Dominique",
+  name: "gabriela.dominiquee",
+  role: "Architectural & Hospitality Photographer",
+  avatar: "/images/avatar.jpg",
+  email: "gabriela.dominiquee@gmail.com",
   location: "Asia/Makassar", // Bali, Indonesia (WITA / UTC+8)
   languages: ["English", "Indonesian"],
   locale: "en",
@@ -23,25 +23,19 @@ const social: Social = [
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/nicholas.lindartono/",
+    link: "https://www.instagram.com/gabriela.dominiquee",
+    essential: true,
+  },
+  {
+    name: "TikTok",
+    icon: "tiktok",
+    link: "https://www.tiktok.com/@gabriela.dominiquee",
     essential: true,
   },
   {
     name: "WhatsApp",
     icon: "whatsapp",
-    link: "https://wa.me/6281236155717",
-    essential: true,
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-    essential: true,
-  },
-  {
-    name: "Software Developer",
-    icon: "code",
-    link: "https://nicholas-porto.vercel.app/",
+    link: "https://wa.me/6281573027842",
     essential: true,
   },
 ];
@@ -50,9 +44,9 @@ const home: Home = {
   path: "/",
   image: "/uploads/1787939992222-img_4507.jpg",
   label: "Home",
-  title: "ne.lens — Photography",
+  title: "gabriela.dominiquee — Photography",
   description: "Photography portfolio focused on property, hospitality, and travel.",
-  headline: <>ne.lens</>,
+  headline: <>gabriela.dominiquee</>,
   featured: {
     display: true,
     title: (
@@ -109,32 +103,32 @@ const contact = {
   subline: "Property · Hospitality · Travel",
   description:
     "Available for commissions, private villa shoots, hospitality campaigns, and destination assignments worldwide.",
-  email: "nnicholasevan@gmail.com",
+  email: "gabriela.dominiquee@gmail.com",
 };
 
 const photographyExperiences = [
   {
-    company: "On The Sola Boutique Hotel",
-    timeframe: "May 2026 - Present",
-    role: "Property & Hospitality Photographer (Bali)",
+    company: "Ciputra Resort Askana",
+    timeframe: "2026",
+    role: "Architectural & Interior Photographer (Tabanan, Bali)",
     achievements: [
-      "Documented boutique hotel guest rooms and suites, capturing architectural light and minimalist spatial aesthetics.",
-      "Commercial food, beverage, and ambiance photography for the on-site mini restaurant and dining menu.",
-      "Produced high-resolution visual marketing assets for guest booking platforms and digital promotion.",
+      "Documented contemporary two-story seaside villa architecture within the coastal Resvara cluster at Ciputra Beach Resort.",
+      "Captured clean linear geometries, open living spaces, and natural daylight illumination across master suites.",
+      "Delivered high-resolution architectural assets emphasizing vacation comfort and seaside resort living.",
     ],
     images: [
       {
-        src: "/uploads/1787939992222-img_4507.jpg",
-        alt: "On The Sola",
+        src: "/uploads/1790338486612-dsc05028-hdr.jpg",
+        alt: "Ciputra Resort Askana",
         width: 16,
         height: 9,
       },
     ],
   },
   {
-    company: "The Huthut Villa",
+    company: "The Huthut",
     timeframe: "May 2026 - Present",
-    role: "Architectural & Hospitality Photographer (Lombok)",
+    role: "Architectural & Hospitality Photographer (Uluwatu, Bali)",
     achievements: [
       "Captured unique organic wooden pavilions, luxury guest villa rental units, and tranquil nature surroundings.",
       "Documented the culinary menu, dining experience, and hospitality amenities.",
@@ -150,12 +144,67 @@ const photographyExperiences = [
     ],
   },
   {
-    company: "Bali Paradise Suites",
-    timeframe: "May 2026 (Single Commission)",
-    role: "Property & Architectural Photographer (Canggu, Bali)",
+    company: "Ciputra Resort Svana",
+    timeframe: "2026",
+    role: "Architectural & Property Photographer (Tabanan, Bali)",
     achievements: [
-      "Commissioned for single-visit visual capture of luxury rental villa suites and private plunge pools.",
+      "Comprehensive architectural documentation of Type Svana, a spacious 125 m² luxury residence at Ciputra Beach Resort.",
+      "Captured double-height ceiling volumes, functional spatial zoning, and seamless indoor-to-garden transitions.",
+      "Utilized natural afternoon daylight to accentuate raw stone finishes, fine teak woodwork, and relaxed coastal aesthetics.",
+    ],
+    images: [
+      {
+        src: "/uploads/1790347905132-dsc05265-hdr.jpg",
+        alt: "Ciputra Resort Svana",
+        width: 16,
+        height: 9,
+      },
+    ],
+  },
+  {
+    company: "Sola",
+    timeframe: "May 2026 - Present",
+    role: "Property & Hospitality Photographer (Uluwatu, Bali)",
+    achievements: [
+      "Documented boutique hotel guest rooms and suites, capturing architectural light and minimalist spatial aesthetics.",
+      "Commercial food, beverage, and ambiance photography for the on-site dining venue and bar.",
+      "Produced high-resolution visual marketing assets for guest booking platforms and digital promotion.",
+    ],
+    images: [
+      {
+        src: "/uploads/1787939992222-img_4507.jpg",
+        alt: "Sola",
+        width: 16,
+        height: 9,
+      },
+    ],
+  },
+  {
+    company: "White Penny",
+    timeframe: "September 2026 - Present",
+    role: "Boutique Property & Lifestyle Photographer (Seminyak, Bali)",
+    achievements: [
+      "Documented bohemian-chic guest suites, custom interior woodwork, and ensuite stone vanities under ambient daylight.",
+      "Captured exterior curving lagoon pool, outdoor timber sun decks, and lush tropical landscape grounds.",
+      "Created vibrant culinary and beverage editorial imagery for the alfresco kitchen and bar.",
+    ],
+    images: [
+      {
+        src: "/uploads/1789127281590-dsc02061-hdr.jpg",
+        alt: "White Penny",
+        width: 16,
+        height: 9,
+      },
+    ],
+  },
+  {
+    company: "Bali Paradise Suites",
+    timeframe: "July 2026 - Present",
+    role: "Property & Architectural Photographer (Seminyak, Bali)",
+    achievements: [
+      "Commissioned for visual capture of luxury rental villa suites, sunlit private plunge pools, and open-plan living areas.",
       "Delivered refined interior and exterior photography for property rental listings and hospitality showcases.",
+      "Balanced natural daylight with soft interior shadows to accentuate polished terrazzo floors and lush landscaping.",
     ],
     images: [
       {
@@ -167,18 +216,36 @@ const photographyExperiences = [
     ],
   },
   {
-    company: "White Penny Bali",
-    timeframe: "September 2026 - Present",
-    role: "Boutique Property & Lifestyle Photographer (Seminyak, Bali)",
+    company: "Gracie Efata House",
+    timeframe: "2026",
+    role: "Residential & Property Photographer (Jimbaran, Bali)",
     achievements: [
-      "Documented bohemian-chic guest suites, custom interior woodwork, and ensuite stone vanities under ambient daylight.",
-      "Captured exterior curving lagoon pool, outdoor timber sun decks, and lush tropical landscape grounds.",
-      "Created vibrant culinary and beverage editorial imagery for the alfresco kitchen and bar.",
+      "Documented contemporary studio living units, private balconies, and tranquil residential interiors in Jimbaran.",
+      "Captured spatial layouts, natural ventilation, and functional residential finishes tailored for rental guests.",
+      "Highlighted clean neutral palettes, warm wood accents, and bright ambient lighting throughout each suite.",
     ],
     images: [
       {
-        src: "/uploads/1789127197934-dsc01278-hdr.jpg",
-        alt: "White Penny Bali",
+        src: "/uploads/1790345017154-dsc03055-hdr.jpg",
+        alt: "Gracie Efata House",
+        width: 16,
+        height: 9,
+      },
+    ],
+  },
+  {
+    company: "Xcite Gym",
+    timeframe: "2026",
+    role: "Commercial & Architectural Photographer (Denpasar, Bali)",
+    achievements: [
+      "Commercial interior and architectural photography documenting the premium athletic training facility at Bali International Golf.",
+      "Captured bold industrial lines, spacious training corridors, and high-contrast ambient illumination across strength machinery.",
+      "Delivered energetic, focused visual assets showcasing modern workout zones, cardio areas, and club amenities.",
+    ],
+    images: [
+      {
+        src: "/uploads/1790344666356-dsc04590-hdr.jpg",
+        alt: "Xcite Gym",
         width: 16,
         height: 9,
       },
@@ -190,8 +257,8 @@ const photographyExperiences = [
 const about: About = {
   path: "/about",
   label: "About",
-  title: "About – Nicholas Evan L (ne.lens)",
-  description: "Meet Nicholas Evan Lindartono — Architectural Photographer & Software Developer.",
+  title: "About – gabriela.dominiquee",
+  description: "Meet Gabriela Dominique — Architectural & Hospitality Photographer.",
   tableOfContent: {
     display: true,
     subItems: false,
@@ -208,7 +275,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Hi! I'm Nicholas Evan Lindartono — an Architectural Photographer and Software Developer.
+        Hi! I'm Gabriela Dominique — an Architectural & Hospitality Photographer.
         I capture architectural spaces, luxury villas, and boutique hospitality properties with a focus on clean geometry, natural illumination, and calm atmospheres.
       </>
     ),
@@ -219,31 +286,9 @@ const about: About = {
     experiences: photographyExperiences,
   },
   studies: {
-    display: true,
+    display: false,
     title: "Education",
-    institutions: [
-      {
-        name: "Indonesian Computer University Bandung Indonesia",
-        timeframe: "2018 - 2022",
-        degree: "Bachelor of Computer Engineering (Information Technology)",
-        achievements: [
-          "Graduated with GPA 3.42 / 4.00 in Computer Engineering (Information Technology).",
-          "Specialized in Software Engineering, Web & Mobile Systems Development, and Distributed Architectures.",
-          "Developed full-stack application capstones with emphasis on clean user interfaces and system performance.",
-        ],
-        description: "Bachelor of Computer Engineering (Information Technology) · GPA 3.42 / 4.00 (2018 - 2022)",
-      },
-      {
-        name: "SMAK Kolese Santo Yusup Malang Indonesia",
-        timeframe: "2015 - 2018",
-        degree: "High School Diploma (Science & Mathematics)",
-        achievements: [
-          "Graduated with Science major and Cumulative Accumulation Score of 85.",
-          "Active in visual arts, computer science clubs, and multimedia campus documentation.",
-        ],
-        description: "High School Diploma (Science) · Accumulations: 85 (2015 - 2018)",
-      },
-    ],
+    institutions: [],
   },
   technical: {
     display: true,
@@ -267,24 +312,6 @@ const about: About = {
           { name: "Architecture" },
         ],
       },
-      {
-        title: "Web & Mobile Development",
-        role: "Full-Stack Engineering & Cross-Platform Development",
-        disciplines: [
-          "Modern Frontend Applications with Next.js, React.js, and TypeScript",
-          "Cross-Platform Mobile Development using Flutter and React Native",
-          "Scalable Backend Services & RESTful APIs with Nest.js, Express.js, and Node.js",
-          "Design Systems & High-Fidelity UI/UX Prototyping with Figma",
-          "Headless E-Commerce Solutions & Supabase / Firebase Cloud Integrations",
-        ],
-        description: "Next.js, React.js, React Native, Flutter, Vue.js, Nest.js, Express.js, TypeScript, and Shopify.",
-        tags: [
-          { name: "Next.js", icon: "nextjs" },
-          { name: "JavaScript", icon: "javascript" },
-          { name: "Figma", icon: "figma" },
-          { name: "Supabase", icon: "supabase" },
-        ],
-      },
     ],
   },
 };
@@ -292,22 +319,22 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Journal",
-  title: "Journal – ne.lens",
-  description: "Stories and visual field notes by ne.lens",
+  title: "Journal – gabriela.dominiquee",
+  description: "Stories and visual field notes by gabriela.dominiquee",
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: "Selected Work — ne.lens",
+  title: "Selected Work — gabriela.dominiquee",
   description: "Photography portfolio showcasing property, hospitality, and travel spaces.",
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: "Photography Gallery — ne.lens",
-  description: "A curated photo collection by ne.lens",
+  title: "Photography Gallery — gabriela.dominiquee",
+  description: "A curated photo collection by gabriela.dominiquee",
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",

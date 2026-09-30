@@ -1,6 +1,6 @@
-# ne.lens — Architectural Photography & Engineering Portfolio
+# gabriela.dominiquee — Photography Portfolio
 
-An editorial portfolio and content management system for **Nicholas Evan Lindartono** (`ne.lens`), showcasing architectural photography, luxury villas, boutique hospitality spaces, and full-stack software development projects.
+An editorial portfolio and content management system for **Gabriela Dominique** (`gabriela.dominiquee`), showcasing architectural photography, luxury villas, and boutique hospitality spaces.
 
 Built with **Next.js 16**, **React 19**, **TypeScript**, **Once UI**, and **Vercel Blob Storage**.
 
@@ -13,10 +13,10 @@ Built with **Next.js 16**, **React 19**, **TypeScript**, **Once UI**, and **Verc
 - **Adaptive Gallery**: Orientation-aware layout (horizontal / vertical) with category filtering (*Property*, *Architecture*, *Hospitality*, *Atmosphere*, *Details*) and high-resolution lightbox views.
 - **Featured Work Grid**: Modern masonry layouts highlighting curated commissions in Bali, Lombok, and beyond.
 
-### 💼 Dual-Discipline Profile (Photography & Software Engineering)
-- **Interactive Work Experience Switcher**: Seamlessly toggle between photography assignments and full-stack software engineering roles.
-- **Structured Education & Disciplines**: Clean visual hierarchy with date timelines, degrees/roles, and bulleted specializations.
-- **Location & Availability Indicator**: Real-time timezone badge (Bali, WITA) and direct booking/portfolio links.
+### 💼 Professional Photographer Profile
+- **Comprehensive Experience Timeline**: Detailed timeline of boutique hotel, luxury villa, and hospitality commissions.
+- **Structured Disciplines & Direction**: Specializing in spatial geometry, architectural lighting, food & beverage, and color grading.
+- **Location & Availability Indicator**: Real-time timezone badge (Bali, WITA) and direct booking/contact links.
 
 ### 🛠️ Built-in Admin CMS (`/admin`)
 - **Protected Dashboard**: Secure password authentication with session cookies.
@@ -84,8 +84,8 @@ Built with **Next.js 16**, **React 19**, **TypeScript**, **Once UI**, and **Verc
 ### 1. Clone & Install Dependencies
 
 ```bash
-git clone https://github.com/Nicholasevann/portfolio-photography-nicholas.git
-cd portfolio-photography-nicholas
+git clone https://github.com/gabriela-dominiquee/portfolio-photography.git
+cd portfolio-photography
 npm install
 ```
 
@@ -146,10 +146,11 @@ npm run start
 
 ## 👤 Author & Credits
 
-**Nicholas Evan Lindartono** (`ne.lens`)
-- **Website & Portfolio**: [nelens.photography](https://my-porto-nine-livid.vercel.app/portfolio)
-- **Email**: [contact@nelens.photography](mailto:contact@nelens.photography)
-- **Role**: Architectural Photographer & Senior Fullstack Developer (Bali, Indonesia)
+**Gabriela Dominique** (`gabriela.dominiquee`)
+- **Instagram**: [@gabriela.dominiquee](https://www.instagram.com/gabriela.dominiquee)
+- **TikTok**: [@gabriela.dominiquee](https://www.tiktok.com/@gabriela.dominiquee)
+- **WhatsApp**: [+62 815-7302-7842](https://wa.me/6281573027842)
+- **Role**: Architectural & Hospitality Photographer (Bali, Indonesia)
 
 ---
 

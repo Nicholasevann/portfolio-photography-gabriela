@@ -119,18 +119,18 @@ export default async function Home() {
                 Selected Work
               </Button>
               <Button
-                id="software-dev-hero-btn"
+                id="whatsapp-hero-btn"
                 data-border="rounded"
-                href="https://nicholas-porto.vercel.app/"
+                href="https://wa.me/6281573027842"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="secondary"
                 size="m"
                 weight="default"
-                prefixIcon="code"
+                prefixIcon="whatsapp"
                 suffixIcon="arrowUpRight"
               >
-                Software Developer
+                WhatsApp
               </Button>
             </Row>
           </RevealFx>
@@ -274,16 +274,18 @@ export default async function Home() {
           </Column>
           <Row gap="12" paddingTop="12" wrap horizontal="center">
             <Button
-              href={`mailto:${contact.email}`}
+              href="https://wa.me/6281573027842"
+              target="_blank"
+              rel="noopener noreferrer"
               variant="primary"
               size="m"
-              prefixIcon="email"
+              prefixIcon="whatsapp"
               arrowIcon
             >
-              Get in touch
+              Chat on WhatsApp
             </Button>
             {social
-              .filter((s) => s.name === "Instagram" || s.name === "WhatsApp")
+              .filter((s) => s.name !== "WhatsApp")
               .map((s, index) => (
                 <Button
                   key={`contact-social-${s.name}-${index}`}
@@ -297,17 +299,6 @@ export default async function Home() {
                   {s.name}
                 </Button>
               ))}
-            <Button
-              href="https://nicholas-porto.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="secondary"
-              size="m"
-              prefixIcon="code"
-              suffixIcon="arrowUpRight"
-            >
-              Software Developer
-            </Button>
           </Row>
         </Column>
       </ScrollReveal>

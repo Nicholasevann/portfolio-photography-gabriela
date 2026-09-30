@@ -100,7 +100,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <Row vertical="center" gap="12">
           <SmartLink href="/admin" style={{ textDecoration: "none" }}>
             <Row vertical="center" gap="8">
-              <Heading variant="heading-strong-s">ne.lens</Heading>
+              <Heading variant="heading-strong-s">gabriela.dominiquee</Heading>
               <Badge background="brand-alpha-weak" onBackground="brand-strong">
                 CMS
               </Badge>
